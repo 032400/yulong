@@ -49,7 +49,7 @@
         </div>
         <img src="@/assets/img/招生要求/招生要求_42.jpg" class="tu1">
         <img src="@/assets/img/招生要求/招生要求_42.jpg" class="tu2">
-        <img src="@/assets/img/招生要求/招生要求_42.jpg" class="tu3">
+        <img src="@/assets/img/招生要求/招生要求_49.jpg" class="tu3">
         <img src="@/assets/img/招生要求/招生要求_42.jpg" class="tu4">
         <img src="@/assets/img/招生要求/招生要求_42.jpg" class="tu5">
     </div>
