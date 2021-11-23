@@ -17,35 +17,51 @@
       <div class="list">
         <ul v-if="current == '0'">
           <li style="margin-top: 0rem">
-            <span class="text">1、39岁的小伙子,就发生...</span>
+            <span class="text">
+               <img style="width: .16rem;padding-bottom: .02rem;" src="@/assets/img/shouye/首页_03.jpg" alt="">
+              39岁的小伙子,就发生...</span>
             <span class="time">2021.10.15</span>
           </li>
           <li>
-            <span class="text">2、市北市民留言咨询这...</span>
+            <span class="text">
+               <img style="width: .16rem;padding-bottom: .02rem;" src="@/assets/img/shouye/首页_03.jpg" alt="">
+              市北市民留言咨询这...</span>
             <span class="time">2021.10.15</span>
           </li>
           <li>
-            <span class="text">3、美供应链受阻问题雪...</span>
+            <span class="text">
+               <img style="width: .16rem;padding-bottom: .02rem;" src="@/assets/img/shouye/首页_03.jpg" alt="">
+              美供应链受阻问题雪...</span>
             <span class="time">2021.10.15</span>
           </li>
           <li>
-            <span class="text">4、篮网有能力解决他们...</span>
+            <span class="text">
+               <img style="width: .16rem;padding-bottom: .02rem;" src="@/assets/img/shouye/首页_03.jpg" alt="">
+              篮网有能力解决他们...</span>
             <span class="time">2021.10.15</span>
           </li>
           <li>
-            <span class="text">5、记者实测快递企业...</span>
+            <span class="text">
+               <img style="width: .16rem;padding-bottom: .02rem;" src="@/assets/img/shouye/首页_03.jpg" alt="">
+              记者实测快递企业...</span>
             <span class="time">2021.10.15</span>
           </li>
           <li>
-            <span class="text">6、养老金有哪些渠道可...</span>
+            <span class="text">
+               <img style="width: .16rem;padding-bottom: .02rem;" src="@/assets/img/shouye/首页_03.jpg" alt="">
+              养老金有哪些渠道可...</span>
             <span class="time">2021.10.15</span>
           </li>
           <li>
-            <span class="text">7、怎么样买保险才是最...</span>
+            <span class="text">
+               <img style="width: .16rem;padding-bottom: .02rem;" src="@/assets/img/shouye/首页_03.jpg" alt="">
+              怎么样买保险才是最...</span>
             <span class="time">2021.10.15</span>
           </li>
           <li>
-            <span class="text">8、全面建成小康社会的...</span>
+            <span class="text">
+               <img style="width: .16rem;padding-bottom: .02rem;" src="@/assets/img/shouye/首页_03.jpg" alt="">
+              全面建成小康社会的...</span>
             <span class="time">2021.10.15</span>
           </li>
           <!-- <li>

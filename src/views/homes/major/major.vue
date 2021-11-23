@@ -1,5 +1,5 @@
 <template>
-  <div class="major">
+  <div class="major" ref="major_header">
     <div class="major-header">
       <img src="@/assets/img/shouye/首页改1_18.gif" alt="" />
     </div>
@@ -19,17 +19,57 @@
         <li>
           <img src="@/assets/img/shouye/网络新媒体运营.png" alt="" />
         </li>
+        
+        <!-- 添加点击显示图片效果 !-->
+         <div ref="lefts" class="left_img">
+          <img  src="@/assets/img/shouye/首页0_03_04.jpg" @click="click" alt="" />
+        </div>
         <li>
-          <img src="@/assets/img/shouye/新能源汽车.png" alt="" />
+          <img src="@/assets/img/shouye/地勤.png" @click="clicks()" alt="" />
         </li>
+        <li>
+          <img src="@/assets/img/shouye/高铁-2.png" alt="" />
+        </li>
+        <li>
+          <img src="@/assets/img/shouye/航空.png" alt="" />
+        </li>
+        <li>
+          <img src="@/assets/img/shouye/游轮.png" alt="" />
+        </li>
+       
       </ul>
     </div>
   </div>
 </template>
+<script>
+export default {
+  data(){
+    return {
+      style:'height:auto',
+      styles:'height:5.7rem'
+    }
+  },
+  methods:{
+    click(){
+      // this.$refs.lefts.style.display='none'
+      // this.$refs.lefts.style.margin='0'
+      this.$refs.major_header.style = this.style
+      // console.log(this.$refs.major_header.style.height);
+    },
+    clicks(){
+        // this.$refs.lefts.style.display='block'
+        // this.$refs.lefts.style.margin='0.18rem'
+        this.$refs.major_header.style = this.styles
+      // console.log(this.$refs.major_header.style.height);
+    }
+  }
+}
+</script>
 <style lang="scss" scoped>
 .major {
   width: 3.55rem;
-  height: 6.4rem;
+  // height: 6.4rem;
+  height: 5.7rem;
   background: #fff;
   border-radius: 0.1rem;
   overflow: hidden;
@@ -54,6 +94,13 @@
         img {
           width: 100%;
         }
+      }
+      .left_img{
+          margin: .18rem;
+          text-align: center;
+          img{
+            width: .24rem;
+          }
       }
     }
   }
