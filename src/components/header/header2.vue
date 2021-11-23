@@ -1,22 +1,63 @@
 <template>
-  <div class="wrap actt">
+  <div class=" actt">
     <div class="logo_body">
       <router-link to="/" tag="div" class="logo">
         <img src="@/assets/img/公共/首页改1_03.gif" alt="" />
       </router-link>
       <div class="menu">
         <img @click="btn()" src="@/assets/img/公共/首页改1_05.gif" alt="" />
-        <div class="txt" :class="{'act':isloading}">
-          <router-link to="/Service" tag="p">VIP地勤专业</router-link>
-          <router-link to="/hangkong" tag="p">航空学院</router-link>
-          <router-link to="/hangkong/chuzhongsheng" tag="p">初中生</router-link>
-          <router-link to="/hangkong/gaozhongsheng" tag="p">高中生</router-link>
-          <router-link to="/hangkong/sanxiaosheng" tag="p">三校生</router-link>
-          <router-link to="/hangkong/yikaosheng" tag="p">艺考生</router-link>
-          <router-link to="/youlun" tag="p">游轮海城专业</router-link>
-          <router-link to="/kongcheng" tag="p">空乘专业</router-link>
+        <div class="txt" :class="{ act: isloading }">
+          <div class="title">
+           
+            <div class="header">
+              <router-link to="/hangkong" tag="span">航空院校</router-link>
+
+              <a-icon
+                ref='icon'
+                slot="suffixIcon"
+                type="caret-down"
+                @click="clicks"
+                style="width: 0.11rem; height: 0.08rem; color: rgb(0, 0, 0)"
+              />
+            </div>
+            <div class="bottom" v-show="lick" >
+              <router-link to="/hangkong/chuzhongsheng" tag="p"
+                >初中生</router-link
+              >
+              <router-link to="/hangkong/gaozhongsheng" tag="p"
+                >高中生</router-link
+              >
+              <router-link to="/hangkong/sanxiaosheng" tag="p"
+                >三校生</router-link
+              >
+              <router-link to="/hangkong/yikaosheng" tag="p"
+                >艺考生</router-link
+              >
+            </div>
+          </div>
+          <div class="title">
+            <div class="header">
+              <router-link to="" tag="span">热门专业</router-link>
+
+              <a-icon
+                ref='icon'
+                slot="suffixIcon"
+                type="caret-down"
+                @click="click"
+                :rotate="0"
+                style="width: 0.11rem; height: 0.08rem; color: rgb(0, 0, 0)"
+              />
+            </div>
+            <div class="bottom" v-show="isShow">
+              <router-link to="/Service" tag="p">VIP地勤专业</router-link>
+              <router-link to="/gaotie" tag="p">高铁乘务专业</router-link>
+              <router-link to="/youlun" tag="p">游轮海城专业</router-link>
+              <router-link to="/kongcheng" tag="p">空乘专业</router-link>
+            </div>
+          </div>
           <router-link to="/zhaoshengyaoqiu" tag="p">招生要求</router-link>
-          <router-link to="/gaotie" tag="p">高铁乘务专业</router-link>
+          <router-link to="/zaixianbaoming" tag="p">在线报名</router-link>
+          <router-link to="/ynjd" tag="p">疑难解答</router-link>
         </div>
         <div class="quan" v-if="isloading" @click="btn()"></div>
       </div>
@@ -25,61 +66,84 @@
 </template>
 
 <script>
-
 export default {
- data(){
-     return {
-         isloading:false,
-     }
- },
- methods:{
-     btn(){
-        if(this.isloading==true){
-          this.isloading=false
-        }else{
-          this.isloading=true
-        }
-     },
-     scroll(){
-        if(this.isloading==true){
-          this.isloading=false
-        }
-     }
- },
- mounted(){
-     this.scrollHanle = this.scroll.bind(this)  
-     window.addEventListener('scroll',this.scrollHanle)
+  data() {
+    return {
+      isloading: false,
+      isShow: false,
+      lick: false,
+      transform:'transform:rotate(180deg)'
+    };
+  },
+  methods: {
+    click() {
+      // this.isShow = !this.isShow;
+      // console.log(this.isShow);
+       if (this.isShow == true) {
+        this.isShow = false;
+        // this.$refs.icon.style={
+        //   transform:this.transform
+        // }
+      } else {
+        this.isShow = true;
+      }
+      
+    },
+    clicks() {
+      this.lick = !this.lick;
+      console.log(this.lick);
+    },
+    btn() {
+      if (this.isloading == true) {
+        this.isloading = false;
+      } else {
+        this.isloading = true;
+      }
+    },
+    scroll() {
+      if (this.isloading == true) {
+        this.isloading = false;
+      }
+    },
+    handleChange(value) {
+      console.log(value); // { key: "lucy", label: "Lucy (101)" }
+    },
+  },
+  mounted() {
+    this.scrollHanle = this.scroll.bind(this);
+    window.addEventListener("scroll", this.scrollHanle);
   },
   destroyed() {
-    window.removeEventListener("scroll",this.scrollHanle)
+    window.removeEventListener("scroll", this.scrollHanle);
   },
- watch:{
-   $route:{
-     handler(){
-        if(this.isloading==true){
-          this.isloading=false
+  watch: {
+    $route: {
+      handler() {
+        if (this.isloading == true) {
+          this.isloading = false;
         }
-     },
-     immediate:true
-   }
- },
+        
+      },
+      immediate: true,
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-.actt{
-    position: fixed;
-    left: 50%;
-    top: 0;
-    transform: translate(-50%,0);
-    z-index: 9999;
+.actt {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+  z-index: 9999;
 }
 
 .logo_body {
   width: 3.75rem;
   height: 0.49rem;
   margin: 0 auto;
-    // background: blue;
+  // background: blue;
 
   background: #eaeaea;
   display: flex;
@@ -93,34 +157,85 @@ export default {
     }
   }
   .menu {
-    position: relative;
+    // position: relative;
     padding: 0.15rem;
 
     img {
       width: 0.3rem;
       height: 0.22rem;
     }
-    .txt{
-        width: 1.5rem;
-        background:#fff;
-        z-index: 2;
-        position: absolute;
-        right: 0;
-        top: .38rem;
-        height: 0;
-        transition: all 0.3s linear;
-        z-index: 3;
-        overflow: hidden;
-        p{
-          height: .40rem;
+    .txt {
+      width: 1.5rem;
+      background: #fff;
+      z-index: 2;
+      position: absolute;
+      right: 0;
+      top: 0.38rem;
+      height: 0;
+      transition: all 0.3s linear;
+      z-index: 3;
+      overflow: hidden;
+      p {
+        height: 0.4rem;
+        text-align: center;
+        line-height: 0.4rem;
+      }
+      .title {
+        position: relative;
+        .header {
+          height: 0.4rem;
+          line-height: 0.4rem;
           text-align: center;
-          line-height: .4rem;
+          p {
+            height: 0.4rem;
+            text-align: center;
+            line-height: 0.4rem;
+          }
+          :hover{
+            p{
+              color: #0869af;
+            }
+            
+          }
         }
+        :hover{
+            ::v-deep  .anticon svg{
+              transition: all 0.3s linear;
+              transform: rotate(180deg);
+          }
+        }
+        // ::v-deep  .anticon svg{
+        //     transition: all 0.3s linear;
+        //     transform: rotate(0deg);
+        // }
+        .bottom {
+          position: relative;
+          display: none;
+          transition: all 0.3s linear;
+          height: 0;
+          background: #eaeaea;
+          p {
+            height: 0.4rem;
+            text-align: center;
+            line-height: 0.4rem;
+          }
+        }
+      }
+      :hover {
+        .bottom {
+          display: block;
+          transition: all 0.3s linear;
+          height: 1.5rem;
+          p {
+            background: #eaeaea;
+          }
+        }
+      }
     }
-    .act{
-      height: 4rem;
+    .act {
+      height: auto;
     }
-    .quan{
+    .quan {
       width: 100%;
       height: 100%;
       position: fixed;
@@ -131,6 +246,4 @@ export default {
     }
   }
 }
-
-
 </style>
