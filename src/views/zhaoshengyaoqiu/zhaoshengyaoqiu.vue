@@ -1,17 +1,37 @@
 <template>
   <div>
-    <HeaderLun/>
+    <div class="lun_warp">
+        <div class="lun_con">
+            <img src="@/assets/img/招生要求/招生要求_02.jpg" alt="">
+        </div>
+    </div>
     <page/>
     <div class="people">
         <div>
             <img src="@/assets/img/招生要求/招生要求_03.jpg" alt="">
+        </div>
+        <div>
             <img src="@/assets/img/招生要求/招生要求_05.jpg" alt="">
+        </div>
+        <div>
             <img src="@/assets/img/招生要求/招生要求_07.jpg" alt="">
+        </div>
+        <div>
             <img src="@/assets/img/招生要求/招生要求_12.jpg" alt="">
+        </div>
+        <div>
             <img src="@/assets/img/招生要求/招生要求_13.jpg" alt="">
+        </div>
+        <div>
             <img src="@/assets/img/招生要求/招生要求_14.jpg" alt="">
+        </div>
+        <div>
             <img src="@/assets/img/招生要求/招生要求_18.jpg" alt="">
+        </div>
+        <div>
             <img src="@/assets/img/招生要求/招生要求_19.jpg" alt="">
+        </div>
+        <div>
             <img src="@/assets/img/招生要求/招生要求_20.jpg" alt="">
         </div>
     </div>
@@ -22,7 +42,6 @@
 </template>
 
 <script>
-import HeaderLun from "@/components/header-lun/header_lun.vue";
 import page from "@/components/page/index.vue";
 
 import Major from '@/views/zhaoshengyaoqiu/requirement/major.vue';
@@ -30,7 +49,6 @@ import Enroll from '@/views/zhaoshengyaoqiu/requirement/enroll.vue';
 import Environment from '@/views/zhaoshengyaoqiu/requirement/environment.vue';
 export default {
   components: {
-    HeaderLun,
     Major,
     Enroll,
     Environment,
@@ -39,6 +57,19 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.lun_warp{
+        width: 100%;
+        height: 1.50rem;
+        .lun_con{
+            width: 3.75rem;
+            height: 1.50rem;
+            margin: 0 auto;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
 
 
 .people{
