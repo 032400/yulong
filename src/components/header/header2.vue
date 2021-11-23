@@ -7,6 +7,8 @@
       <div class="menu">
         <img @click="btn()" src="@/assets/img/公共/首页改1_05.gif" alt="" />
         <div class="txt" :class="{ act: isloading }">
+          <router-link tag="p" to="/" style="background-color: #0865a7;font-weight: normal;
+	font-stretch: normal;color:#fff;font-size:.15rem">首页</router-link>
           <div class="title">
            
             <div class="header">
@@ -190,11 +192,17 @@ export default {
             height: 0.4rem;
             text-align: center;
             line-height: 0.4rem;
+            :hover{
+            // p{
+              color: #0869af;
+            // }
+            
+            }
           }
           :hover{
-            p{
+          //   // p{
               color: #0869af;
-            }
+          //   // }
             
           }
         }
