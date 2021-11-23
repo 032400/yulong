@@ -2,7 +2,7 @@
   <div class="aviation">
     <div class="aviation-header">
       <img src="@/assets/img/shouye/首页改1_33.gif" alt="" />
-      <img src="@/assets/img/公共/航空院校展示_03.jpg" alt="" />
+      <!-- <img src="@/assets/img/公共/航空院校展示_03.jpg" alt="" /> -->
     </div>
     <div class="aviation-content">
       <ul>
@@ -75,6 +75,7 @@
   .aviation-header {
     width: 100%;
     height: 0.55rem;
+    // background: #fff;
     img {
       width: 100%;
     }
