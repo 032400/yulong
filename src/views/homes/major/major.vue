@@ -11,14 +11,19 @@
             </router-link>
         </li>
         <li>
-          <img src="@/assets/img/shouye/互联网金融与管理.png" alt="" />
-        </li>
-        <li>
           <img src="@/assets/img/shouye/人工智能与机器人.png" alt="" />
         </li>
         <li>
           <img src="@/assets/img/shouye/网络新媒体运营.png" alt="" />
         </li>
+        <li>
+          <img src="@/assets/img/shouye/新能源汽车.png" alt="" />
+        </li>
+        <li>
+          <img src="@/assets/img/shouye/互联网金融与管理.png" alt="" />
+        </li>
+       
+        
         
         <!-- 添加点击显示图片效果 !-->
          <div ref="lefts" class="left_img">
@@ -46,7 +51,7 @@ export default {
   data(){
     return {
       style:'height:auto',
-      styles:'height:5.7rem'
+      styles:'height: 6.87rem;'
     }
   },
   methods:{
@@ -69,7 +74,7 @@ export default {
 .major {
   width: 3.55rem;
   // height: 6.4rem;
-  height: 5.7rem;
+  height: 6.87rem;
   background: #fff;
   border-radius: 0.1rem;
   overflow: hidden;
