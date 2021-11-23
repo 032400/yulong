@@ -13,6 +13,9 @@
           <div class="age-title">
             <p class="junior">初中生15岁+</p>
           </div>
+          <div class="age-title-img">
+            <img src="@/assets/img/航空学院/国际航空服务与管理_09.jpg" alt="" />
+          </div>
         </li>
         </router-link>
         <router-link to="/hangkong/gaozhongsheng">
@@ -22,6 +25,9 @@
           </div>
           <div class="age-title">
             <p class="senior">高中生18岁+</p>
+          </div>
+          <div class="age-title-img">
+            <img src="@/assets/img/航空学院/国际航空服务与管理_10.jpg" alt="" />
           </div>
         </li>
         </router-link>
@@ -35,6 +41,9 @@
           <div class="age-title">
             <p class="cube">三校生18岁+</p>
           </div>
+          <div class="age-title-img">
+            <img src="@/assets/img/航空学院/国际航空服务与管理_18.jpg" alt="" />
+          </div>
         </li>
         </router-link>
         <router-link to="/hangkong/yikaosheng">
@@ -45,15 +54,12 @@
           <div class="age-title">
             <p class="art">艺考生18岁+</p>
           </div>
+          <div class="age-title-img">
+            <img src="@/assets/img/航空学院/国际航空服务与管理_20.jpg" alt="" />
+          </div>
         </li>
         </router-link>
       </ul>
-    </div>
-    <div class="information_con_btm">
-      <div class="btm_border">
-        <span>查看更多资讯</span>
-        <img src="@/assets/img/公共/sou.png" alt="" />
-      </div>
     </div>
   </div>
 </template>
@@ -85,7 +91,6 @@ export default {};
       justify-content: space-between;
       margin-bottom: 0;
       li {
-        height: 1.3rem;
         width: 1.1rem;
         .age-img {
           width: 1rem;
@@ -116,46 +121,14 @@ export default {};
             color: #3399cc;
           }
         }
+        .age-title-img {
+          width: 1rem;
+          margin: .1rem auto;
+          img {
+            width: 100%;
+          }
+        }
       }
-    }
-  }
-  .information_con_btm {
-      height: .44rem;
-      width: 3.32rem;
-      margin: auto;
-    .btm_border {
-      width: 100%;
-      height: 100%;
-      border-radius: 5px;
-      border: solid 1px #1776af;
-      text-align: center;
-      line-height: 0.44rem;
-      span {
-        font-size: 0.16rem;
-        color: #1776af;
-        font-family: PingFang-SC-Medium;
-        font-weight: normal;
-        font-stretch: normal;
-        letter-spacing: 0px;
-      }
-      img {
-        width: 0.16rem;
-        height: 0.16rem;
-        margin-left: 0.04rem;
-        vertical-align: middle;
-        margin-bottom: 0.02rem;
-      }
-    }
-    :hover {
-      background: #3f555f;
-    }
-    :hover > span {
-      color: #ffffff;
-      font-size: 0.16rem;
-      font-family: PingFang-SC-Medium;
-      font-weight: normal;
-      font-stretch: normal;
-      letter-spacing: 0px;
     }
   }
 }
