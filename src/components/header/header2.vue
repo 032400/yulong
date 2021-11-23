@@ -72,21 +72,21 @@ export default {
       isloading: false,
       isShow: false,
       lick: false,
-      transform:'transform:rotate(180deg)'
+      // transform:'transform:rotate(180deg)'
     };
   },
   methods: {
     click() {
-      // this.isShow = !this.isShow;
+      this.isShow = !this.isShow;
       // console.log(this.isShow);
-       if (this.isShow == true) {
-        this.isShow = false;
+      //  if (this.isShow == true) {
+      //   this.isShow = false;
         // this.$refs.icon.style={
         //   transform:this.transform
         // }
-      } else {
-        this.isShow = true;
-      }
+      // } else {
+      //   this.isShow = true;
+      // }
       
     },
     clicks() {
