@@ -40,13 +40,13 @@ export default {
                 }
             ],
             leftimg:require("@/assets/img/公共/首页改1_10.gif"),
-            rightimg:require("@/assets/img/航空学院/未标题-1_03.png"),
+            rightimg:require("@/assets/img/公共/未标题-1_03.gif"),
         }
     },
     methods:{
         leftSide(){
             this.leftimg = require("@/assets/img/航空学院/题-1_03.png")
-            this.rightimg = require("@/assets/img/航空学院/未标题-1_03.png")
+            this.rightimg = require("@/assets/img/公共/未标题-1_03.gif")
         },
         rightSide(){
             this.rightimg = require("@/assets/img/航空学院/未标题-1_03.png")

@@ -1,13 +1,13 @@
 <template>
-    <div class="signup_warp">
-        <div class="avi_nav">
-            <p>
-                <span>当前位置：</span>
-                <router-link to='/'>  <span id="shou">首页 > </span></router-link>
-                <span>在线报名</span>
-            </p>
-        </div>
-         <div class="information_warp">
+  <div class="signup_warp">
+    <div class="avi_nav">
+      <p>
+        <span>当前位置：</span>
+        <router-link to="/"> <span id="shou">首页 > </span></router-link>
+        <span>疑难解答</span>
+      </p>
+    </div>
+     <div class="information_warp">
         <div class="information_con">
             <div class="information_con_top">
                 <img src="@/assets/img/公共/疑难解答_03.jpg" alt="">
@@ -60,16 +60,16 @@
             </div>
         </div>
     </div>
-    </div>
+  </div>
 </template>
 <script>
-import Information from '@/views/homes/hottopics/Information.vue'
+import Information from "@/views/homes/hottopics/Information.vue";
 
 export default {
-    components:{
-        Information
-    }
-}
+  components: {
+    Information,
+  },
+};
 </script>
 <style lang="scss" scoped>
 .signup_warp {
@@ -79,7 +79,7 @@ export default {
     width: 3.75rem;
     height: 0.44rem;
     background: #fff;
-    margin-bottom:.1rem ;
+    margin-bottom: 0.1rem;
     p {
       line-height: 0.44rem;
       margin-left: 0.2rem;
@@ -88,10 +88,106 @@ export default {
       span:nth-child(3) {
         margin: 0 0.03rem;
       }
-      #shou{
-          color: #888;
+      #shou {
+        color: #888;
       }
     }
   }
 }
+ .information_warp{
+        width: 100%;
+        height: auto;
+        min-width: 3.56rem;
+        background: #eaeaea;
+        .information_con{
+            width: 3.55rem;
+            height: 100%;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: .05rem;
+            .information_con_top{
+                width: 100%;
+                height: .55rem;
+                padding-top: .02rem;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .information_con_cen{
+                width: 100%;
+                height: 100%;
+                .btm_list{
+                    width: 3.56rem;
+                    height: 100%;
+                    li{
+                        padding:.2rem .05rem 0 .07rem;
+                        border-bottom: 1px solid #ccc;
+                        overflow: hidden;
+                        a{
+                            float: left;
+                            font-family: PingFang-SC-Medium;
+                            font-size: .15rem;
+                            font-weight: normal;
+                            font-stretch: normal;
+                            letter-spacing: 0px;
+                            color: #333333;
+                            width: 2.41rem;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 1;
+                            overflow: hidden;
+                        }
+                        p{
+                            float: right;
+                            font-family: PingFang-SC-Medium;
+                            font-size: .14rem;
+                            font-weight: normal;
+                            font-stretch: normal;
+                            letter-spacing: 0px;
+                            color: #999999;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+            .information_con_btm{
+                padding: .15rem .12rem .25rem .12rem;
+                .btm_border{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 5px;
+                    border: solid 1px #1776af;
+                    text-align: center;
+                    line-height: .42rem;
+                    span{
+                        font-size: .16rem;
+                        color: #1776af;
+                        font-family: PingFang-SC-Medium;
+                        font-weight: normal; 
+                        font-stretch: normal;
+                        letter-spacing: 0px;
+                    }
+                    img{
+                        width: 0.16rem;
+                        height: 0.16rem;
+                        margin-left: .04rem; 
+                        vertical-align: middle;
+                        margin-bottom: .02rem;   
+                    }
+                }
+                :hover{
+                    background: #3f555f;
+                }
+                :hover>span{
+                    color: #ffffff;
+                    font-size: .16rem;
+                    font-family: PingFang-SC-Medium;
+                    font-weight: normal; 
+                    font-stretch: normal;
+                    letter-spacing: 0px;
+                }
+            }
+        }
+    }
 </style>

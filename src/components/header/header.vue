@@ -1,37 +1,20 @@
 <template>
-  <div class="wrap actt">
+  <div class="wrap ">
     <div class="inp">
       <span class="spn">欢迎来到紧缺应用技术技能型人才职业教育报考平台</span>
+      <header2 style="top:.3rem" />
     </div>
-    <div class="logo_body">
-        <router-link to="/" tag="div" class="logo">
-          <img src="@/assets/img/公共/首页改1_03.gif" alt="" />
-        </router-link>
-      <div class="menu">
-        <img @click="btn()" src="@/assets/img/公共/首页改1_05.gif" alt="" />
-        <div class="txt" :class="{'act':isloading}">
-          <router-link to="/" tag="p">首页</router-link>
-          <router-link to="/Service" tag="p">VIP地勤专业</router-link>
-          <router-link to="/hangkong" tag="p">航空学院</router-link>
-          <router-link to="/hangkong/chuzhongsheng" tag="p">初中生</router-link>
-          <router-link to="/hangkong/gaozhongsheng" tag="p">高中生</router-link>
-          <router-link to="/hangkong/sanxiaosheng" tag="p">三校生</router-link>
-          <router-link to="/hangkong/yikaosheng" tag="p">艺考生</router-link>
-          <router-link to="/youlun" tag="p">游轮海城专业</router-link>
-          <router-link to="/kongcheng" tag="p">空乘专业</router-link>
-          <router-link to="/zhaoshengyaoqiu" tag="p">招生要求</router-link>
-          <router-link to="/gaotie" tag="p">高铁乘务专业</router-link>
-          <router-link to="/ynjd" tag="p">疑难解答</router-link>
-        </div>
-        <div class="quan" v-if="isloading" @click="btn()"></div>
-      </div>
+    
     </div>
-  </div>
+  
 </template>
 
 <script>
-
+import header2 from '@/components/header/header2.vue'
 export default {
+  components:{
+    header2
+  },
  data(){
      return {
          isloading:false,
@@ -72,7 +55,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.actt{
+
+.wrap{
     position: fixed;
     left: 50%;
     top: 0;
