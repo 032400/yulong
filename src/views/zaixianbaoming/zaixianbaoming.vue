@@ -585,7 +585,7 @@ export default {
       font-size: 0.12rem;
   }
   ::v-deep .ant-select-selection__placeholder{
-      padding: 0  0 0 0.2rem;
+      padding: 0  0 0 0.14rem;
       font-size: 0.12rem;
       height: 0.29rem;
    
