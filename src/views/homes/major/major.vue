@@ -11,6 +11,9 @@
             </router-link>
         </li>
         <li>
+          <img src="@/assets/img/shouye/互联网金融与管理.png" alt="" />
+        </li>
+        <li>
           <img src="@/assets/img/shouye/人工智能与机器人.png" alt="" />
         </li>
         <li>
@@ -19,9 +22,7 @@
         <li>
           <img src="@/assets/img/shouye/新能源汽车.png" alt="" />
         </li>
-        <li>
-          <img src="@/assets/img/shouye/互联网金融与管理.png" alt="" />
-        </li>
+        
        
         
         
@@ -30,16 +31,24 @@
           <img  src="@/assets/img/shouye/首页0_03_04.jpg" @click="click" alt="" />
         </div>
         <li>
-          <img src="@/assets/img/shouye/地勤.png"  alt="" />
+          <router-link to="/Service">
+            <img src="@/assets/img/shouye/地勤.png"  alt="" />
+          </router-link>
         </li>
         <li>
-          <img src="@/assets/img/shouye/高铁-2.png" alt="" />
+          <router-link to="/gaotie">
+            <img src="@/assets/img/shouye/高铁-2.png"  alt="" />
+          </router-link>
         </li>
         <li>
-          <img src="@/assets/img/shouye/航空.png" alt="" />
+          <router-link to="/kongcheng">
+            <img src="@/assets/img/shouye/航空.png"  alt="" />
+          </router-link>
         </li>
         <li>
-          <img src="@/assets/img/shouye/游轮.png" alt="" />
+          <router-link to="/youlun">
+            <img src="@/assets/img/shouye/游轮.png"  alt="" />
+          </router-link>
         </li>
         <div ref="right" class="right_img">
           <img  src="@/assets/img/shouye/首页0_03_04.jpg" @click="clicks()" alt="" />
