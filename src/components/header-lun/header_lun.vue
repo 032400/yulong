@@ -3,7 +3,9 @@
     <div class="swiper-container" id="swiperOne">
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="(item, index) in img" :key="index">
-          <img :src="item.pic" />
+          <router-link :to="item.name">
+            <img :src="item.pic" />
+          </router-link>
         </div>
       </div>
       <!-- 如果需要分页器 -->
@@ -34,9 +36,15 @@ export default {
   data(){
     return {
       img: [
-        { pic: require("@/assets/img/shouye/首页.png") },
-        { pic: require("@/assets/img/shouye/首页轮播1.png") },
-        { pic: require("@/assets/img/shouye/首页轮播2.png") },
+        { pic: require("@/assets/img/shouye/首页.png"),
+          name:'/hangkong',
+        },
+        { pic: require("@/assets/img/shouye/首页轮播1.png"),
+          name:'/gaotie',
+        },
+        { pic: require("@/assets/img/shouye/首页轮播2.png"),
+        name:'/youlun'
+        },
       ],
       leftimg:require("@/assets/img/公共/首页改1_10.gif"),
       rightimg:require("@/assets/img/公共/未标题-1_03.gif")

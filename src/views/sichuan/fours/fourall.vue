@@ -95,9 +95,9 @@
         </li>
       </ul>
       <div class="information_con_btm">
-        <div class="btm_border">
+        <div class="btm_border" @click="set()">
           <span>查看更多资讯</span>
-          <img src="@/assets/img/公共/sou.png" alt="" />
+          <img :src="setimg" alt="" />
         </div>
       </div>
     </div>
@@ -133,9 +133,9 @@
         </li>
       </ul>
       <div class="information_con_btm">
-        <div class="btm_border">
+        <div class="btm_border" @click="set1()">
           <span>查看更多资讯</span>
-          <img src="@/assets/img/公共/sou.png" alt="" />
+          <img :src="setimg1" alt="" />
         </div>
       </div>
     </div>
@@ -154,7 +154,21 @@ export default {
   components:{
     indexT,
     index
-  }
+  },
+   data() {
+    return {
+      setimg:require("@/assets/img/公共/sou.png"),
+      setimg1:require("@/assets/img/公共/sou.png"),
+    };
+  },
+  methods: {
+    set(){
+      this.setimg=require("@/assets/img/公共/放大镜白色.png");
+    },
+    set1(){
+      this.setimg1=require("@/assets/img/公共/放大镜白色.png");
+    }
+  },
 };
 </script>
 <style lang="scss" scoped>

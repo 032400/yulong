@@ -164,7 +164,7 @@ export default {
 
     img {
       width: 0.3rem;
-      height: 0.22rem;
+      height: 0.3rem;
     }
     .txt {
       width: 1.5rem;

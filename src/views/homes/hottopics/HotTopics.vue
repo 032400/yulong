@@ -80,7 +80,6 @@ em,i{
         .hot_con_top{
             width: 100%;
             height: .55rem;
-            padding-top: .02rem;
             img{
                 width: 100%;
                 height: 100%;

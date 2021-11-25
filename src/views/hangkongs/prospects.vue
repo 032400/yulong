@@ -88,9 +88,9 @@
                       <p><span>4</span>、分开开开飞机抗裂砂浆low扣痘痘是'DNF酒精发酵按键打开的渴望快递'</p>
                   </li>
                   <div data-v-38b7d4ae="" class="information_con_btm">
-                      <div data-v-38b7d4ae="" class="btm_border">
+                      <div data-v-38b7d4ae="" class="btm_border" @click="set()">
                           <span data-v-38b7d4ae="">查看更多通告</span>
-                          <img data-v-38b7d4ae="" src="@/assets/img/公共/sou.png" alt="">
+                          <img data-v-38b7d4ae="" :src="setimg" alt="">
                     </div>
                   </div>
               </ul>
@@ -109,9 +109,9 @@
                 </ul>           
             </div>
             <div class="information_con_btm">
-                <div class="btm_border">
+                <div class="btm_border" @click="set1()">
                     <span>点击查看更多</span>
-                    <img src="@/assets/img/公共/sou.png" alt="">
+                    <img :src="setimg1" alt="">
                 </div>
             </div>
       </div>
@@ -158,8 +158,18 @@ export default {
                 '全面建成小康社会的重要举措你们慢慢',
                 '摩根士丹利重磅报告:中国经济措施'       
             ],
+            setimg:require("@/assets/img/公共/sou.png"),
+            setimg1:require("@/assets/img/公共/sou.png"),
         }
+    },
+     methods: {
+    set(){
+      this.setimg=require("@/assets/img/公共/放大镜白色.png");
+    },
+     set1(){
+      this.setimg1=require("@/assets/img/公共/放大镜白色.png");
     }
+  },
 }
 </script>
 

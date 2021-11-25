@@ -64,14 +64,33 @@
                 </ul>
             </div>
             <div class="information_con_btm">
-                <div class="btm_border">
+                <div class="btm_border" @click="set()">
                     <span>查看更多资讯</span>
-                    <img src="@/assets/img/公共/sou.png" alt="">
+                    <img :src="setimg"  alt="">
                 </div>
             </div>
         </div>
     </div>
 </template>
+<script>
+
+
+export default {
+  data(){
+    return {
+      setimg:require("@/assets/img/公共/sou.png"),
+    };
+  },
+  
+  methods:{
+    set(){
+        this.setimg=require("@/assets/img/公共/放大镜白色.png");
+    },
+   
+  }
+}
+</script>
+
 <style lang="scss" scoped>
     .information_warp{
         width: 100%;
@@ -87,7 +106,7 @@
             .information_con_top{
                 width: 100%;
                 height: .55rem;
-                padding-top: .02rem;
+                
                 img{
                     width: 100%;
                     height: 100%;

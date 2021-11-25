@@ -5,7 +5,15 @@
             <img src="@/assets/img/三校生/三校生.png" alt="">
         </div>
     </div>
-      <page />
+     <div class="title_warp">
+      <p>
+        <router-link to="/" tag="span">当前位置：首页</router-link>
+        <router-link to="/hangkong" tag="span">>航空学院</router-link>
+        <router-link to="/chuzhongsheng">
+            <span   style="color: #999;">>三校生</span>
+        </router-link>
+      </p >
+    </div>
     <div class="what">
       <div class="what-img-one">
         <img src="@/assets/img/三校生/什么是三校生_03.jpg" alt="" />
@@ -73,6 +81,33 @@ export default {
 }
 </script>
 <style lang='scss'  scoped >
+.title_warp{
+width:100%;
+padding:0 .2rem;
+margin: .15rem 0;
+box-sizing:border-box;
+  p{
+    width: 3.75rem;
+    margin: 0 auto;
+    span {
+        margin-left: 0.2rem;
+        font-size: .14rem;
+        font-weight: normal;
+        font-stretch: normal;
+        line-height: .07rem;
+        letter-spacing: 0px;
+        color: #888888;
+    }
+    .hang {
+        margin-left: 0.05rem;
+        font-family: PingFang-SC-Medium;
+        font-size: .14rem;
+        font-weight: normal;
+        letter-spacing: 0px;
+        color: #b0b0b0;
+        }
+    }
+}
  .lun_warp{
         width: 100%;
         height: 1.50rem;

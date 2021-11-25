@@ -52,10 +52,10 @@
                     </li>
                 </ul>
             </div>
-            <div class="information_con_btm">
+            <div class="information_con_btm" @click="set()">
                 <div class="btm_border">
                     <span>查看更多资讯</span>
-                    <img src="@/assets/img/公共/sou.png" alt="">
+                    <img :src="setimg" alt="">
                 </div>
             </div>
         </div>
@@ -68,6 +68,16 @@ import Information from "@/views/homes/hottopics/Information.vue";
 export default {
   components: {
     Information,
+  },
+   data() {
+    return {
+      setimg:require("@/assets/img/公共/sou.png"),
+    };
+  },
+  methods: {
+    set(){
+      this.setimg=require("@/assets/img/公共/放大镜白色.png");
+    }
   },
 };
 </script>
