@@ -306,7 +306,7 @@ box-sizing:border-box;
   .kc-text {
     width: 3.3rem;
     height: 1.62rem;
-    box-sizing: border-box;
+    // box-sizing: border-box;
     border-radius: 0.15rem;
     border: solid 0.01rem #999999;
     margin: 0 auto;
@@ -314,8 +314,8 @@ box-sizing:border-box;
     padding: 0 0.1rem;
     text-indent: 0.12rem;
     line-height: 0.23rem;
-    font-weight: 900;
-    letter-spacing: 0px;
+    // font-weight: 900;
+    // letter-spacing: 0px;
   }
   .information_con_btm {
     padding: 0.15rem 0.12rem 0.25rem 0.12rem;
@@ -438,7 +438,6 @@ box-sizing:border-box;
   }
   .kczhiwei-text {
     width: 100%;
-    height: 3.2rem;
     background: url("~@/assets/img/高中生/高中生_03.jpg") no-repeat;
     background-size: 100% 100%;
     margin: 0.3rem 0 0 0;
@@ -446,7 +445,7 @@ box-sizing:border-box;
     div {
       padding: 0.13rem 0.2rem 0 1.4rem;
       // line-height: .18rem;
-      font-weight: 900;
+      // font-weight: 900;
     }
   }
 }
