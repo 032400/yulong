@@ -30,7 +30,7 @@
           <img  src="@/assets/img/shouye/首页0_03_04.jpg" @click="click" alt="" />
         </div>
         <li>
-          <img src="@/assets/img/shouye/地勤.png" @click="clicks()" alt="" />
+          <img src="@/assets/img/shouye/地勤.png"  alt="" />
         </li>
         <li>
           <img src="@/assets/img/shouye/高铁-2.png" alt="" />
@@ -41,7 +41,9 @@
         <li>
           <img src="@/assets/img/shouye/游轮.png" alt="" />
         </li>
-       
+        <div ref="right" class="right_img">
+          <img  src="@/assets/img/shouye/首页0_03_04.jpg" @click="clicks()" alt="" />
+        </div>
       </ul>
     </div>
   </div>
@@ -51,19 +53,19 @@ export default {
   data(){
     return {
       style:'height:auto',
-      styles:'height: 6.87rem;'
+      styles:'height: 6.82rem;'
     }
   },
   methods:{
     click(){
-      // this.$refs.lefts.style.display='none'
-      // this.$refs.lefts.style.margin='0'
+      this.$refs.lefts.style.display='none'
+      this.$refs.lefts.style.margin='0'
       this.$refs.major_header.style = this.style
       // console.log(this.$refs.major_header.style.height);
     },
     clicks(){
-        // this.$refs.lefts.style.display='block'
-        // this.$refs.lefts.style.margin='0.18rem'
+        this.$refs.lefts.style.display='block'
+        this.$refs.lefts.style.margin='0.18rem'
         this.$refs.major_header.style = this.styles
       // console.log(this.$refs.major_header.style.height);
     }
@@ -74,7 +76,7 @@ export default {
 .major {
   width: 3.55rem;
   // height: 6.4rem;
-  height: 6.87rem;
+  height: 6.82rem;
   background: #fff;
   border-radius: 0.1rem;
   overflow: hidden;
@@ -105,6 +107,14 @@ export default {
           text-align: center;
           img{
             width: .24rem;
+          }
+      }
+      .right_img{
+        margin: .18rem;
+          text-align: center;
+          img{
+            width: .24rem;
+            transform: rotate(180deg);
           }
       }
     }
