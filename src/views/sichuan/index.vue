@@ -27,7 +27,7 @@
             ></a-input>
           </div>
         </a-form-model-item>
-        <a-form-model-item ref="number" label="" prop="name">
+        <a-form-model-item ref="number" label="" prop="region">
           <div class="aviation_text_input">
             <span class="span"><em>*</em>手机号码</span>
             <a-input
@@ -60,7 +60,7 @@
           </div>
         </a-form-model-item>
 
-        <a-form-model-item ref="region" label="" style="margin: 0" prop="region">
+        <a-form-model-item ref="region" label="" style="margin: 0" prop="education">
           <div class="aviation_text_cascader">
             <span class="span"><em>*</em>所选课程</span>
             <div class="from_three">
@@ -96,7 +96,7 @@
           </div>
         </a-form-model-item>
 
-        <a-form-model-item label="" style="margin: 0" ref="education" prop="education">
+        <a-form-model-item label="" style="margin: 0" ref="id_number" prop="id_number">
           <div class="aviation_text_cascader">
             <span class="span"><em>*</em>当前学历</span>
             <div class="from_three">
@@ -132,7 +132,7 @@
           </div>
         </a-form-model-item>
 
-        <a-form-model-item label="" prop="id_number" ref="id_number">
+        <a-form-model-item label="" prop="type" ref="type">
           <div class="aviation_text_input">
             <span class="span"><em>*</em>身份证号</span>
             <a-input
@@ -222,65 +222,65 @@ export default {
         name: [
           {
             required: true,
-            message: "Please input Activity name",
+            message: "请填写姓名",
             trigger: "blur",
           },
           {
             min: 3,
             max: 5,
-            message: "Length should be 3 to 5",
+            message: "请填写正确的姓名",
             trigger: "blur",
           },
         ],
         region: [
           {
             required: true,
-            message: "Please select Activity zone",
+            message: "请填写手机号",
             trigger: "blur",
           },
           {
             min: 3,
             max: 5,
-            message: "Length should be 3 to 5",
+            message: "请填写正确的手机号",
             trigger: "blur",
           },
         ],
         date1: [
           {
             required: true,
-            message: "Length should be 3 to 5",
+            message: "请选择出生年月",
             trigger: "blur",
           },
           {
             min: 3,
             max: 5,
-            message: "Length should be 3 to 5",
+            message: "请选择出生年月",
             trigger: "blur",
           },
         ],
         education: [
           {
             required: true,
-            message: "Please input Activity name",
+            message: "请选择课程",
             trigger: "blur",
           },
           {
             min: 3,
             max: 5,
-            message: "Length should be 3 to 5",
+            message: "请选择课程",
             trigger: "blur",
           },
         ],
         id_number: [
           {
             required: true,
-            message: "Please input Activity name",
+            message: "请选择学历",
             trigger: "blur",
           },
           {
             min: 3,
             max: 5,
-            message: "Length should be 3 to 5",
+            message: "请选择学历",
             trigger: "blur",
           },
         ],
@@ -288,14 +288,14 @@ export default {
           {
             type: "array",
             required: true,
-            message: "Please select at least one activity type",
+            message: "请填写身份证号",
             trigger: "change",
           },
         ],
         desc: [
           {
             required: true,
-            message: "Please input activity form",
+            message: "请填写您的疑问",
             trigger: "blur",
           },
         ],

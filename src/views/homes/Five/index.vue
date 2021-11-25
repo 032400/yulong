@@ -217,78 +217,78 @@ export default {
         names: [
           {
             required: true,
-            message: "Please input Activity name",
+            message: "请填写姓名",
             trigger: "blur",
           },
           {
             min: 3,
             max: 5,
-            message: "Length should be 3 to 5",
+            message: "请填写正确的姓名",
             trigger: "blur",
           },
         ],
         numbers: [
           {
             required: true,
-            message: "Please input Activity name",
+            message: "请填写手机号",
             trigger: "blur",
           },
           {
-            min: 3,
-            max: 5,
-            message: "Length should be 3 to 5",
+            min: 11,
+            max: 11,
+            message: "请填写正确的手机号",
             trigger: "blur",
           },
         ],
         regions: [
           {
             required: true,
-            message: "Please select Activity zone",
+            message: "请选择课程",
             trigger: "blur",
           },
           {
             min: 3,
             max: 5,
-            message: "Length should be 3 to 5",
+            message: "请选择课程",
             trigger: "blur",
           },
         ],
         dates: [
           {
             required: true,
-            message: "Length should be 3 to 5",
+            message: "请选择出生年月",
             trigger: "blur",
           },
           {
             min: 3,
             max: 5,
-            message: "Length should be 3 to 5",
+            message: "请选择出生年月",
             trigger: "blur",
           },
         ],
         educations: [
           {
             required: true,
-            message: "Please input Activity name",
+            message: "请选择学历",
             trigger: "blur",
           },
           {
             min: 3,
             max: 5,
-            message: "Length should be 3 to 5",
+            message: "请选择学历",
             trigger: "blur",
           },
         ],
         id_numbers: [
           {
             required: true,
-            message: "Please input Activity name",
+            message: "请填写身份证号",
             trigger: "blur",
           },
           {
             min: 3,
             max: 5,
-            message: "Length should be 3 to 5",
+            message: "请填写正确的身份证号",
             trigger: "blur",
           },
         ],
@@ -296,20 +296,20 @@ export default {
           {
             type: "array",
             required: true,
-            message: "Please select at least one activity type",
+            message: "请输入您的疑问",
             trigger: "change",
           },
           {
             min: 3,
             max: 5,
-            message: "Length should be 3 to 5",
+            message: "请输入您的疑问",
             trigger: "blur",
           },
         ],
         descs: [
           {
             required: true,
-            message: "Please input activity form",
+            message: "请输入您的疑问",
             trigger: "blur",
           },
 
