@@ -367,6 +367,7 @@ export default {
     a {
       display: flex;
       border: 0;
+    height: 0.55rem;
       img {
         width: 100%;
       }

@@ -269,16 +269,11 @@
             </a-form-model>
           </div>
         </div>
-        <div class="go">
-          <p>上一篇：航空方面有哪些专业？</p>
-          <p>下一篇：航空专业就业前景如何？</p>
-        </div>
       </div>
     </div>
-    <div class="cdsa">
+     <div class="cdsa">
       <aviation />
-      <div class="click">更多院校></div>
-    </div>
+    </div> 
     <div class="read">
       <div class="read-top">
         <img src="@/assets/img/航空专业/推荐阅读_03.jpg" alt="" />
@@ -793,13 +788,6 @@ export default {
       padding-left: 0.25rem;
       padding-bottom: 0.05rem;
     }
-    .go {
-      margin-left: 0.16rem;
-      p {
-        margin-bottom: 0.15rem;
-        color: rgb(51, 51, 51);
-      }
-    }
   }
 }
 .cdsa {
@@ -808,11 +796,7 @@ export default {
   margin: 0 auto 0.15rem;
   border-radius: 0.05rem;
   box-shadow: 0 0 8px #ccc;
-}
-.click {
-  text-align: center;
-  color: rgb(153, 153, 153);
-  margin: 0.18rem 0;
+  background: #fff;
 }
 .read {
   width: 3.55rem;

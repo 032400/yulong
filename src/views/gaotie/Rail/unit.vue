@@ -56,7 +56,6 @@ export default {
       li {
         width: 1.63rem;
         height: 1.05rem;
-        background-color: #00ffff;
         border: solid 1px #c5c5c5;
         margin-top: 0.1rem;
         img {
