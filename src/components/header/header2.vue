@@ -106,11 +106,10 @@ export default {
 
 <style lang="scss" scoped>
 ::v-deep .active {
-  transition: all 0.3s linear;
   transform: rotate(180deg);
+  transform-origin: 65% 90%;
 }
 ::v-deep .tive {
-  transition: all 0.3s linear;
   transform: rotate(0deg);
 }
 .actt {

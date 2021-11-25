@@ -14,7 +14,7 @@
             <p class="junior">初中生15岁+</p>
           </div>
           <div class="age-title-img">
-            <img src="@/assets/img/航空学院/国际航空服务与管理_09.jpg" alt="" />
+            <img src="@/assets/img/航空学院/国际航空服务与管理_03.jpg" alt="" />
           </div>
         </li>
         </router-link>
@@ -27,7 +27,7 @@
             <p class="senior">高中生18岁+</p>
           </div>
           <div class="age-title-img">
-            <img src="@/assets/img/航空学院/国际航空服务与管理_10.jpg" alt="" />
+            <img src="@/assets/img/航空学院/国际航空服务与管理_05.png" alt="" />
           </div>
         </li>
         </router-link>
@@ -42,7 +42,7 @@
             <p class="cube">三校生18岁+</p>
           </div>
           <div class="age-title-img">
-            <img src="@/assets/img/航空学院/国际航空服务与管理_18.jpg" alt="" />
+            <img src="@/assets/img/航空学院/国际航空服务与管理_10.jpg" alt="" />
           </div>
         </li>
         </router-link>
@@ -55,7 +55,7 @@
             <p class="art">艺考生18岁+</p>
           </div>
           <div class="age-title-img">
-            <img src="@/assets/img/航空学院/国际航空服务与管理_20.jpg" alt="" />
+            <img src="@/assets/img/航空学院/国际航空服务与管理_12.jpg" alt="" />
           </div>
         </li>
         </router-link>
