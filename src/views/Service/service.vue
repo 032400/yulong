@@ -305,7 +305,6 @@ export default {
           width: 1.62rem;
           height: 1.05rem;
           margin-bottom: 0.12rem;
-          background: aqua;
         }
       }
     }

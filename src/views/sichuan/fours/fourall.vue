@@ -47,9 +47,6 @@
       <div class="introduction-header">
         <img src="@/assets/img/四川外国语大学/新闻动态_03.jpg" alt="" />
       </div>
-      <div class="lookmore">
-        <span>查看更多></span>
-      </div>
       <div class="news-text">
         <ul>
           <li>· 四川外国语大学留学预科有哪些专业?</li>
@@ -59,6 +56,12 @@
           <li>· 四川外国语大学意大利留学预科报考条件?</li>
           <li>· 四川外国语大学小语种留学预科班怎么样?</li>
         </ul>
+      </div>
+      <div class="information_con_btm">
+        <div class="btm_border">
+          <span>点击查看更多</span>
+          <img src="@/assets/img/公共/sou.png" alt="" />
+        </div>
       </div>
     </div>
     <index/>
@@ -280,21 +283,15 @@ export default {
     border-radius: 0.05rem;
     overflow: hidden;
     margin-top: 0.1rem;
-    position: relative;
+    padding-bottom: .1rem;
     .introduction-header {
       width: 100%;
       img {
         width: 100%;
       }
     }
-    .lookmore {
-      position: absolute;
-      top: 0.17rem;
-      right: 0.1rem;
-      color: #888;
-    }
     .news-text {
-      padding: .2rem 0.1rem .13rem;
+      padding: 0 0.1rem .13rem;
       color: #888;
       ul {
         margin-bottom: 0;
@@ -302,6 +299,44 @@ export default {
           line-height: 0.25rem;
         }
       }
+      
+    .information_con_btm {
+      padding: 0.15rem 0.12rem 0.25rem 0.12rem;
+      .btm_border {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        border: solid 1px #1776af;
+        text-align: center;
+        line-height: 0.42rem;
+        span {
+          font-size: 0.16rem;
+          color: #1776af;
+          font-family: PingFang-SC-Medium;
+          font-weight: normal;
+          font-stretch: normal;
+          letter-spacing: 0px;
+        }
+        img {
+          width: 0.16rem;
+          height: 0.16rem;
+          margin-left: 0.04rem;
+          vertical-align: middle;
+          margin-bottom: 0.02rem;
+        }
+      }
+      :hover {
+        background: #3f555f;
+      }
+      :hover > span {
+        color: #ffffff;
+        font-size: 0.16rem;
+        font-family: PingFang-SC-Medium;
+        font-weight: normal;
+        font-stretch: normal;
+        letter-spacing: 0px;
+      }
+    }
     }
   }
   .all-environment {
