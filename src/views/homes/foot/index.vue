@@ -30,6 +30,7 @@
           <span>南京市航空大学</span>
         </div>
       </div>
+
     </div>
   </div>
 </template>
@@ -60,6 +61,7 @@ export default {
     }
   }
   .sch-content {
+    padding-bottom: .1rem;
     width: 100%;
     min-height: 1rem;
     background: #fff;
@@ -88,6 +90,7 @@ export default {
       }
     }
   }
+
 }
 
 </style>

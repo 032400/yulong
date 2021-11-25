@@ -41,22 +41,33 @@
                 <p class="box-text">现场信息确认</p>
             </div>
         </div>
-        <div class="information_con_btm">
+        <div class="information_con_btm" @click="set()">
             <div class="btm_border">
                 <span>点击查看详情</span>
-                <img src="@/assets/img/公共/sou.png" alt="">
+                <img :src="setimg" alt="">
             </div>
         </div>
         <img src="@/assets/img/招生要求/招生要求_42.jpg" class="tu1">
         <img src="@/assets/img/招生要求/招生要求_42.jpg" class="tu2">
-        <img src="@/assets/img/招生要求/招生要求_49.jpg" class="tu3">
-        <img src="@/assets/img/招生要求/招生要求_42.jpg" class="tu4">
-        <img src="@/assets/img/招生要求/招生要求_42.jpg" class="tu5">
+        <img src="@/assets/img/招生要求/招生要求_49.jpg" style="height: 0.2rem;
+    width: 0.15rem;" class="tu3">
+        <img src="@/assets/img/招生要求/招生要求_56.jpg" class="tu4">
+        <img src="@/assets/img/招生要求/招生要求_56.jpg" class="tu5">
     </div>
 </template>
 
 <script type="text/javascript">
  export default {
+      data() {
+    return {
+      setimg:require("@/assets/img/公共/sou.png"),
+    };
+  },
+  methods: {
+    set(){
+      this.setimg=require("@/assets/img/公共/放大镜白色.png");
+    }
+  },
 }
 </script>
 
@@ -87,7 +98,7 @@
             .box-img{
                 width: .50rem;
                 height: .50rem;
-                padding: .15rem 0 0 0;
+                padding: .2rem 0 0 0;
                 margin: 0 auto;
                 img{
                     width: 100%;
@@ -96,7 +107,7 @@
             }
             .box-text{
                 text-align: center;
-                padding: .1rem 0 0 0;
+                padding: .05rem 0 0 0;
                 font-size: .11rem;
             }
         }
@@ -154,18 +165,18 @@
     }
     .tu3{
         position: absolute;
-        left: 2.8rem;
+        left: 2.9rem;
         top: 1.5rem;
     }
     .tu4{
         position: absolute;
         left: 2.3rem;
-        top: 1.8rem;
+        top: 1.85rem;
     }
     .tu5{
         position: absolute;
         left: 1.04rem;
-        top: 1.8rem;
+        top: 1.85rem;
     }
 }
 </style>

@@ -5,7 +5,15 @@
         <img src="@/assets/img/高中生/高中生.png" alt="" />
       </div>
     </div>
-    <page />
+    <div class="title_warp">
+      <p>
+        <router-link to="/" tag="span">当前位置：首页</router-link>
+        <router-link to="/hangkong" tag="span">>航空学院</router-link>
+        <router-link to="/chuzhongsheng">
+            <span   style="color: #999;">>高中生</span>
+        </router-link>
+      </p >
+    </div>
     <div class="major">
       <div class="mar-top">
         <img src="@/assets/img/高中生/当代高中生出路_03.jpg" alt="" />
@@ -57,9 +65,9 @@
         空乘就是大学选择读空中乘务专业，也就是未来当上大家说的空姐、空少艺考就是通过艺术类专业考试，拿到学校专业合格证后再在高考报考中报名该学校。简单来说空乘高考空乘就是大学选择读空中乘务专业，也就是未来当上大家说的空姐、空少艺考就是通过艺术类专业考试，拿到学校专业合格证后再在高考报考中报名该学校。简单来说空乘高考...
       </div>
       <div class="information_con_btm">
-        <div class="btm_border">
+        <div class="btm_border" @click="set()">
           <span>查看更多</span>
-          <img src="@/assets/img/公共/sou.png" alt="" />
+          <img :src="setimg" alt="" />
         </div>
       </div>
     </div>
@@ -160,15 +168,48 @@
 </template>
 
 <script>
-import page from "@/components/page/index.vue";
 export default {
-  components: {
-    page,
+  data() {
+    return {
+      setimg:require("@/assets/img/公共/sou.png"),
+    };
+  },
+  methods: {
+    set(){
+      this.setimg=require("@/assets/img/公共/放大镜白色.png");
+    }
   },
 };
 </script>
 
 <style lang='scss' scoped>
+.title_warp{
+width:100%;
+padding:0 .2rem;
+margin: .15rem 0;
+box-sizing:border-box;
+  p{
+    width: 3.75rem;
+    margin: 0 auto;
+    span {
+        margin-left: 0.2rem;
+        font-size: .14rem;
+        font-weight: normal;
+        font-stretch: normal;
+        line-height: .07rem;
+        letter-spacing: 0px;
+        color: #888888;
+    }
+    .hang {
+        margin-left: 0.05rem;
+        font-family: PingFang-SC-Medium;
+        font-size: .14rem;
+        font-weight: normal;
+        letter-spacing: 0px;
+        color: #b0b0b0;
+        }
+    }
+}
 .lun_warp {
   width: 100%;
   height: 1.5rem;

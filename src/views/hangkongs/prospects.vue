@@ -1,8 +1,106 @@
 <template>
   <div class="prospects">
+
+      <div class="prospects_header">
+          <div class="prospects_title">
+            <img src="@/assets/img/航空学院/国际航空服务与管理_72.jpg" alt="">
+          </div>
+          <div class="prospects_banner">
+              <ul class="prospects_banner_ul">
+                  <li>
+                      <div class="banner_li_left">
+                          <router-link to="/Service">
+                            <img src="@/assets/img/航空学院/国际航空服务与管理_74.jpg" alt="">
+                          </router-link>
+                          <div class="ul_text">
+                                就业方向：地勤专业值机 、 机场安检 、 VIP客服 、 易登机 、 航空票务 、 两舱等
+                                '00000000000000000000000000000000000000000000000000'
+                          </div>
+                      </div>
+                      <div class="banner_li_right">
+                          <router-link to="/youlong">
+                            <img src="@/assets/img/航空学院/国际航空服务与管理_76.jpg" alt="">
+                          </router-link>
+                          <div class="ul_text_two">
+                                就业方向：当时国内外的豪华邮轮为主，主要在邮轮上从事服务性的工作。高收入
+                                '00000000000000000000000000000000000000000000000000'
+                          </div>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="banner_li_left">
+                          <router-link to="/kongcheng">
+                            <img src="@/assets/img/航空学院/国际航空服务与管理_79.jpg" alt="">
+                          </router-link>
+                          <div class="ul_text">
+                                就业方向：国内外各主要机场及其他非民航相关单位。从事飞机机体结构维修、飞机
+                               '00000000000000000000000000000000000000000000000000'
+                          </div>
+                      </div>
+                      <div class="banner_li_right">
+                          <router-link to="/kongcheng">
+                            <img src="@/assets/img/航空学院/国际航空服务与管理_80.jpg" alt="">
+                          </router-link>
+                          <div class="ul_text_two">
+                                就业方向：掌握民航管理、民航乘务、民航票务、民航法规、机场商务管理，从事
+                                '00000000000000000000000000000000000000000000000000'
+                          </div>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="banner_li_left">
+                          <router-link to="/gaotie">
+                            <img src="@/assets/img/航空学院/国际航空服务与管理_83.jpg" alt="">
+                          </router-link>
+                          <div class="ul_text">
+                                就业方向：国内外各主要机场及其他非民航相关单位。从事飞机机体结构维修、飞机
+                                '00000000000000000000000000000000000000000000000000'
+                          </div>
+                      </div>
+                      <div class="banner_li_right">
+                          <router-link to="/kongcheng">
+                            <img src="@/assets/img/航空学院/国际航空服务与管理_84.jpg" alt="">
+                          </router-link>
+                          <div class="ul_text_two">
+                                就业方向：国内外各大航空公司、地方航空公司、民营航空公司、外航服务公司、各大
+                                '00000000000000000000000000000000000000000000000000'
+                          </div>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <div class="prospects_content">
+          <div class="prospects_content_title">
+              <img src="@/assets/img/航空学院/国际航空服务与管理_87.jpg" alt="">
+          </div>
+          <div class="prospects_content_Two">
+              <ul>
+                  <li>
+                      <p><span>1</span>、凤凰可分为颇为姐姐基督教减肥陪玩'DNF酒精发酵按键打开的渴望快递'</p>
+                  </li>
+                  <li>
+                      <p><span>2</span>、DNF酒精发酵按键打开的渴望快递'DNF酒精发酵按键打开的渴望快递'</p>
+                  </li>
+                  <li>
+                      <p><span>3</span>、和客户上帝问问饿未接龙卷风分'DNF酒精发酵按键打开的渴望快递'</p>
+                  </li>
+                  <li>
+                      <p><span>4</span>、分开开开飞机抗裂砂浆low扣痘痘是'DNF酒精发酵按键打开的渴望快递'</p>
+                  </li>
+                  <div data-v-38b7d4ae="" class="information_con_btm">
+                      <div data-v-38b7d4ae="" class="btm_border" @click="set()">
+                          <span data-v-38b7d4ae="">查看更多通告</span>
+                          <img data-v-38b7d4ae="" :src="setimg" alt="">
+                    </div>
+                  </div>
+              </ul>
+          </div>
+
     <div class="prospects_header">
       <div class="prospects_title">
         <img src="@/assets/img/航空学院/国际航空服务与管理_72.jpg" alt="" />
+
       </div>
       <div class="prospects_banner">
         <ul class="prospects_banner_ul">
@@ -46,6 +144,13 @@
                 '00000000000000000000000000000000000000000000000000'
               </div>
             </div>
+
+            <div class="information_con_btm">
+                <div class="btm_border" @click="set1()">
+                    <span>点击查看更多</span>
+                    <img :src="setimg1" alt="">
+                </div>
+
             <div class="banner_li_right">
               <router-link to="/kongcheng">
                 <img
@@ -57,6 +162,7 @@
                 就业方向：掌握民航管理、民航乘务、民航票务、民航法规、机场商务管理，从事
                 '00000000000000000000000000000000000000000000000000'
               </div>
+
             </div>
           </li>
           <li>
@@ -137,6 +243,59 @@
 
 <script>
 export default {
+
+    data(){
+        return {
+            banners:[
+                {
+                    minimg:'@/assets/img/航空学院/国际航空服务与管理_74.jpg',
+                    text:'就业方向：地勤专业值机 、 机场安检 、 VIP客服 、 易登机 、 航空票务 、 两舱等'
+                },
+                {
+                    minimg:'@/assets/img/航空学院/国际航空服务与管理_76.jpg',
+                    text:'就业方向：当时国内外的豪华邮轮为主，主要在邮轮上从事服务性的工作。高收入'
+                },
+                {
+                    minimg:'@/assets/img/航空学院/国际航空服务与管理_79.jpg',
+                    text:'就业方向：国内外各主要机场及其他非民航相关单位。从事飞机机体结构维修、飞机'
+                },{
+                    minimg:'@/assets/img/航空学院/国际航空服务与管理_80.jpg',
+                    text:'就业方向：掌握民航管理、民航乘务、民航票务、民航法规、机场商务管理，从事'
+                },
+                {
+                    minimg:'@/assets/img/航空学院/国际航空服务与管理_83.jpg',
+                    text:'就业方向：国内外各主要机场及其他非民航相关单位。从事飞机机体结构维修、飞机'
+                },
+                {
+                    minimg:'@/assets/img/航空学院/国际航空服务与管理_84.jpg',
+                    text:'就业方向：国内外各大航空公司、地方航空公司、民营航空公司、外航服务公司、各大'
+                }
+            ],
+            list:[
+                '39岁的小伙子,就发生了发颤,怎么',
+                '市北市民留言咨询这些问题,官方',
+                '美供应链受阻问题雪上加霜',
+                '篮网有能力解决他们的问题度,你',
+                '记者实测快速企业智能客服:回复',
+                '养老金有哪些渠道可以获得?有说明',
+                '怎么样买保险才是最合理的?咱们',
+                '全面建成小康社会的重要举措你们慢慢',
+                '摩根士丹利重磅报告:中国经济措施'       
+            ],
+            setimg:require("@/assets/img/公共/sou.png"),
+            setimg1:require("@/assets/img/公共/sou.png"),
+        }
+    },
+     methods: {
+    set(){
+      this.setimg=require("@/assets/img/公共/放大镜白色.png");
+    },
+     set1(){
+      this.setimg1=require("@/assets/img/公共/放大镜白色.png");
+    }
+  },
+}
+
   data() {
     return {
       banners: [
@@ -190,6 +349,7 @@ export default {
     };
   },
 };
+
 </script>
 
 <style lang='scss' scoped>

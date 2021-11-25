@@ -185,9 +185,9 @@
         </ul>
       </div>
       <div class="information_con_btm">
-            <div class="btm_border">
+            <div class="btm_border" @click="set()">
                 <span>查看更多资讯</span>
-                <img src="@/assets/img/公共/sou.png" alt="">
+                <img :src="setimg" alt="">
             </div>
         </div>
     </div>
@@ -218,6 +218,7 @@ export default {
     return {
       student,
       current: "0", //默认选中第一个tab
+      setimg:require("@/assets/img/公共/sou.png"),
     };
   },
   methods: {
@@ -225,6 +226,9 @@ export default {
     handleClick(item) {
       this.current = item.type;
     },
+    set(){
+      this.setimg=require("@/assets/img/公共/放大镜白色.png");
+    }
   },
   created() {},
 };
