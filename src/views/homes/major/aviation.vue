@@ -1,12 +1,7 @@
 <template>
   <div class="aviation">
     <div class="aviation-header">
-
       <img src="@/assets/img/shouye/首页改1_33.gif" alt="" />
-     
-
-     
-
     </div>
     <div class="aviation-content">
       <ul>
@@ -71,11 +66,11 @@
 .aviation {
   width: 3.55rem;
   height: 2.89rem;
-  background: #edeaea;
-  border-radius: 0.1rem;
+  background: #fff;
+  border-radius: 0.05rem;
   overflow: hidden;
-  margin: 0.15rem auto;
-  box-shadow: 1px 2px 2px 0px rgba(228, 228, 228, 0.51);
+  // margin: 0.15rem auto;
+  // box-shadow: 1px 2px 2px 0px rgba(228, 228, 228, 0.51);
   .aviation-header {
     width: 100%;
     height: 0.55rem;
@@ -99,6 +94,8 @@
         border-radius: 0.06rem;
         overflow: hidden;
         float: left;
+        border: 0.01rem solid #ccc;
+        border-radius: 0.06rem;
         .content-img {
           height: 0.4rem;
           width: 0.4rem;

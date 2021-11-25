@@ -92,6 +92,7 @@
             font-size: .09rem;
             float: left;
             color: rgb(153,153,153);
+            text-align: center;
             p:first-of-type{
                 font-size: .2rem;
                 height: .2rem;
