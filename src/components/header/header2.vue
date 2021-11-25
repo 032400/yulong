@@ -1,62 +1,50 @@
+/* eslint-disable vue/no-side-effects-in-computed-properties */
 <template>
-  <div class=" actt">
+  <div class="actt">
     <div class="logo_body">
       <router-link to="/" tag="div" class="logo">
         <img src="@/assets/img/公共/首页改1_03.gif" alt="" />
       </router-link>
       <div class="menu">
         <img @click="btn()" src="@/assets/img/公共/首页改1_05.gif" alt="" />
-        <div class="txt" :class="{ act: isloading }">
-          <router-link tag="p" to="/" style="background-color: #0865a7;font-weight: normal;
-	font-stretch: normal;color:#fff;font-size:.15rem">首页</router-link>
+        <div class="txt" :class="{ act: isloading }" ref="acts">
+          <router-link
+            tag="p"
+            to="/"
+            style="
+              background-color: #0865a7;
+              font-weight: normal;
+              font-stretch: normal;
+              color: #fff;
+              font-size: 0.15rem;
+            "
+            >首页</router-link
+          >
+          <router-link to="/hangkong" tag="p">航空院校</router-link>
           <div class="title">
-           
-            <div class="header">
-              <router-link to="/hangkong" tag="span">航空院校</router-link>
-
+            <div class="header" @click="click">
+              <router-link to="" tag="span" class="s" style="padding-left:.04rem">热门专业</router-link>
               <a-icon
-                ref='icon'
+                ref="icon"
                 slot="suffixIcon"
                 type="caret-down"
-                @click="clicks"
-                style="width: 0.11rem; height: 0.08rem; color: rgb(0, 0, 0)"
-              />
-            </div>
-            <div class="bottom" v-show="lick" >
-              <router-link to="/hangkong/chuzhongsheng" tag="p"
-                >初中生</router-link
-              >
-              <router-link to="/hangkong/gaozhongsheng" tag="p"
-                >高中生</router-link
-              >
-              <router-link to="/hangkong/sanxiaosheng" tag="p"
-                >三校生</router-link
-              >
-              <router-link to="/hangkong/yikaosheng" tag="p"
-                >艺考生</router-link
-              >
-            </div>
-          </div>
-          <div class="title">
-            <div class="header">
-              <router-link to="" tag="span">热门专业</router-link>
-
-              <a-icon
-                ref='icon'
-                slot="suffixIcon"
-                type="caret-down"
-                @click="click"
                 :rotate="0"
+                :class="{ active: isShow, tive: !isShow }"
                 style="width: 0.11rem; height: 0.08rem; color: rgb(0, 0, 0)"
               />
+              <!--  -->
             </div>
-            <div class="bottom" v-show="isShow">
+            <div class="bottom" v-show="isShow" ref="bottom">
               <router-link to="/Service" tag="p">VIP地勤专业</router-link>
               <router-link to="/gaotie" tag="p">高铁乘务专业</router-link>
               <router-link to="/youlun" tag="p">游轮海城专业</router-link>
               <router-link to="/kongcheng" tag="p">空乘专业</router-link>
             </div>
           </div>
+          <router-link to="/hangkong/chuzhongsheng" tag="p">初中生</router-link>
+          <router-link to="/hangkong/gaozhongsheng" tag="p">高中生</router-link>
+          <router-link to="/hangkong/sanxiaosheng" tag="p">三校生</router-link>
+          <router-link to="/hangkong/yikaosheng" tag="p">艺考生</router-link>
           <router-link to="/zhaoshengyaoqiu" tag="p">招生要求</router-link>
           <router-link to="/zaixianbaoming" tag="p">在线报名</router-link>
           <router-link to="/ynjd" tag="p">疑难解答</router-link>
@@ -73,27 +61,11 @@ export default {
     return {
       isloading: false,
       isShow: false,
-      lick: false,
-      // transform:'transform:rotate(180deg)'
     };
   },
   methods: {
     click() {
       this.isShow = !this.isShow;
-      // console.log(this.isShow);
-      //  if (this.isShow == true) {
-      //   this.isShow = false;
-        // this.$refs.icon.style={
-        //   transform:this.transform
-        // }
-      // } else {
-      //   this.isShow = true;
-      // }
-      
-    },
-    clicks() {
-      this.lick = !this.lick;
-      console.log(this.lick);
     },
     btn() {
       if (this.isloading == true) {
@@ -114,6 +86,7 @@ export default {
   mounted() {
     this.scrollHanle = this.scroll.bind(this);
     window.addEventListener("scroll", this.scrollHanle);
+    
   },
   destroyed() {
     window.removeEventListener("scroll", this.scrollHanle);
@@ -124,7 +97,6 @@ export default {
         if (this.isloading == true) {
           this.isloading = false;
         }
-        
       },
       immediate: true,
     },
@@ -133,14 +105,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+::v-deep .active {
+  transition: all 0.3s linear;
+  transform: rotate(180deg);
+}
+::v-deep .tive {
+  transition: all 0.3s linear;
+  transform: rotate(0deg);
+}
 .actt {
   position: fixed;
   left: 50%;
   top: 0;
   transform: translate(-50%, 0);
   z-index: 9999;
+  color: #000;
 }
-
 .logo_body {
   width: 3.75rem;
   height: 0.49rem;
@@ -181,6 +161,7 @@ export default {
         height: 0.4rem;
         text-align: center;
         line-height: 0.4rem;
+       
       }
       .title {
         position: relative;
@@ -192,30 +173,11 @@ export default {
             height: 0.4rem;
             text-align: center;
             line-height: 0.4rem;
-            :hover{
-            // p{
-              color: #0869af;
-            // }
-            
-            }
           }
-          :hover{
-          //   // p{
+          :hover {
               color: #0869af;
-          //   // }
-            
           }
         }
-        :hover{
-            ::v-deep  .anticon svg{
-              transition: all 0.3s linear;
-              transform: rotate(180deg);
-          }
-        }
-        // ::v-deep  .anticon svg{
-        //     transition: all 0.3s linear;
-        //     transform: rotate(0deg);
-        // }
         .bottom {
           position: relative;
           display: none;
@@ -226,6 +188,9 @@ export default {
             height: 0.4rem;
             text-align: center;
             line-height: 0.4rem;
+          }
+          :hover{
+            color: #0869af;
           }
         }
       }
