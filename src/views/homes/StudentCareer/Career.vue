@@ -18,50 +18,90 @@
         <ul v-if="current == '0'">
           <li style="margin-top: 0rem">
             <span class="text">
-               <img style="width: .16rem;padding-bottom: .02rem;" src="@/assets/img/shouye/首页_03.jpg" alt="">
-              39岁的小伙子,就发生...</span>
+              <img
+                style="width: 0.16rem; padding-bottom: 0.02rem"
+                src="@/assets/img/shouye/首页_03.jpg"
+                alt=""
+              />
+              39岁的小伙子,就发生...</span
+            >
             <span class="time">2021.10.15</span>
           </li>
           <li>
             <span class="text">
-               <img style="width: .16rem;padding-bottom: .02rem;" src="@/assets/img/shouye/首页_03.jpg" alt="">
-              市北市民留言咨询这...</span>
+              <img
+                style="width: 0.16rem; padding-bottom: 0.02rem"
+                src="@/assets/img/shouye/首页_03.jpg"
+                alt=""
+              />
+              市北市民留言咨询这...</span
+            >
             <span class="time">2021.10.15</span>
           </li>
           <li>
             <span class="text">
-               <img style="width: .16rem;padding-bottom: .02rem;" src="@/assets/img/shouye/首页_03.jpg" alt="">
-              美供应链受阻问题雪...</span>
+              <img
+                style="width: 0.16rem; padding-bottom: 0.02rem"
+                src="@/assets/img/shouye/首页_03.jpg"
+                alt=""
+              />
+              美供应链受阻问题雪...</span
+            >
             <span class="time">2021.10.15</span>
           </li>
           <li>
             <span class="text">
-               <img style="width: .16rem;padding-bottom: .02rem;" src="@/assets/img/shouye/首页_03.jpg" alt="">
-              篮网有能力解决他们...</span>
+              <img
+                style="width: 0.16rem; padding-bottom: 0.02rem"
+                src="@/assets/img/shouye/首页_03.jpg"
+                alt=""
+              />
+              篮网有能力解决他们...</span
+            >
             <span class="time">2021.10.15</span>
           </li>
           <li>
             <span class="text">
-               <img style="width: .16rem;padding-bottom: .02rem;" src="@/assets/img/shouye/首页_03.jpg" alt="">
-              记者实测快递企业...</span>
+              <img
+                style="width: 0.16rem; padding-bottom: 0.02rem"
+                src="@/assets/img/shouye/首页_03.jpg"
+                alt=""
+              />
+              记者实测快递企业...</span
+            >
             <span class="time">2021.10.15</span>
           </li>
           <li>
             <span class="text">
-               <img style="width: .16rem;padding-bottom: .02rem;" src="@/assets/img/shouye/首页_03.jpg" alt="">
-              养老金有哪些渠道可...</span>
+              <img
+                style="width: 0.16rem; padding-bottom: 0.02rem"
+                src="@/assets/img/shouye/首页_03.jpg"
+                alt=""
+              />
+              养老金有哪些渠道可...</span
+            >
             <span class="time">2021.10.15</span>
           </li>
           <li>
             <span class="text">
-               <img style="width: .16rem;padding-bottom: .02rem;" src="@/assets/img/shouye/首页_03.jpg" alt="">
-              怎么样买保险才是最...</span>
+              <img
+                style="width: 0.16rem; padding-bottom: 0.02rem"
+                src="@/assets/img/shouye/首页_03.jpg"
+                alt=""
+              />
+              怎么样买保险才是最...</span
+            >
             <span class="time">2021.10.15</span>
           </li>
           <li>
             <span class="text">
-               <img style="width: .16rem;padding-bottom: .02rem;" src="@/assets/img/shouye/首页_03.jpg" alt="">
-              全面建成小康社会的...</span>
+              <img
+                style="width: 0.16rem; padding-bottom: 0.02rem"
+                src="@/assets/img/shouye/首页_03.jpg"
+                alt=""
+              />
+              全面建成小康社会的...</span
+            >
             <span class="time">2021.10.15</span>
           </li>
           <!-- <li>
@@ -184,12 +224,9 @@
           </li>
         </ul>
       </div>
-      <div class="information_con_btm">
-            <div class="btm_border" @click="set()">
-                <span>查看更多资讯</span>
-                <img :src="setimg" alt="">
-            </div>
-        </div>
+      <div class="information_con_btm" @touchstart="seet()" @touchend="sett()">
+        <img :src="setimg" alt="" />
+      </div>
     </div>
   </div>
 </template>
@@ -218,7 +255,7 @@ export default {
     return {
       student,
       current: "0", //默认选中第一个tab
-      setimg:require("@/assets/img/公共/sou.png"),
+      setimg: require("@/assets/img/公共/首页_06.jpg"),
     };
   },
   methods: {
@@ -226,9 +263,14 @@ export default {
     handleClick(item) {
       this.current = item.type;
     },
-    set(){
-      this.setimg=require("@/assets/img/公共/放大镜白色.png");
-    }
+    seet() {
+      console.log(1);
+      this.setimg = require("@/assets/img/公共/首页_03.jpg");
+    },
+    sett() {
+      console.log(2);
+      this.setimg = require("@/assets/img/公共/首页_06.jpg");
+    },
   },
   created() {},
 };
@@ -266,7 +308,7 @@ body {
       }
     }
     .tabs {
-      width:  3.48rem;
+      width: 3.48rem;
       height: 0.39rem;
       margin: 0 auto;
       cursor: pointer;
@@ -337,48 +379,17 @@ body {
         }
       }
     }
-     .information_con_btm{
-            width: 3.31rem;
-            height: 0.44rem;
-            position: absolute;
-            bottom: 0.25rem;
-            left: 0.12rem;
-                // padding: .15rem .12rem .25rem .12rem;
-                .btm_border{
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 5px;
-                    border: solid 1px #1776af;
-                    text-align: center;
-                    line-height: .42rem;
-                    span{
-                        font-size: .16rem;
-                        color: #1776af;
-                        font-family: PingFang-SC-Medium;
-                        font-weight: normal; 
-                        font-stretch: normal;
-                        letter-spacing: 0px;
-                    }
-                    img{
-                        width: 0.16rem;
-                        height: 0.16rem;
-                        margin-left: .04rem; 
-                        vertical-align: middle;
-                        margin-bottom: .02rem;   
-                    }
-                }
-                :hover{
-                    background: #3f555f;
-                }
-                :hover>span{
-                    color: #ffffff;
-                    font-size: .16rem;
-                    font-family: PingFang-SC-Medium;
-                    font-weight: normal; 
-                    font-stretch: normal;
-                    letter-spacing: 0px;
-                }
-            }
+    .information_con_btm {
+      width: 3.31rem;
+      height: 0.44rem;
+      position: absolute;
+      bottom: 0.25rem;
+      left: 0.12rem;
+      img {
+        width: 3.31rem;
+        height: 0.44rem;
+      }
+    }
     .footer {
       width: 3.31rem;
       height: 0.44rem;
@@ -390,7 +401,6 @@ body {
         height: 0.44rem;
       }
     }
-
   }
 }
 </style>

@@ -2,9 +2,8 @@
   <div class="cruise">
     <!--  国际海乘就业趋势  -->
     <div class="cruise_header_title">
-      <a href="">
         <img src="@/assets/img/游轮海乘专业/游轮海乘专业.png" alt="" />
-      </a>
+      
     </div>
     <page />
     <!-- 头部 -->
@@ -156,12 +155,11 @@ a {
   overflow: hidden;
   margin: 0 auto;
   .cruise_header_title {
-    a {
-      height: 1.5rem;
+    
       img {
         height: 100%;
+        height: 1.5rem;
       }
-    }
   }
   .cruise_header {
     // margin: 0 auto;
