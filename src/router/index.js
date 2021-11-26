@@ -90,6 +90,16 @@ const routes = [
       path:"/ynjd",
       component:()=> import ('@/views/ynjd/index.vue')
     },
+    {
+      path:"/ai",
+      name:"人工智能切图",
+      component:()=> import ('@/views/AI/index.vue')
+    },
+    {
+      path:"/financial",
+      name:"互联网金融与管理",
+      component:()=> import ('@/views/financial/index.vue')
+    },
 ]
 
 const router = new VueRouter({

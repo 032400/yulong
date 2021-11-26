@@ -8,13 +8,17 @@
         <li>
           <router-link to="/hangkong">
             <img src="@/assets/img/shouye/国际航空服务与管理.png" alt="" />
-            </router-link>
+          </router-link>
         </li>
         <li>
-          <img src="@/assets/img/shouye/互联网金融与管理.png" alt="" />
+          <router-link to="/financial">
+            <img src="@/assets/img/shouye/互联网金融与管理.png" alt=""/>
+          </router-link>
         </li>
         <li>
-          <img src="@/assets/img/shouye/人工智能与机器人.png" alt="" />
+          <router-link to="/ai">
+            <img src="@/assets/img/shouye/人工智能与机器人.png" alt="" />
+          </router-link>
         </li>
         <li>
           <img src="@/assets/img/shouye/网络新媒体运营.png" alt="" />
@@ -22,36 +26,41 @@
         <li>
           <img src="@/assets/img/shouye/新能源汽车.png" alt="" />
         </li>
-        
-       
-        
-        
+
         <!-- 添加点击显示图片效果 !-->
-         <div ref="lefts" class="left_img">
-          <img  src="@/assets/img/shouye/首页0_03_04.jpg" @click="click" alt="" />
+        <div ref="lefts" class="left_img">
+          <img
+            src="@/assets/img/shouye/首页0_03_04.jpg"
+            @click="click"
+            alt=""
+          />
         </div>
         <li>
           <router-link to="/Service">
-            <img src="@/assets/img/shouye/地勤.png"  alt="" />
+            <img src="@/assets/img/shouye/地勤.png" alt="" />
           </router-link>
         </li>
         <li>
           <router-link to="/gaotie">
-            <img src="@/assets/img/shouye/高铁-2.png"  alt="" />
+            <img src="@/assets/img/shouye/高铁-2.png" alt="" />
           </router-link>
         </li>
         <li>
           <router-link to="/kongcheng">
-            <img src="@/assets/img/shouye/航空.png"  alt="" />
+            <img src="@/assets/img/shouye/航空.png" alt="" />
           </router-link>
         </li>
         <li>
           <router-link to="/youlun">
-            <img src="@/assets/img/shouye/游轮.png"  alt="" />
+            <img src="@/assets/img/shouye/游轮.png" alt="" />
           </router-link>
         </li>
         <div ref="right" class="right_img">
-          <img  src="@/assets/img/shouye/首页0_03_04.jpg" @click="clicks()" alt="" />
+          <img
+            src="@/assets/img/shouye/首页0_03_04.jpg"
+            @click="clicks()"
+            alt=""
+          />
         </div>
       </ul>
     </div>
@@ -59,27 +68,27 @@
 </template>
 <script>
 export default {
-  data(){
+  data() {
     return {
-      style:'height:auto',
-      styles:'height: 6.82rem;'
-    }
+      style: "height:auto",
+      styles: "height: 6.82rem;",
+    };
   },
-  methods:{
-    click(){
-      this.$refs.lefts.style.display='none'
-      this.$refs.lefts.style.margin='0'
-      this.$refs.major_header.style = this.style
+  methods: {
+    click() {
+      this.$refs.lefts.style.display = "none";
+      this.$refs.lefts.style.margin = "0";
+      this.$refs.major_header.style = this.style;
       // console.log(this.$refs.major_header.style.height);
     },
-    clicks(){
-        this.$refs.lefts.style.display='block'
-        this.$refs.lefts.style.margin='0.18rem'
-        this.$refs.major_header.style = this.styles
+    clicks() {
+      this.$refs.lefts.style.display = "block";
+      this.$refs.lefts.style.margin = "0.18rem";
+      this.$refs.major_header.style = this.styles;
       // console.log(this.$refs.major_header.style.height);
-    }
-  }
-}
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 .major {
@@ -111,20 +120,20 @@ export default {
           width: 100%;
         }
       }
-      .left_img{
-          margin: .18rem;
-          text-align: center;
-          img{
-            width: .24rem;
-          }
+      .left_img {
+        margin: 0.18rem;
+        text-align: center;
+        img {
+          width: 0.24rem;
+        }
       }
-      .right_img{
-        margin: .18rem;
-          text-align: center;
-          img{
-            width: .24rem;
-            transform: rotate(180deg);
-          }
+      .right_img {
+        margin: 0.18rem;
+        text-align: center;
+        img {
+          width: 0.24rem;
+          transform: rotate(180deg);
+        }
       }
     }
   }
