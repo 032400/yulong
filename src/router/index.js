@@ -91,7 +91,17 @@ const routes = [
       component:()=> import ('@/views/ynjd/index.vue')
     },
     {
-      path:"/Network",
+
+      path:"/ai",
+      name:"人工智能切图",
+      component:()=> import ('@/views/AI/index.vue')
+    },
+    {
+      path:"/financial",
+      name:"互联网金融与管理",
+      component:()=> import ('@/views/financial/index.vue')
+},
+      {path:"/Network",
       name:"网络新媒体运营",
       component:()=> import ('@/views/Network/index.vue')
     },
@@ -99,6 +109,7 @@ const routes = [
       path:"/Netenergy",
       name:"新能源汽车",
       component:()=> import ('@/views/Netenergy/index.vue')
+
     },
 ]
 

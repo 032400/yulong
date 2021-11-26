@@ -16,216 +16,63 @@
       </div>
       <div class="list">
         <ul v-if="current == '0'">
-          <li style="margin-top: 0rem">
+          <li v-for="(item, index) in list" :key="index">
             <span class="text">
               <img
                 style="width: 0.16rem; padding-bottom: 0.02rem"
                 src="@/assets/img/shouye/首页_03.jpg"
                 alt=""
               />
-              39岁的小伙子,就发生...</span
-            >
+              {{ item }}
+            </span>
             <span class="time">2021.10.15</span>
           </li>
-          <li>
-            <span class="text">
-              <img
-                style="width: 0.16rem; padding-bottom: 0.02rem"
-                src="@/assets/img/shouye/首页_03.jpg"
-                alt=""
-              />
-              市北市民留言咨询这...</span
-            >
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">
-              <img
-                style="width: 0.16rem; padding-bottom: 0.02rem"
-                src="@/assets/img/shouye/首页_03.jpg"
-                alt=""
-              />
-              美供应链受阻问题雪...</span
-            >
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">
-              <img
-                style="width: 0.16rem; padding-bottom: 0.02rem"
-                src="@/assets/img/shouye/首页_03.jpg"
-                alt=""
-              />
-              篮网有能力解决他们...</span
-            >
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">
-              <img
-                style="width: 0.16rem; padding-bottom: 0.02rem"
-                src="@/assets/img/shouye/首页_03.jpg"
-                alt=""
-              />
-              记者实测快递企业...</span
-            >
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">
-              <img
-                style="width: 0.16rem; padding-bottom: 0.02rem"
-                src="@/assets/img/shouye/首页_03.jpg"
-                alt=""
-              />
-              养老金有哪些渠道可...</span
-            >
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">
-              <img
-                style="width: 0.16rem; padding-bottom: 0.02rem"
-                src="@/assets/img/shouye/首页_03.jpg"
-                alt=""
-              />
-              怎么样买保险才是最...</span
-            >
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">
-              <img
-                style="width: 0.16rem; padding-bottom: 0.02rem"
-                src="@/assets/img/shouye/首页_03.jpg"
-                alt=""
-              />
-              全面建成小康社会的...</span
-            >
-            <span class="time">2021.10.15</span>
-          </li>
-          <!-- <li>
-            <span class="text">9、摩根士丹利重磅报告...</span>
-            <span class="time">2021.10.15</span>
-          </li> -->
         </ul>
         <ul v-if="current == '1'">
-          <li style="margin-top: 0rem">
-            <span class="text">1、39岁的小伙子,就发生...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">2、市北市民留言咨询这...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">3、美供应链受阻问题雪...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">4、篮网有能力解决他们...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">5、记者实测快递企业...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">6、养老金有哪些渠道可...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">7、怎么样买保险才是最...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">8、全面建成小康社会的...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">9、摩根士丹利重磅报告...</span>
+          <li v-for="(item, index) in list" :key="index">
+            <span class="text">
+              <img
+                style="width: 0.16rem; padding-bottom: 0.02rem"
+                src="@/assets/img/shouye/首页_03.jpg"
+                alt=""
+              />
+              {{ item }}
+            </span>
             <span class="time">2021.10.15</span>
           </li>
         </ul>
         <ul v-if="current == '2'">
-          <li style="margin-top: 0rem">
-            <span class="text">1、39岁的小伙子,就发生...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">2、市北市民留言咨询这...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">3、美供应链受阻问题雪...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">4、篮网有能力解决他们...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">5、记者实测快递企业...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">6、养老金有哪些渠道可...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">7、怎么样买保险才是最...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">8、全面建成小康社会的...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">9、摩根士丹利重磅报告...</span>
+          <li v-for="(item, index) in list" :key="index">
+            <span class="text">
+              <img
+                style="width: 0.16rem; padding-bottom: 0.02rem"
+                src="@/assets/img/shouye/首页_03.jpg"
+                alt=""
+              />
+              {{ item }}
+            </span>
             <span class="time">2021.10.15</span>
           </li>
         </ul>
         <ul v-if="current == '3'">
-          <li style="margin-top: 0rem">
-            <span class="text">1、39岁的小伙子,就发生...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">2、市北市民留言咨询这...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">3、美供应链受阻问题雪...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">4、篮网有能力解决他们...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">5、记者实测快递企业...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">6、养老金有哪些渠道可...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">7、怎么样买保险才是最...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">8、全面建成小康社会的...</span>
-            <span class="time">2021.10.15</span>
-          </li>
-          <li>
-            <span class="text">9、摩根士丹利重磅报告...</span>
+          <li v-for="(item, index) in list" :key="index">
+            <span class="text">
+              <img
+                style="width: 0.16rem; padding-bottom: 0.02rem"
+                src="@/assets/img/shouye/首页_03.jpg"
+                alt=""
+              />
+              {{ item }}
+            </span>
             <span class="time">2021.10.15</span>
           </li>
         </ul>
       </div>
-      <div class="information_con_btm" @touchstart="seet()" @touchend="sett()">
-        <img :src="setimg" alt="" />
+      <div class="information_con_btm">
+        <div class="btm_border">
+          <span>查看更多资讯</span>
+          <img src="@/assets/img/公共/sou.png" alt="" />
+        </div>
       </div>
     </div>
   </div>
@@ -255,21 +102,23 @@ export default {
     return {
       student,
       current: "0", //默认选中第一个tab
-      setimg: require("@/assets/img/公共/首页_06.jpg"),
+      list: [
+        "39岁的小伙子,就发生了发颤,怎么",
+        "市北市民留言咨询这些问题,官方",
+        "美供应链受阻问题雪上加霜",
+        "篮网有能力解决他们的问题度,你",
+        "记者实测快速企业智能客服:回复",
+        "养老金有哪些渠道可以获得?有说明",
+        "怎么样买保险才是最合理的?咱们",
+        "全面建成小康社会的重要举措你们慢慢",
+        "摩根士丹利重磅报告:中国经济措施",
+      ],
     };
   },
   methods: {
     //点击的时候改变current
     handleClick(item) {
       this.current = item.type;
-    },
-    seet() {
-      console.log(1);
-      this.setimg = require("@/assets/img/公共/首页_03.jpg");
-    },
-    sett() {
-      console.log(2);
-      this.setimg = require("@/assets/img/公共/首页_06.jpg");
     },
   },
   created() {},
@@ -377,6 +226,9 @@ body {
             float: right;
           }
         }
+        li:nth-child(1) {
+          margin-top: 0rem;
+        }
       }
     }
     .information_con_btm {
@@ -385,9 +237,40 @@ body {
       position: absolute;
       bottom: 0.25rem;
       left: 0.12rem;
-      img {
-        width: 3.31rem;
-        height: 0.44rem;
+      // padding: .15rem .12rem .25rem .12rem;
+      .btm_border {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        border: solid 1px #1776af;
+        text-align: center;
+        line-height: 0.42rem;
+        span {
+          font-size: 0.16rem;
+          color: #1776af;
+          font-family: PingFang-SC-Medium;
+          font-weight: normal;
+          font-stretch: normal;
+          letter-spacing: 0px;
+        }
+        img {
+          width: 0.16rem;
+          height: 0.16rem;
+          margin-left: 0.04rem;
+          vertical-align: middle;
+          margin-bottom: 0.02rem;
+        }
+      }
+      :hover {
+        background: #3f555f;
+      }
+      :hover > span {
+        color: #ffffff;
+        font-size: 0.16rem;
+        font-family: PingFang-SC-Medium;
+        font-weight: normal;
+        font-stretch: normal;
+        letter-spacing: 0px;
       }
     }
     .footer {

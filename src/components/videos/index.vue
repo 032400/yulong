@@ -16,7 +16,7 @@
     </div>
     <div class="videos">
       <div class="vides">
-        <img src="@/assets/img/航空学院/video/1.jpg" alt="" />
+        <img src="@/assets/img/航空学院/国际航空服务与管理_43.jpg" alt="" />
         <!-- <video src="@/assets/images2/ship/mda-jmi4aniy24gvebwr.mp4" controls></video> -->
       </div>
       <div class="video-text">
