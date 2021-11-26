@@ -66,6 +66,7 @@ export default {
   methods: {
     click() {
       this.isShow = !this.isShow;
+     
     },
     btn() {
       if (this.isloading == true) {
@@ -73,6 +74,7 @@ export default {
       } else {
         this.isloading = true;
       }
+      this.isShow=false
     },
     scroll() {
       if (this.isloading == true) {

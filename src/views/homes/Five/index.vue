@@ -2,7 +2,7 @@
   <div class="aviation_text">
     <div class="aviation_text_header">
       <a href="">
-        <img src="@/assets/img/shouye/首页改1_33.gif" alt="" />
+        <img src="@/assets/img/shouye/有问必答1_03.jpg" alt="" />
       </a>
     </div>
     <div class="aviation_text_content">
