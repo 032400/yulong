@@ -29,11 +29,12 @@
         <p>
           空乘就是大学选择读空中乘务专业，也就是未来当上大家说的空姐、空少艺考就是通过艺术类专业考试，拿到学校专业合格证后再在高考报考中报名该学校。简单来说空乘艺考...
         </p>
-        <div class="information_con_btm">
-          <div class="btm_border" @click="set()">
-            <span>查看更多资讯</span>
-            <img :src="setimg" alt="" />
-          </div>
+        <div
+          class="information_con_btm"
+          @touchstart="seet()"
+          @touchend="sett()"
+        >
+          <img :src="setimg" alt="" />
         </div>
       </div>
     </div>
@@ -116,12 +117,15 @@
 export default {
   data() {
     return {
-      setimg: require("@/assets/img/公共/sou.png"),
+      setimg: require("@/assets/img/公共/首页_06.jpg"),
     };
   },
   methods: {
-    set() {
-      this.setimg = require("@/assets/img/公共/放大镜白色.png");
+    seet() {
+      this.setimg = require("@/assets/img/公共/首页_03.jpg");
+    },
+    sett() {
+      this.setimg = require("@/assets/img/公共/首页_06.jpg");
     },
   },
 };
@@ -200,39 +204,9 @@ export default {
     height: 0.44rem;
     width: 3.32rem;
     margin: 0.15rem auto 0;
-    .btm_border {
-      width: 100%;
-      height: 100%;
-      border-radius: 5px;
-      border: solid 1px #1776af;
-      text-align: center;
-      line-height: 0.44rem;
-      span {
-        font-size: 0.16rem;
-        color: #1776af;
-        font-family: PingFang-SC-Medium;
-        font-weight: normal;
-        font-stretch: normal;
-        letter-spacing: 0px;
-      }
-      img {
-        width: 0.16rem;
-        height: 0.16rem;
-        margin-left: 0.04rem;
-        vertical-align: middle;
-        margin-bottom: 0.02rem;
-      }
-    }
-    :hover {
-      background: #3f555f;
-    }
-    :hover > span {
-      color: #ffffff;
-      font-size: 0.16rem;
-      font-family: PingFang-SC-Medium;
-      font-weight: normal;
-      font-stretch: normal;
-      letter-spacing: 0px;
+    img {
+      width: 3.31rem;
+      height: 0.44rem;
     }
   }
 }
