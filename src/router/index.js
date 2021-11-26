@@ -90,6 +90,16 @@ const routes = [
       path:"/ynjd",
       component:()=> import ('@/views/ynjd/index.vue')
     },
+    {
+      path:"/Network",
+      name:"网络新媒体运营",
+      component:()=> import ('@/views/Network/index.vue')
+    },
+    {
+      path:"/Netenergy",
+      name:"新能源汽车",
+      component:()=> import ('@/views/Netenergy/index.vue')
+    },
 ]
 
 const router = new VueRouter({
