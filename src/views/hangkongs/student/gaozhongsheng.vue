@@ -6,14 +6,18 @@
       </div>
     </div>
     <div class="title_warp">
-      <p>
-        <router-link to="/" tag="span">当前位置：首页</router-link>
+           
+      <p>
+                <router-link to="/" tag="span">当前位置：首页</router-link>
         <router-link to="/hangkong" tag="span">>航空学院</router-link>
-        <router-link to="/chuzhongsheng">
-            <span   style="color: #999;">>高中生</span>
+               
+        <router-link to="/chuzhongsheng">
+          <span style="color: #999">>高中生</span>
         </router-link>
-      </p >
-    </div>
+             
+      </p>
+         
+    </div>
     <div class="major">
       <div class="mar-top">
         <img src="@/assets/img/高中生/当代高中生出路_03.jpg" alt="" />
@@ -64,11 +68,8 @@
       <div class="kc-text">
         空乘就是大学选择读空中乘务专业，也就是未来当上大家说的空姐、空少艺考就是通过艺术类专业考试，拿到学校专业合格证后再在高考报考中报名该学校。简单来说空乘高考空乘就是大学选择读空中乘务专业，也就是未来当上大家说的空姐、空少艺考就是通过艺术类专业考试，拿到学校专业合格证后再在高考报考中报名该学校。简单来说空乘高考...
       </div>
-      <div class="information_con_btm">
-        <div class="btm_border" @click="set()">
-          <span>查看更多</span>
-          <img :src="setimg" alt="" />
-        </div>
+      <div class="information_con_btm" @touchstart="seet()" @touchend="sett()">
+        <img :src="setimg" alt="" />
       </div>
     </div>
     <div class="ches">
@@ -171,44 +172,47 @@
 export default {
   data() {
     return {
-      setimg:require("@/assets/img/公共/sou.png"),
+      setimg: require("@/assets/img/公共/首页_06.jpg"),
     };
   },
   methods: {
-    set(){
-      this.setimg=require("@/assets/img/公共/放大镜白色.png");
-    }
+    seet() {
+      this.setimg = require("@/assets/img/公共/首页_03.jpg");
+    },
+    sett() {
+      this.setimg = require("@/assets/img/公共/首页_06.jpg");
+    },
   },
 };
 </script>
 
 <style lang='scss' scoped>
-.title_warp{
-width:100%;
-padding:0 .2rem;
-margin: .15rem 0;
-box-sizing:border-box;
-  p{
+.title_warp {
+  width: 100%;
+  padding: 0 0.2rem;
+  margin: 0.15rem 0;
+  box-sizing: border-box;
+    p {
     width: 3.75rem;
     margin: 0 auto;
-    span {
-        margin-left: 0.2rem;
-        font-size: .14rem;
-        font-weight: normal;
-        font-stretch: normal;
-        line-height: .07rem;
-        letter-spacing: 0px;
-        color: #888888;
+        span {
+      margin-left: 0.2rem;
+      font-size: 0.14rem;
+      font-weight: normal;
+      font-stretch: normal;
+      line-height: 0.07rem;
+      letter-spacing: 0px;
+      color: #888888;
     }
-    .hang {
-        margin-left: 0.05rem;
-        font-family: PingFang-SC-Medium;
-        font-size: .14rem;
-        font-weight: normal;
-        letter-spacing: 0px;
-        color: #b0b0b0;
-        }
+        .hang {
+      margin-left: 0.05rem;
+      font-family: PingFang-SC-Medium;
+      font-size: 0.14rem;
+      font-weight: normal;
+      letter-spacing: 0px;
+      color: #b0b0b0;
     }
+  }
 }
 .lun_warp {
   width: 100%;
@@ -319,39 +323,9 @@ box-sizing:border-box;
   }
   .information_con_btm {
     padding: 0.15rem 0.12rem 0.25rem 0.12rem;
-    .btm_border {
-      width: 100%;
-      height: 100%;
-      border-radius: 5px;
-      border: solid 1px #1776af;
-      text-align: center;
-      line-height: 0.42rem;
-      span {
-        font-size: 0.16rem;
-        color: #1776af;
-        font-family: PingFang-SC-Medium;
-        font-weight: normal;
-        font-stretch: normal;
-        letter-spacing: 0px;
-      }
-      img {
-        width: 0.16rem;
-        height: 0.16rem;
-        margin-left: 0.04rem;
-        vertical-align: middle;
-        margin-bottom: 0.02rem;
-      }
-    }
-    :hover {
-      background: #3f555f;
-    }
-    :hover > span {
-      color: #ffffff;
-      font-size: 0.16rem;
-      font-family: PingFang-SC-Medium;
-      font-weight: normal;
-      font-stretch: normal;
-      letter-spacing: 0px;
+    img {
+      width: 3.31rem;
+      height: 0.44rem;
     }
   }
 }

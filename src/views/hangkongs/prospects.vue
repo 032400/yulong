@@ -101,11 +101,12 @@
             >
             <!-- <span class="span_Two">{{tlep}}</span> -->
           </li>
-          <div data-v-38b7d4ae="" class="information_con_btm">
-            <div data-v-38b7d4ae="" class="btm_border" @click="set()">
-              <span data-v-38b7d4ae="">查看更多通告</span>
-              <img data-v-38b7d4ae="" :src="setimg" alt="" />
-            </div>
+          <div
+            class="information_con_btm"
+            @touchstart="seet()"
+            @touchend="sett()"
+          >
+            <img :src="setimg" alt="" />
           </div>
         </ul>
       </div>
@@ -125,11 +126,8 @@
           </li>
         </ul>
       </div>
-      <div class="information_con_btm">
-        <div class="btm_border" @click="set1()">
-          <span>点击查看更多</span>
-          <img :src="setimg1" alt="" />
-        </div>
+      <div class="information_con_btm" @touchstart="seet1()" @touchend="sett1()">
+        <img :src="setimg1" alt="" />
       </div>
     </div>
   </div>
@@ -187,17 +185,23 @@ export default {
         "全面建成小康社会的重要举措你们慢慢",
         "39岁的小伙子,就发生了发颤,怎么",
       ],
-       setimg:require("@/assets/img/公共/sou.png"),
-       setimg1:require("@/assets/img/公共/sou.png"),
+      setimg: require("@/assets/img/公共/首页_06.jpg"),
+      setimg1: require("@/assets/img/公共/首页_06.jpg"),
     };
   },
-   methods: {
-    set(){
-      this.setimg=require("@/assets/img/公共/放大镜白色.png");
+  methods: {
+    seet() {
+      this.setimg = require("@/assets/img/公共/首页_03.jpg");
     },
-     set1(){
-      this.setimg1=require("@/assets/img/公共/放大镜白色.png");
-    }
+    sett() {
+      this.setimg = require("@/assets/img/公共/首页_06.jpg");
+    },
+    seet1() {
+      this.setimg1 = require("@/assets/img/公共/首页_03.jpg");
+    },
+    sett1() {
+      this.setimg1 = require("@/assets/img/公共/首页_06.jpg");
+    },
   },
 };
 </script>
@@ -346,39 +350,9 @@ export default {
         }
         .information_con_btm {
           padding: 0.15rem 0.12rem 0.25rem 0.12rem;
-          .btm_border {
-            width: 100%;
-            height: 100%;
-            border-radius: 5px;
-            border: solid 1px #1776af;
-            text-align: center;
-            line-height: 0.42rem;
-            span {
-              font-size: 0.16rem;
-              color: #1776af;
-              font-family: PingFang-SC-Medium;
-              font-weight: normal;
-              font-stretch: normal;
-              letter-spacing: 0px;
-            }
-            img {
-              width: 0.16rem;
-              height: 0.16rem;
-              margin-left: 0.04rem;
-              vertical-align: middle;
-              margin-bottom: 0.02rem;
-            }
-          }
-          :hover {
-            background: #3f555f;
-          }
-          :hover > span {
-            color: #ffffff;
-            font-size: 0.16rem;
-            font-family: PingFang-SC-Medium;
-            font-weight: normal;
-            font-stretch: normal;
-            letter-spacing: 0px;
+          img {
+            width: 3.31rem;
+            height: 0.44rem;
           }
         }
       }
@@ -455,39 +429,9 @@ export default {
     }
     .information_con_btm {
       padding: 0.15rem 0.12rem 0.25rem 0.12rem;
-      .btm_border {
-        width: 100%;
-        height: 100%;
-        border-radius: 5px;
-        border: solid 1px #1776af;
-        text-align: center;
-        line-height: 0.42rem;
-        span {
-          font-size: 0.16rem;
-          color: #1776af;
-          font-family: PingFang-SC-Medium;
-          font-weight: normal;
-          font-stretch: normal;
-          letter-spacing: 0px;
-        }
-        img {
-          width: 0.16rem;
-          height: 0.16rem;
-          margin-left: 0.04rem;
-          vertical-align: middle;
-          margin-bottom: 0.02rem;
-        }
-      }
-      :hover {
-        background: #3f555f;
-      }
-      :hover > span {
-        color: #ffffff;
-        font-size: 0.16rem;
-        font-family: PingFang-SC-Medium;
-        font-weight: normal;
-        font-stretch: normal;
-        letter-spacing: 0px;
+      img {
+        width: 3.31rem;
+        height: 0.44rem;
       }
     }
   }
