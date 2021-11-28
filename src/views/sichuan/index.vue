@@ -27,15 +27,15 @@
             ></a-input>
           </div>
         </a-form-model-item>
-        <a-form-model-item ref="number" label="" prop="region">
+        <a-form-model-item ref="region" label="" prop="region">
           <div class="aviation_text_input">
             <span class="span"><em>*</em>手机号码</span>
             <a-input
-              v-model="form.number"
+              v-model="form.region"
               placeholder="请填写手机号码"
               @blur="
                 () => {
-                  $refs.number.onFieldBlur();
+                  $refs.region.onFieldBlur();
                 }
               "
             ></a-input>
@@ -239,8 +239,8 @@ export default {
             trigger: "blur",
           },
           {
-            min: 3,
-            max: 5,
+            min: 11,
+            max: 11,
             message: "请填写正确的手机号",
             trigger: "blur",
           },
@@ -352,6 +352,7 @@ export default {
       border: 0;
       img {
         width: 100%;
+        height: .6rem;
       }
     }
   }

@@ -390,7 +390,7 @@ export default {
           type: "1",
         },
         {
-          pic: require("@/assets/img/人工智能与机器人/人工智能与机器人_25.jpg"),
+          pic: require("@/assets/img/人工智能与机器人/人工智能与机器人_29.jpg"),
           type: "2",
         },
         {
@@ -398,7 +398,7 @@ export default {
           type: "3",
         },
         {
-          pic: require("@/assets/img/人工智能与机器人/人工智能与机器人_29.jpg"),
+          pic: require("@/assets/img/人工智能与机器人/人工智能与机器人_25.jpg"),
           type: "4",
         },
       ],
