@@ -21,10 +21,14 @@
           </router-link>
         </li>
         <li>
+          <router-link to="/Network">
           <img src="@/assets/img/shouye/网络新媒体运营.png" alt="" />
+           </router-link>
         </li>
         <li>
+          <router-link to="/Netenergy">
           <img src="@/assets/img/shouye/新能源汽车.png" alt="" />
+           </router-link>
         </li>
 
         <!-- 添加点击显示图片效果 !-->
