@@ -271,8 +271,8 @@ export default {
               background: #8dcff4;
               color: #fff;
               float: left;
-              margin: 0.09rem 0.17rem 0;
-              box-shadow: 0px 1px 2px 0px 
+              margin: 0.09rem 0.1rem 0;
+              box-shadow: 0px 0.01rem 0.02rem 0px 
                 rgba(0, 0, 0, 0.18);
               border-radius: .01rem;
             }
@@ -295,12 +295,16 @@ export default {
       }
     }
     .news-text {
-      padding: 0 0.1rem .13rem;
+      padding: 0.1rem 0.1rem .13rem;
       color: #888;
       ul {
         margin-bottom: 0;
         li {
           line-height: 0.25rem;
+          width: 90%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
       }
       

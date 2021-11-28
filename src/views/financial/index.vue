@@ -390,7 +390,7 @@ export default {
           type: "1",
         },
         {
-          pic: require("@/assets/img/互联网金融与管理/互联网金融与管理_(3).jpg"),
+          pic: require("@/assets/img/互联网金融与管理/互联网金融与管理_(5).jpg"),
           type: "2",
         },
         {
@@ -398,7 +398,7 @@ export default {
           type: "3",
         },
         {
-          pic: require("@/assets/img/互联网金融与管理/互联网金融与管理_(5).jpg"),
+          pic: require("@/assets/img/互联网金融与管理/互联网金融与管理_(3).jpg"),
           type: "4",
         },
       ],

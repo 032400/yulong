@@ -21,7 +21,7 @@
               </div>
             </div>
             <div class="banner_li_right">
-              <router-link to="/youlong">
+              <router-link to="/youlun">
                 <img
                   src="@/assets/img/航空学院/国际航空服务与管理_76.jpg"
                   alt=""

@@ -41,11 +41,11 @@
             ></a-input>
           </div>
         </a-form-model-item>
-        <a-form-model-item label="" required prop="datePis" ref="datePis">
+        <a-form-model-item label="" required prop="regionKis" ref="regionKis">
           <div class="aviation_text_input">
             <span class="span"><em>*</em>出生年月</span>
             <a-date-picker
-              v-model="form.datePis"
+              v-model="form.regionKis "
               show-time
               type="date"
               style="height: 0.35rem; color: #000 !important"
@@ -53,22 +53,22 @@
               placeholder="请选择出生年月"
                @blur="
                 () => {
-                  $refs.datePis.onFieldBlur();
+                  $refs.regionKis.onFieldBlur();
                 }
               "
             />
           </div>
         </a-form-model-item>
 
-        <a-form-model-item label="" style="margin: 0" ref="regionKis" prop="regionKis">
+        <a-form-model-item label="" style="margin: 0" ref="datePis" prop="datePis">
           <div class="aviation_text_cascader">
             <span class="span"><em>*</em>所选课程</span>
             <div class="from_three">
               <a-select
-                v-model="form.regionKis"
+                v-model="form.datePis"
                 @blur="
                   () => {
-                    $refs.regionKis.onFieldBlur();
+                    $refs.datePis.onFieldBlur();
                   }
                 "
                 placeholder="请选择课程"
@@ -198,78 +198,78 @@ export default {
         formName: [
           {
             required: true,
-            message: "Please input Activity name",
+            message: "请输入姓名",
             trigger: "blur",
           },
           {
             min: 3,
             max: 5,
-            message: "Length should be 3 to 5",
+            message: "请输入正确的姓名",
             trigger: "blur",
           },
         ],
         numberBar: [
           {
             required: true,
-            message: "Please input Activity name",
+            message: "请输入手机号",
             trigger: "blur",
           },
           {
-            min: 3,
-            max: 5,
-            message: "Length should be 3 to 5",
+            min: 11,
+            max: 11,
+            message: "请输入正确的手机号",
             trigger: "blur",
           },
         ],
         regionKis: [
           {
             required: true,
-            message: "Please select Activity zone",
+            message: "请选择您的出生年月",
             trigger: "blur",
           },
           {
             min: 3,
             max: 5,
-            message: "Length should be 3 to 5",
+            message: "请选择您的出生年月",
             trigger: "blur",
           },
         ],
         datePis: [
           {
             required: true,
-            message: "Length should be 3 to 5",
+            message: "请选择课程",
             trigger: "blur",
           },
           {
-            min: 3,
-            max: 5,
-            message: "Length should be 3 to 5",
+            // min: 3,
+            // max: 5,
+            message: "请选择课程",
             trigger: "blur",
           },
         ],
         educaTions: [
           {
             required: true,
-            message: "Please input Activity name",
+            message: "请选择学历",
             trigger: "blur",
           },
           {
-            min: 3,
-            max: 5,
-            message: "Length should be 3 to 5",
+            // min: 3,
+            // max: 5,
+            message: "请选择学历",
             trigger: "blur",
           },
         ],
         id_numberTes: [
           {
             required: true,
-            message: "Please input Activity name",
+            message: "请填写身份证号",
             trigger: "blur",
           },
           {
-            min: 3,
-            max: 5,
-            message: "Length should be 3 to 5",
+            min: 18,
+            max: 18,
+            message: "请填写正确的身份证号",
             trigger: "blur",
           },
         ],
@@ -337,6 +337,7 @@ export default {
       border: 0;
       img {
         width: 100%;
+        height: .6rem;
       }
     }
   }
