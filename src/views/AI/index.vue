@@ -212,7 +212,7 @@
               </div>
             </div>
             <div class="banner_li_right">
-              <router-link to="/youlong">
+              <router-link to="/youlun">
                 <img
                   src="@/assets/img/人工智能与机器人/人工智能与机器人_38.jpg"
                   alt=""
