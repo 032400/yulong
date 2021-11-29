@@ -240,7 +240,7 @@
                 </div>
               </div>
               <div class="banner_li_right">
-                <router-link to="/youlong">
+                <router-link to="/youlun">
                   <img
                     src="@/assets/img/网络新媒体/网络新媒体运营_40.jpg"
                     alt=""

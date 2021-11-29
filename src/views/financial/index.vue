@@ -212,7 +212,7 @@
               </div>
             </div>
             <div class="banner_li_right">
-              <router-link to="/youlong">
+              <router-link to="/youlun">
                 <img
                   src="@/assets/img/互联网金融与管理/互联网金融与管理_02.jpg"
                   alt=""

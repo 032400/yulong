@@ -237,7 +237,7 @@
                 </div>
               </div>
               <div class="banner_li_right">
-                <router-link to="/youlong">
+                <router-link to="/youlun">
                   <img src="@/assets/img/新能源/新能源汽车_37.jpg" alt="" />
                 </router-link>
                 <div class="ul_text_two">
