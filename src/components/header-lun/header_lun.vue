@@ -29,6 +29,7 @@
 </template>
 <script>
 //引入swiper
+import axios from'axios'
 import Swiper from "swiper";
 import "swiper/css/swiper.css";
 
@@ -50,7 +51,7 @@ export default {
       rightimg:require("@/assets/img/公共/未标题-1_03.gif")
     };
   },
-  mounted() {
+  async mounted() {
     var mySwiper =new Swiper("#swiperOne", {
       loop: true, // 循环模式选项
     //   autoplay: true, //自动播放
@@ -63,6 +64,9 @@ export default {
         prevEl: ".swiper-button-prev",
       },
     });
+    axios.get('/cw',{params:{'mod':'bran'}}).then(res=>{
+      console.log(res);
+    })
   },
   methods:{
     left(){
