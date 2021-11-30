@@ -3,7 +3,7 @@ module.exports = {
     //vue配置文件
     //服务器端口设置
     devServer:{
-     port:9527,
+     port:8080,
      open:true,
      proxy:{
       '/cw':{
