@@ -2,7 +2,7 @@
   <div>
     <div class="lun_warp">
       <div class="lun_con">
-        <img src="@/assets/img/航空学院/航空专业.jpg" alt="" />
+        <img :src="urlimg" alt="" />
       </div>
     </div>
     <page />
@@ -57,7 +57,13 @@ import swiperBanner from "@/views/hangkongs/Aviation/swiperbanner.vue";
 
 import Prospects from "@/views/hangkongs/prospects.vue";
 
+import axios from "axios";
 export default {
+  data(){
+    return{
+      urlimg: "",
+    }
+  },
   components: {
     Show,
     Age,
@@ -66,6 +72,12 @@ export default {
     Prospects,
     page,
   },
+  mounted(){
+    axios.get("/cw", { params: { mod: "list" } }).then((res) => {
+      this.urlimg = "//39.105.137.169:9527/"+res.data.nav
+      // console.log(this.urlimg)
+    });
+  }
 };
 </script>
 <style lang="scss" scoped>
