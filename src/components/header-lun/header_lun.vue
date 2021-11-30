@@ -50,7 +50,7 @@ export default {
         { pic: require("@/assets/img/shouye/首页轮播2.png"), name: "/youlun" },
       ],
       imgs: [],
-      url: "//39.105.137.169:9527/",
+      url: "http://39.105.137.169:9527/",
       leftimg: require("@/assets/img/公共/首页改1_10.gif"),
       rightimg: require("@/assets/img/公共/未标题-1_03.gif"),
     };
@@ -74,7 +74,7 @@ export default {
       },
     });
     axios.get("/cw", { params: { mod: "bran" } }).then((res) => {
-      console.log(res);
+      // console.log(res);
       this.imgs = res.data;
       console.log(this.imgs);
     });
