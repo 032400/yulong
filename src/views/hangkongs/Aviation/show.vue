@@ -5,94 +5,58 @@
     </div>
     <div class="show-text">
       <ul>
-        <router-link to="/sichuan" tag="li">
-          <div class="school-img">
-            <img src="@/assets/img/航空学院/国际航空服务与管理_26.jpg" alt="" />
-          </div>
-          <div class="school-text">
-            <div class="school-name">大连海事大学</div>
-            <p><span>学校所在地：</span>大连</p>
-            <p>
-              <span>专业设置：</span>飞行器专业 电子工程专业 计算机专业 理学院
-            </p>
-            <p><span>学校优势：</span>专业任选 推荐就业 一对一教学</p>
-          </div>
-        </router-link>
-        <li>
-          <div class="school-img">
-            <img src="@/assets/img/航空学院/国际航空服务与管理_28.jpg" alt="" />
-          </div>
-          <div class="school-text">
-            <div class="school-name">渤海大学</div>
-            <p><span>学校所在地：</span>大连</p>
-            <p>
-              <span>专业设置：</span>飞行器专业 电子工程专业 计算机专业 理学院
-            </p>
-            <p><span>学校优势：</span>专业任选 推荐就业 一对一教学</p>
-          </div>
+        <li v-for="(item, index) in school" :key="item.product_id">
+          <router-link :to="{path:'sichuan',params:'category_id'}">
+            <div class="school-img">
+              <img :src="url + item.product_logo" alt="" />
+            </div>
+            <div class="school-text">
+              <div class="school-name">{{ item.product_name }}</div>
+              <p><span>学校所在地：</span>{{ item.product_desc }}</p>
+              <p>
+                <span>专业设置：</span>飞行器专业 电子工程专业 计算机专业 理学院
+              </p>
+              <p><span>学校优势：</span>专业任选 推荐就业 一对一教学</p>
+            </div>
+          </router-link>
         </li>
-      </ul>
-      <ul>
-        <li>
+
+        <li v-for="(item, index) in school" :key="index">
+          <router-link to="/sichuan">
           <div class="school-img">
-            <img src="@/assets/img/航空学院/国际航空服务与管理_32.jpg" alt="" />
+            <img :src="url + item.product_logo" alt="" />
           </div>
           <div class="school-text">
-            <div class="school-name">北京航空大学</div>
-            <p><span>学校所在地：</span>大连</p>
+            <div class="school-name">{{ item.product_name }}</div>
+            <p><span>学校所在地：</span>{{ item.product_desc }}</p>
             <p>
               <span>专业设置：</span>飞行器专业 电子工程专业 计算机专业 理学院
             </p>
             <p><span>学校优势：</span>专业任选 推荐就业 一对一教学</p>
           </div>
-        </li>
-        <li>
-          <div class="school-img">
-            <img src="@/assets/img/航空学院/国际航空服务与管理_33.jpg" alt="" />
-          </div>
-          <div class="school-text">
-            <div class="school-name">吉林大学</div>
-            <p><span>学校所在地：</span>大连</p>
-            <p>
-              <span>专业设置：</span>飞行器专业 电子工程专业 计算机专业 理学院
-            </p>
-            <p><span>学校优势：</span>专业任选 推荐就业 一对一教学</p>
-          </div>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <div class="school-img">
-            <img src="@/assets/img/航空学院/国际航空服务与管理_36.jpg" alt="" />
-          </div>
-          <div class="school-text">
-            <div class="school-name">山东杏林航空</div>
-            <p><span>学校所在地：</span>大连</p>
-            <p>
-              <span>专业设置：</span>飞行器专业 电子工程专业 计算机专业 理学院
-            </p>
-            <p><span>学校优势：</span>专业任选 推荐就业 一对一教学</p>
-          </div>
-        </li>
-        <li>
-          <div class="school-img">
-            <img src="@/assets/img/航空学院/国际航空服务与管理_37.jpg" alt="" />
-          </div>
-          <div class="school-text">
-            <div class="school-name">南京航空学院</div>
-            <p><span>学校所在地：</span>大连</p>
-            <p>
-              <span>专业设置：</span>飞行器专业 电子工程专业 计算机专业 理学院
-            </p>
-            <p><span>学校优势：</span>专业任选 推荐就业 一对一教学</p>
-          </div>
+          </router-link>
         </li>
       </ul>
     </div>
   </div>
 </template>
 <script>
-export default {};
+import axios from "axios";
+export default {
+  data() {
+    return {
+      school: [],
+      url: "//39.105.137.169:9527/",
+    };
+  },
+  mounted() {
+    axios.get("/cw", { params: { mod: "list" } }).then((res) => {
+      console.log(res);
+      this.school = res.data.list;
+      console.log(this.school);
+    });
+  },
+};
 </script>
 <style lang="scss" scoped>
 .show {
@@ -109,22 +73,25 @@ export default {};
     }
   }
   .show-text {
-    padding: 0.1rem 0.05rem 0rem;
+    padding: 0rem 0.05rem 0rem;
     ul {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: .05rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 0.05rem;
       li {
         width: 1.7rem;
         border-radius: 0.06rem;
         overflow: hidden;
         background: #f4f4f4;
+        margin-top: 0.05rem;
         .school-img {
           width: 100%;
           height: 0.9rem;
           img {
             width: 100%;
+            height: 100%;
           }
         }
         .school-text {
@@ -139,14 +106,14 @@ export default {};
             font-family: PingFang-SC-Heavy;
             font-size: 0.1rem;
             color: #999;
-            line-height: .17rem;
+            line-height: 0.17rem;
             span {
               font-family: PingFang-SC-Heavy;
               font-size: 0.1rem;
               font-weight: normal;
               color: #666;
             }
-            }
+          }
         }
       }
     }
