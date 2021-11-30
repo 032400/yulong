@@ -5,12 +5,12 @@
     </div>
     <div class="major-content">
       <ul>
-        <li>
-          <router-link to="/hangkong">
-            <img src="@/assets/img/shouye/国际航空服务与管理.png" alt="" />
+        <li v-for="(item, index) in image" :key="index">
+          <router-link :to="{ path: item.category_url ,params:'category_id'}" >
+            <img :src="url + item.category_icon" alt="" />
           </router-link>
         </li>
-        <li>
+        <!-- <li>
           <router-link to="/financial">
             <img src="@/assets/img/shouye/互联网金融与管理.png" alt=""/>
           </router-link>
@@ -24,7 +24,7 @@
           <router-link to="/Network">
           <img src="@/assets/img/shouye/网络新媒体运营.png" alt="" />
            </router-link>
-        </li>
+        </li> -->
         <li>
           <router-link to="/Netenergy">
           <img src="@/assets/img/shouye/新能源汽车.png" alt="" />
@@ -71,12 +71,21 @@
   </div>
 </template>
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
       style: "height:auto",
       styles: "height: 6.82rem;",
+      image:[],
+      url:'http://39.105.137.169:9527/'
     };
+  },
+  mounted(){
+    axios.get("/cw", { params: { mod: "mayjor" } }).then((res)=>{
+      console.log(res);
+      this.image = res.data;
+    })
   },
   methods: {
     click() {
