@@ -1,10 +1,18 @@
 <template>
   <div class="swiper">
     <div class="swiper-container" id="swiperOne">
-      <div class="swiper-wrapper">
+      <!-- <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="(item, index) in img" :key="index">
           <router-link :to="item.name">
             <img :src="item.pic" />
+          </router-link>
+        </div>
+      </div> -->
+
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" v-for="(item, index) in imgs" :key="index">
+          <router-link :to="{ path: item.ad_url }">
+            <img :src="url + item.ad_logo" />
           </router-link>
         </div>
       </div>
@@ -29,33 +37,34 @@
 </template>
 <script>
 //引入swiper
-import axios from'axios'
+import axios from "axios";
 import Swiper from "swiper";
 import "swiper/css/swiper.css";
 
 export default {
-  data(){
+  data() {
     return {
       img: [
-        { pic: require("@/assets/img/shouye/首页.png"),
-          name:'/hangkong',
-        },
-        { pic: require("@/assets/img/shouye/首页轮播1.png"),
-          name:'/gaotie',
-        },
-        { pic: require("@/assets/img/shouye/首页轮播2.png"),
-        name:'/youlun'
-        },
+        { pic: require("@/assets/img/shouye/首页.png"), name: "/hangkong" },
+        { pic: require("@/assets/img/shouye/首页轮播1.png"), name: "/gaotie" },
+        { pic: require("@/assets/img/shouye/首页轮播2.png"), name: "/youlun" },
       ],
-      leftimg:require("@/assets/img/公共/首页改1_10.gif"),
-      rightimg:require("@/assets/img/公共/未标题-1_03.gif")
+      imgs: [],
+      url: "//39.105.137.169:9527/",
+      leftimg: require("@/assets/img/公共/首页改1_10.gif"),
+      rightimg: require("@/assets/img/公共/未标题-1_03.gif"),
     };
   },
-  async mounted() {
-    var mySwiper =new Swiper("#swiperOne", {
+  mounted() {
+    var mySwiper = new Swiper("#swiperOne", {
       loop: true, // 循环模式选项
-    //   autoplay: true, //自动播放
-      // 如果需要分页器
+      lazyLoading: true,
+      observer: true, //修改swiper自己或子元素时，自动初始化swiper
+      observeParents: true, //修改swiper的父元素时，自动初始化swiper
+      spaceBetween: 0,
+      observer: true, // 启动动态检查器(OB/观众/观看者)
+      observeParents: true, // 修改swiper的父元素时，自动初始化swiper
+      loopAdditionalSlides: 4,
       pagination: {
         el: ".swiper-pagination",
       },
@@ -64,21 +73,23 @@ export default {
         prevEl: ".swiper-button-prev",
       },
     });
-    axios.get('/cw',{params:{'mod':'bran'}}).then(res=>{
+    axios.get("/cw", { params: { mod: "bran" } }).then((res) => {
       console.log(res);
-    })
+      this.imgs = res.data;
+      console.log(this.imgs);
+    });
   },
-  methods:{
-    left(){
-        this.leftimg=require("@/assets/img/公共/左.png")
-        this.rightimg=require("@/assets/img/公共/未标题-1_03.gif")
+  methods: {
+    left() {
+      this.leftimg = require("@/assets/img/公共/左.png");
+      this.rightimg = require("@/assets/img/公共/未标题-1_03.gif");
     },
-    right(){
-        this.leftimg=require("@/assets/img/公共/首页改1_10.gif")
-        this.rightimg=require("@/assets/img/公共/首页改1_13.gif")
-    }
-  }
-}
+    right() {
+      this.leftimg = require("@/assets/img/公共/首页改1_10.gif");
+      this.rightimg = require("@/assets/img/公共/首页改1_13.gif");
+    },
+  },
+};
 </script>
 <style  lang="scss" scoped>
 .swiper {
