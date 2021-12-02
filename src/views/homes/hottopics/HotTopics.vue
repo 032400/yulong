@@ -7,22 +7,22 @@
             <div class="hot_con_btm">
                 <ul>                    
                     <router-link tag="li" to="/detail">
-                        <img src="@/assets/img/shouye/首页改1_59.gif" alt="">
+                        <img src="@/assets/img/shouye/航空专业注意需求.jpg" alt="">
                     </router-link>
                     <li>
-                        <img src="@/assets/img/shouye/首页改1_62.gif" alt="">
+                        <img src="@/assets/img/shouye/三步了解航空专业.png" alt="">
                     </li>
                     <li>
-                        <img src="@/assets/img/shouye/首页改1_66.gif" alt="">
+                        <img src="@/assets/img/shouye/航空院校 招生面试问题.png" alt="">
                     </li>
                     <li>
-                        <img src="@/assets/img/shouye/首页改1_68.gif" alt="">
+                        <img src="@/assets/img/shouye/高中毕业学习航空专业.png" alt="">
                     </li>
                     <li>
-                        <img src="@/assets/img/shouye/首页改1_71.gif" alt="">
+                        <img src="@/assets/img/shouye/带你了解.png" alt="">
                     </li>
                     <li>
-                        <img src="@/assets/img/shouye/首页改1_72.gif" alt="">
+                        <img src="@/assets/img/shouye/初中生学习航空专业.png" alt="">
                     </li>
                     <li>
                         <img src="@/assets/img/shouye/首页改1_75.gif" alt="">
