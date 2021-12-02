@@ -2,38 +2,33 @@
   <div class="details">
     <!-- <Headerlun /> -->
     <div class="lun_warp">
-        <div class="lun_con">
-            <img src="@/assets/img/航空专业/航空专业详情页_04.jpg" alt="">
-        </div>
+      <div class="lun_con">
+        <img src="@/assets/img/航空内部席位/内部席位.png" alt="" />
+      </div>
     </div>
     <page />
     <div class="requirement">
       <div class="requ">
         <div class="requ-top">
-          <span>航空专业</span>
-          <span>到底有哪些要求？</span>
+          <span>带你了解航空专业的内部席位</span>
+          <br>
+          <span>总有一个适合你</span>
           <div class="circular"></div>
           <p>REQUIREMENTS</p>
         </div>
         <div class="img">
-          <img src="@/assets/img/航空专业/航空专业详情页_03.jpg" alt="" />
-        </div>
-        <div class="dotted">
-          <p>
-            随着航空事业的不断深入，从事航空事业的人也是越来越多，当然航空事业的要求是非常高的，记得当时验飞行员也是百里挑一哦，那么航空专业的要求有哪些?这个问题对于想要上蓝天的人来说是太重要了。
-          </p>
-          <div class="imgs">
-            <img src="@/assets/img/公共/航空专业详情页_04.jpg" alt="" />
-          </div>
+         <img src="@/assets/img/航空内部席位/大航空内部席位.png" alt="" />
         </div>
         <div class="number">
           <div class="left">
             <img src="@/assets/img/公共/航空专业详情页_03.png" alt="" />
           </div>
           <div class="right">
-            <span class="orange">政治条件：</span>
+            <span class="orange">机长：</span>
             <span
-              >拥护党的路线、方针、政策，热爱祖国，品德优秀，志愿献身民航飞行事业，符合《民用航空背景调查规定》相关要求。</span
+              >民用航空器运输机长（以下简称机长）在飞行中最高的法律地位和至高无上的权力，航空活动中机长对航空器和旅客的安全负有直接的也是最终的责任。
+我国《民用航空运输机长职责》中规定机长是依据中国民用航空规章取得航线运输驾驶员执照，并被航空运输企业聘为机长的飞行员，并明确了机长的十二条职责。
+</span
             >
           </div>
         </div>
@@ -42,9 +37,9 @@
             <img src="@/assets/img/公共/航空专业详情页_06.png" alt="" />
           </div>
           <div class="right">
-            <span class="blue">身体条件：</span>
+            <span class="blue">地勤：</span>
             <span
-              >大二、大三学生年龄不超过23周岁(1985年8月31日以后出生)，大四学生年龄不超过24周岁(1984年8月31日以后出生)，身高170厘米以上，身体符合《民用航空招收飞行学生体格检查鉴定规范》(MH/T7013-2006)要求。考生可按照《中国民用航空飞行学院招飞自荐标准》进行自我检查。</span
+              >机场地勤为自有航空运输服务以及各大航空站（机场）建设营运以来，出现在各级民用、军用航空站的一项重要附加服务，和航空站的运作息息相关且不可或缺。</span
             >
           </div>
         </div>
@@ -53,28 +48,42 @@
             <img src="@/assets/img/公共/航空专业详情页_03_08.png" alt="" />
           </div>
           <div class="right">
-            <span class="green">心理品质条件：</span>
+            <span class="green">空姐：</span>
             <span
-              >参加中国民用航空飞行学院组织的飞行员心理选拔，其心理品质应满足飞行职业需求。</span
+              >空姐，即女空中乘务员，泛指民航客机上从事旅客服务的女性工作人员，年龄一般在20-50岁，身高1.63-1.75米，要求端庄、秀丽，面容姣好，具有空中服务方面的专业修养。
+主要职责是在民航飞机上确保乘客旅途中的安全和舒适（例如为乘客供应飞机餐等餐饮），指导乘客使用机上安全设备以及在紧急情况下组织乘客逃离飞机等等。飞机客舱服务是民航运输服务的重要组成部分，它直接反映了航空公司的服务质量。
+</span
             >
           </div>
         </div>
-        <div class="number">
+         <div class="number">
           <div class="left">
             <img src="@/assets/img/公共/航空专业详情页_10.png" alt="" />
           </div>
           <div class="right">
-            <span class="pink">学历文化条件：</span>
+            <span class="pink">签派员：</span>
             <span
-              >普通二类本科以上在校大二、大三学生或毕业生，专业不限。在校学习成绩优良，具有良好的中英文口头表达能力。大学毕业生必须达到英语四级水平。大二、三学生经考核认定英语达到相当于四级水平。</span
+              >签派员(DISPATCHER)是一个航空公司不可或缺的人员。他们的主要工作是搜集飞行信息、制定并申请飞行计划，与机长共同放行每个航班。属于非常重要的工种，可以根据情况推迟、调配甚至取消航班。</span
+            >
+          </div>
+        </div>
+         <div class="number">
+          <div class="left">
+            <img src="@/assets/img/公共/航空专业内部席位_03.jpg" alt="" />
+          </div>
+          <div class="right">
+            <span class="hui">机务：</span>
+            <span
+              >航空机务，也就是（飞机检修），保障航空机务系统飞行安全，机械、航电设备等原因飞行事故万时率控制在0.1以下，飞机完好率始终保持在80%以上。维修质量高、保障能力强的安全技术人员。</span
             >
           </div>
         </div>
       </div>
     </div>
+
     <div class="inline">
       <div class="read-top">
-        <img src="@/assets/img/shouye/航空专业内部席位_07.jpg" alt="" />
+        <img src="@/assets/img/航空专业/推荐阅读_03.jpg" alt="" />
       </div>
       <div class="aviation_text">
         <div class="aviation_text_content">
@@ -276,14 +285,86 @@
         </div>
       </div>
     </div>
-     <div class="cdsa">
+
+    <div class="cdsa">
       <aviation />
-    </div> 
+    </div>
     <div class="read">
       <div class="read-top">
         <img src="@/assets/img/航空专业/推荐阅读_03.jpg" alt="" />
       </div>
-      <Data />
+      <div class="data">
+        <div class="data-cont">
+          <div class="left">
+            <p>27</p>
+            <p>2021.10</p>
+          </div>
+          <div class="right">
+            <p>航空学校招生要求有哪些？</p>
+            <p>空乘专业本科院校招生对高考成绩要求很高...</p>
+          </div>
+        </div>
+        <div class="data-cont">
+          <div class="left">
+            <p>14</p>
+            <p>2021.10</p>
+          </div>
+          <div class="right">
+            <p>航空学校学费一年多少钱？</p>
+            <p>海南空中乘务专业招生院校，海南空姐学校...</p>
+          </div>
+        </div>
+        <div class="data-cont">
+          <div class="left">
+            <p>18</p>
+            <p>2021.10</p>
+          </div>
+          <div class="right">
+            <p>河北空乘职业学校有哪些？</p>
+            <p>随着航空专业的热度，其他航空专业方向...</p>
+          </div>
+        </div>
+        <div class="data-cont">
+          <div class="left">
+            <p>05</p>
+            <p>2021.10</p>
+          </div>
+          <div class="right">
+            <p>航空物流专业好就业吗？</p>
+            <p>市北言咨,市民留言咨询这些问题,官...</p>
+          </div>
+        </div>
+        <div class="data-cont">
+          <div class="left">
+            <p>21</p>
+            <p>2021.10</p>
+          </div>
+          <div class="right">
+            <p>空姐就业前景怎么样？</p>
+            <p>随着航空服务专业学校的增多，所开设的专...</p>
+          </div>
+        </div>
+        <div class="data-cont">
+          <div class="left">
+            <p>14</p>
+            <p>2021.10</p>
+          </div>
+          <div class="right">
+            <p>航空学校学费一年多少钱？</p>
+            <p>海南空中乘务专业招生院校，海南空姐学校...</p>
+          </div>
+        </div>
+        <div class="data-cont">
+          <div class="left">
+            <p>18</p>
+            <p>2021.10</p>
+          </div>
+          <div class="right">
+            <p>河北空乘职业学校有哪些？</p>
+            <p>随着航空专业的热度，其他航空专业方向...</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -455,19 +536,19 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-.lun_warp{
-        width: 100%;
-        height: 1.50rem;
-        .lun_con{
-            width: 3.75rem;
-            height: 1.50rem;
-            margin: 0 auto;
-            img{
-                width: 100%;
-                height: 100%;
-            }
-        }
+.lun_warp {
+  width: 100%;
+  height: 1.5rem;
+  .lun_con {
+    width: 3.75rem;
+    height: 1.5rem;
+    margin: 0 auto;
+    img {
+      width: 100%;
+      height: 100%;
     }
+  }
+}
 .title_warp {
   width: 100%;
   padding: 0 0.2rem;
@@ -497,7 +578,7 @@ export default {
 .requirement {
   width: 100%;
   // padding: 0.15rem 0.1rem;
-  padding: 0 0.1rem .15rem .1rem;
+  padding: 0 0.1rem 0.15rem 0.1rem;
   box-sizing: border-box;
   .requ {
     width: 100%;
@@ -506,13 +587,13 @@ export default {
     overflow: hidden;
     .requ-top {
       width: 100%;
-      padding: 0.2rem 0.68rem;
+      padding: 0.2rem 0;
       font-size: 0.18rem;
       font-weight: 700;
       text-align: center;
       box-sizing: border-box;
-      span:first-of-type {
-        color: rgb(51, 102, 204);
+      span{
+        color: #000;
       }
       .circular {
         width: 0.04rem;
@@ -553,32 +634,7 @@ export default {
         height: 100%;
       }
     }
-    .dotted {
-      width: 3.3rem;
-      height: 0.91rem;
-      margin: 0.15rem 0.1rem 0.2rem;
-      border-radius: 15px;
-      border: 1px dashed rgb(153, 153, 153);
-      padding: 0.1rem 0.13rem;
-      box-sizing: border-box;
-      text-indent: 0.25rem;
-      position: relative;
-      font-size: 0.12rem;
-      color: rgb(51, 51, 51);
-      .imgs {
-        width: 0.13rem;
-        height: 0.09rem;
-        position: absolute;
-        bottom: -0.14rem;
-        left: 50%;
-        margin-left: -0.065rem;
-        img {
-          width: 100%;
-          height: 100%;
-          float: left;
-        }
-      }
-    }
+    
     .number {
       width: 3.14rem;
       margin: 0.15rem 0.1rem;
@@ -608,6 +664,9 @@ export default {
         }
         .pink {
           color: rgb(126, 0, 146);
+        }
+        .hui{
+            color: #7b6542;
         }
       }
     }
@@ -834,6 +893,41 @@ export default {
     img {
       width: 100%;
       height: 100%;
+    }
+  }
+  .data {
+    width: 100%;
+    .data-cont {
+      padding-left: 0.15rem;
+      margin-top: 0.2rem;
+      height: 0.35rem;
+      .left {
+        width: 0.47rem;
+        height: 0.35rem;
+        border-right: 1px solid rgb(204, 204, 204);
+        font-size: 0.09rem;
+        float: left;
+        color: rgb(153, 153, 153);
+        text-align: center;
+        p:first-of-type {
+          font-size: 0.2rem;
+          height: 0.2rem;
+          line-height: 0.2rem;
+        }
+      }
+      .right {
+        float: left;
+        margin-left: 0.08rem;
+        line-height: 0.13rem;
+        color: rgb(102, 102, 102);
+        font-size: 0.13rem;
+        p:first-of-type {
+          font-size: 0.15rem;
+          line-height: 0.15rem;
+          color: rgb(51, 51, 51);
+          margin-bottom: 0.07rem;
+        }
+      }
     }
   }
 }
