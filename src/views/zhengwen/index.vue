@@ -79,39 +79,39 @@
               :label-col="labelCol"
               :wrapper-col="wrapperCol"
             >
-              <a-form-model-item ref="names" label="" prop="names">
+              <a-form-model-item ref="namesr" label="" prop="namesr">
                 <div class="aviation_text_input">
                   <span class="span"><em>*</em>学生姓名</span>
                   <a-input
-                    v-model="form.names"
+                    v-model="form.namesr"
                     placeholder="请填写姓名"
                     @blur="
                       () => {
-                        $refs.names.onFieldBlur();
+                        $refs.namesr.onFieldBlur();
                       }
                     "
                   ></a-input>
                 </div>
               </a-form-model-item>
-              <a-form-model-item ref="numbers" label="" prop="numbers">
+              <a-form-model-item ref="numbersr" label="" prop="numbersr">
                 <div class="aviation_text_input">
                   <span class="span"><em>*</em>手机号码</span>
                   <a-input
-                    v-model="form.numbers"
+                    v-model="form.numbersr"
                     placeholder="请填写手机号码"
                     @blur="
                       () => {
-                        $refs.numbers.onFieldBlur();
+                        $refs.numbersr.onFieldBlur();
                       }
                     "
                   ></a-input>
                 </div>
               </a-form-model-item>
-              <a-form-model-item ref="dates" label="" required prop="dates">
+              <a-form-model-item ref="datesr" label="" required prop="datesr">
                 <div class="aviation_text_input">
                   <span class="span"><em>*</em>出生年月</span>
                   <a-date-picker
-                    v-model="form.dates"
+                    v-model="form.datesr"
                     show-time
                     type="date"
                     style="height: 0.35rem; color: #000 !important"
@@ -119,7 +119,7 @@
                     placeholder="请选择出生年月"
                     @blur="
                       () => {
-                        $refs.dates.onFieldBlur();
+                        $refs.datesr.onFieldBlur();
                       }
                     "
                   />
@@ -127,20 +127,20 @@
               </a-form-model-item>
 
               <a-form-model-item
-                ref="regions"
+                ref="regionsr"
                 label=""
                 style="margin: 0"
-                prop="regions"
+                prop="regionsr"
               >
                 <div class="aviation_text_cascader">
                   <span class="span"><em>*</em>所选课程</span>
                   <div class="from_three">
                     <a-select
-                      v-model="form.regions"
+                      v-model="form.regionsr"
                       placeholder="请选择课程"
                       @blur="
                         () => {
-                          $refs.regions.onFieldBlur();
+                          $refs.regionsr.onFieldBlur();
                         }
                       "
                       style="
@@ -168,20 +168,20 @@
               </a-form-model-item>
 
               <a-form-model-item
-                ref="educations"
+                ref="educationsr"
                 label=""
                 style="margin: 0"
-                prop="educations"
+                prop="educationsr"
               >
                 <div class="aviation_text_cascader">
                   <span class="span"><em>*</em>当前学历</span>
                   <div class="from_three">
                     <a-select
-                      v-model="form.educations"
+                      v-model="form.educationsr"
                       placeholder="请选择学历"
                       @blur="
                         () => {
-                          $refs.educations.onFieldBlur();
+                          $refs.educationsr.onFieldBlur();
                         }
                       "
                       style="
@@ -208,33 +208,34 @@
                 </div>
               </a-form-model-item>
 
-              <a-form-model-item ref="id_numbers" label="" prop="id_numbers">
+              <a-form-model-item ref="id_numbersr" label="" prop="id_numbersr">
                 <div class="aviation_text_input">
                   <span class="span"><em>*</em>身份证号</span>
                   <a-input
-                    v-model="form.id_numbers"
+                    v-model="form.id_numbersr"
                     placeholder="请填写身份证号"
                     @blur="
                       () => {
-                        $refs.id_numbers.onFieldBlur();
+                        $refs.id_numbersr.onFieldBlur();
                       }
                     "
                   ></a-input>
                 </div>
               </a-form-model-item>
 
-              <a-form-model-item label="" prop="descs">
+              <a-form-model-item label="" ref="descsr" prop="descsr">
                 <div class="aviation_textarea">
                   <span>您的疑问</span>
                   <div class="aviation_textarea_text">
                     <textarea
-                      v-model="form.descs"
-                      name=""
-                      id=""
-                      cols="30"
-                      rows="10"
+                      v-model="form.descsr"
                       style="color: #000"
                       placeholder="请填写您的疑问"
+                      @blur="
+                      () => {
+                        $refs.descsr.onFieldBlur();
+                      }
+                    "
                     >
                     </textarea>
                   </div>
@@ -251,7 +252,7 @@
                       <span @click="showModal">《隐私保障》</span>
                     </div>
                     <a-modal
-                      v-model="visible"
+                      v-model="visibles"
                       title="隐私保障"
                       ok-text="确认"
                       cancel-text="取消"
@@ -293,97 +294,97 @@ export default {
   components: { Data, Headerlun, Aviation, Page, Five },
   data() {
     return {
-      visible: false,
+      visibles: false,
       size: "default",
       labelCol: { span: 4 },
       wrapperCol: { span: 14 },
       other: "",
       form: {
-        names: "",
-        numbers: "",
-        regions: undefined,
-        dates: undefined,
-        educations: undefined,
-        id_numbers: undefined,
+        namesr: "",
+        numbersr: "",
+        regionsr: undefined,
+        datesr: undefined,
+        educationsr: undefined,
+        id_numbersr: undefined,
         type: [],
-        descs: "",
+        descsr: "",
       },
-      rules: {
-        names: [
+       rules: {
+        namesr: [
           {
             required: true,
-            message: "Please input Activity name",
+            message: "请填写姓名",
             trigger: "blur",
           },
           {
             min: 3,
             max: 5,
-            message: "Length should be 3 to 5",
+            message: "请填写正确的姓名",
             trigger: "blur",
           },
         ],
-        numbers: [
+        numbersr: [
           {
             required: true,
-            message: "Please input Activity name",
+            message: "请填写手机号",
             trigger: "blur",
           },
           {
-            min: 3,
-            max: 5,
-            message: "Length should be 3 to 5",
+            min: 11,
+            max: 11,
+            message: "请填写正确的手机号",
             trigger: "blur",
           },
         ],
-        regions: [
+        regionsr: [
           {
             required: true,
-            message: "Please select Activity zone",
+            message: "请选择课程",
             trigger: "blur",
           },
           {
             min: 3,
             max: 5,
-            message: "Length should be 3 to 5",
+            message: "请选择课程",
             trigger: "blur",
           },
         ],
-        dates: [
+        datesr: [
           {
             required: true,
-            message: "Length should be 3 to 5",
+            message: "请选择出生年月",
             trigger: "blur",
           },
           {
             min: 3,
             max: 5,
-            message: "Length should be 3 to 5",
+            message: "请选择出生年月",
             trigger: "blur",
           },
         ],
-        educations: [
+        educationsr: [
           {
             required: true,
-            message: "Please input Activity name",
+            message: "请选择学历",
             trigger: "blur",
           },
           {
             min: 3,
             max: 5,
-            message: "Length should be 3 to 5",
+            message: "请选择学历",
             trigger: "blur",
           },
         ],
-        id_numbers: [
+        id_numbersr: [
           {
             required: true,
-            message: "Please input Activity name",
+            message: "请填写身份证号",
             trigger: "blur",
           },
           {
             min: 3,
             max: 5,
-            message: "Length should be 3 to 5",
+            message: "请填写正确的身份证号",
             trigger: "blur",
           },
         ],
@@ -391,22 +392,29 @@ export default {
           {
             type: "array",
             required: true,
-            message: "Please select at least one activity type",
+            message: "请输入您的疑问",
             trigger: "change",
           },
           {
             min: 3,
             max: 5,
-            message: "Length should be 3 to 5",
+            message: "请输入您的疑问",
             trigger: "blur",
           },
         ],
-        descs: [
+        descsr: [
           {
             required: true,
-            message: "Please input activity form",
+            message: "请输入您的疑问",
             trigger: "blur",
           },
+          {
+            min:3,
+            max:40,
+            message: "请输入您的疑问?",
+            trigger: "blur",
+          },
+
         ],
       },
     };
@@ -430,10 +438,10 @@ export default {
       console.log(this.value);
     },
     showModal() {
-      this.visible = true;
+      this.visibles = true;
     },
     hideModal() {
-      this.visible = false;
+      this.visibles = false;
     },
     confirm() {
       this.$confirm({
