@@ -10,26 +10,8 @@
             <img :src="url + item.category_icon" alt="" />
           </router-link>
         </li>
-        <!-- <li>
-          <router-link to="/financial">
-            <img src="@/assets/img/shouye/互联网金融与管理.png" alt=""/>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/ai">
-            <img src="@/assets/img/shouye/人工智能与机器人.png" alt="" />
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/Network">
-          <img src="@/assets/img/shouye/网络新媒体运营.png" alt="" />
-           </router-link>
-        </li> -->
-        <li>
-          <router-link to="/Netenergy">
-          <img src="@/assets/img/shouye/新能源汽车.png" alt="" />
-           </router-link>
-        </li>
+       
+        
 
         <!-- 添加点击显示图片效果 !-->
         <div ref="lefts" class="left_img">
@@ -39,26 +21,7 @@
             alt=""
           />
         </div>
-        <li>
-          <router-link to="/Service">
-            <img src="@/assets/img/shouye/地勤.png" alt="" />
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/gaotie">
-            <img src="@/assets/img/shouye/高铁-2.png" alt="" />
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/kongcheng">
-            <img src="@/assets/img/shouye/航空.png" alt="" />
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/youlun">
-            <img src="@/assets/img/shouye/游轮.png" alt="" />
-          </router-link>
-        </li>
+        
         <div ref="right" class="right_img">
           <img
             src="@/assets/img/shouye/首页0_03_04.jpg"

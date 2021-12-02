@@ -8,7 +8,7 @@
     <All />
     <!-- {{list.product_text}} -->
 
-    <div v-html="list.product_text"></div>
+    
   </div>
 </template>
 <script>
@@ -22,7 +22,7 @@ export default {
   },
   data(){
     return {
-      list:[],
+      // list:[],
       url:"http://39.105.137.169:9527/",
       img:''
     }
@@ -33,7 +33,7 @@ export default {
   mounted(){
    axios.get("/cw", { params: { mod: "center" } }).then((res) => {
       console.log(res);
-      this.list = res.data[0]
+      // this.list = res.data[0]
       this.img = res.data[0].product_album.split(',')
     });
   }
