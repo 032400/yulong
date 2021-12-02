@@ -12,15 +12,17 @@
                     <li>
                         <img src="@/assets/img/shouye/三步了解航空专业.png" alt="">
                     </li>
-                    <li>
+                    <router-link tag="li" to="/Enrollment">
                         <img src="@/assets/img/shouye/航空院校 招生面试问题.png" alt="">
-                    </li>
+
+                    </router-link>
                     <router-link tag="li" to="/gaozhong">
                         <img src="@/assets/img/shouye/高中毕业学习航空专业.png" alt="">
                     </router-link>
-                    <li>
+                    <router-link tag="li" to="/dainiliaojie">
                         <img src="@/assets/img/shouye/带你了解.png" alt="">
-                    </li>
+                    </router-link>
+                   
                     <router-link tag="li" to="/chuzhong">
                         <img src="@/assets/img/shouye/初中生学习航空专业.png" alt="">
                     </router-link>

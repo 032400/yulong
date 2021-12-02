@@ -5,7 +5,7 @@
     </div>
     <div class="show-text">
       <ul>
-        <li v-for="(item, index) in school" :key="item.product_id">
+        <li v-for="item in school" :key="item.product_id">
           <router-link :to="{path:'sichuan',params:'category_id'}">
             <div class="school-img">
               <img :src="url + item.product_logo" alt="" />
@@ -21,21 +21,7 @@
           </router-link>
         </li>
 
-        <li v-for="(item, index) in school" :key="index">
-          <router-link to="/sichuan">
-          <div class="school-img">
-            <img :src="url + item.product_logo" alt="" />
-          </div>
-          <div class="school-text">
-            <div class="school-name">{{ item.product_name }}</div>
-            <p><span>学校所在地：</span>{{ item.product_desc }}</p>
-            <p>
-              <span>专业设置：</span>飞行器专业 电子工程专业 计算机专业 理学院
-            </p>
-            <p><span>学校优势：</span>专业任选 推荐就业 一对一教学</p>
-          </div>
-          </router-link>
-        </li>
+        
       </ul>
     </div>
   </div>
@@ -53,7 +39,7 @@ export default {
     axios.get("/cw", { params: { mod: "list" } }).then((res) => {
       console.log(res);
       this.school = res.data.list;
-      console.log(this.school);
+      // console.log(this.school);
     });
   },
 };
