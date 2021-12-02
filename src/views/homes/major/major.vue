@@ -5,12 +5,13 @@
     </div>
     <div class="major-content">
       <ul>
-        <li v-for="(item, index) in image" :key="index">
+        <li v-for="(item, index) in image.slice(0,5)"  :key="index">
           <router-link :to="{ path: item.category_url ,params:'category_id'}" >
             <img :src="url + item.category_icon" alt="" />
           </router-link>
         </li>
-        <!-- <li>
+
+        <!-- <li> 
           <router-link to="/financial">
             <img src="@/assets/img/shouye/互联网金融与管理.png" alt=""/>
           </router-link>
@@ -25,20 +26,21 @@
           <img src="@/assets/img/shouye/网络新媒体运营.png" alt="" />
            </router-link>
         </li> -->
-        <li>
-          <router-link to="/Netenergy">
-          <img src="@/assets/img/shouye/新能源汽车.png" alt="" />
-           </router-link>
-        </li>
 
         <!-- 添加点击显示图片效果 !-->
-        <div ref="lefts" class="left_img">
+        <div ref="lefts" class="left_img" v-show="image.length>5">
           <img
             src="@/assets/img/shouye/首页0_03_04.jpg"
             @click="click"
             alt=""
           />
         </div>
+
+        <!-- <li>
+          <router-link to="/Netenergy">
+          <img src="@/assets/img/shouye/新能源汽车.png" alt="" />
+           </router-link>
+        </li>
         <li>
           <router-link to="/Service">
             <img src="@/assets/img/shouye/地勤.png" alt="" />
@@ -58,8 +60,14 @@
           <router-link to="/youlun">
             <img src="@/assets/img/shouye/游轮.png" alt="" />
           </router-link>
+        </li> -->
+        
+        <li v-for="(item, index) in image.slice(6,10)"  :key="index">
+          <router-link :to="{ path: item.category_url ,params:'category_id'}" >
+            <img :src="url + item.category_icon" alt="" />
+          </router-link>
         </li>
-        <div ref="right" class="right_img">
+        <div ref="right" class="right_img" v-show="image.length>5">
           <img
             src="@/assets/img/shouye/首页0_03_04.jpg"
             @click="clicks()"

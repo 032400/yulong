@@ -121,6 +121,12 @@ const routes = [
       component:()=> import ('@/views/Netenergy/index.vue')
 
     },
+    {
+      path:"/message",
+      name:"最新资讯",
+      component:()=> import ('@/views/message/message.vue')
+
+    },
 ]
 
 const router = new VueRouter({
