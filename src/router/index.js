@@ -111,6 +111,12 @@ const routes = [
       component:()=> import ('@/views/Netenergy/index.vue')
 
     },
+    {
+      path:"/zhengwen",
+      name:"正文",
+      component:()=> import ('@/views/zhengwen/index.vue')
+
+    },
 ]
 
 const router = new VueRouter({
