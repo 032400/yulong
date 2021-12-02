@@ -10,20 +10,17 @@
         </div>
         <div class="school-text">
           <div class="school-more">
-            <p><span>所在地区：</span>北京</p>
-            <p><span>办学特性：</span>211、985</p>
-            <p><span>留学国家：</span>美国、加拿大、澳大利亚</p>
+            <p><span>所在地区：</span>{{list.product_desc}}</p>
+            <p><span>办学特性：</span>{{list.product_adj}}</p>
+            <p><span>留学国家：</span>{{list.product_country}}</p>
           </div>
           <div class="details">
             <p>
-              <span
-                ><i><img src="@/assets/img/四川外国语大学/学校简介_03.jpg" alt="" /></i
-                >学校详情：</span
-              >
-              四川外国语大学，简称“川外”，坐落在重庆市沙坪坝区，是一所经国家教育部批准，隶属于重庆市人民政府的全日制普通高校,为国家最早设立的四所外语专业高等院校之一。
+              <span><i><img src="@/assets/img/四川外国语大学/学校简介_03.jpg" alt="" /></i>学校详情：</span >
+             <span v-html="list.product_text"></span> 
             </p>
             <p class="two">
-              学校秉承“团结、勤奋、严谨、求实”的优良校风，弘扬“海纳百川,学贯中外"的校训精神，形成了“国际导向、外语共核、多元发展”的办学特色，开拓出一条“内涵发展,质量为先，中外合作，分类培养”的办学路径。
+              
               <!-- <router-link to=""> -->
               <span class="look-details">查看详情>></span>
               <!-- <router-link/> -->
@@ -143,7 +140,7 @@
 <script>
 import indexT from '@/views/sichuan/index.vue'
 import index from '@/views/sichuan/index1.vue'
-
+import axios from 'axios'
 export default {
   components:{
     indexT,
@@ -154,6 +151,9 @@ export default {
       setimg: require("@/assets/img/公共/首页_06.jpg"),
       setimg1: require("@/assets/img/公共/首页_06.jpg"),
       setimg2: require("@/assets/img/公共/首页_06.jpg"),
+       list:[],
+      url:"http://39.105.137.169:9527/",
+      img:''
     };
   },
   methods: {
@@ -176,6 +176,13 @@ export default {
       this.setimg2 = require("@/assets/img/公共/首页_06.jpg");
     },
   },
+  mounted(){
+   axios.get("/cw", { params: { mod: "center" } }).then((res) => {
+      console.log(res);
+      this.list = res.data[0]
+      this.img = res.data[0].product_album.split(',')
+    });
+  }
 };
 </script>
 <style lang="scss" scoped>
