@@ -15,15 +15,15 @@
                     <li>
                         <img src="@/assets/img/shouye/航空院校 招生面试问题.png" alt="">
                     </li>
-                    <li>
+                    <router-link tag="li" to="/gaozhong">
                         <img src="@/assets/img/shouye/高中毕业学习航空专业.png" alt="">
-                    </li>
+                    </router-link>
                     <li>
                         <img src="@/assets/img/shouye/带你了解.png" alt="">
                     </li>
-                    <li>
+                    <router-link tag="li" to="/chuzhong">
                         <img src="@/assets/img/shouye/初中生学习航空专业.png" alt="">
-                    </li>
+                    </router-link>
                     <li>
                         <img src="@/assets/img/shouye/首页改1_75.gif" alt="">
                     </li>

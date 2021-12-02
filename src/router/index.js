@@ -87,6 +87,16 @@ const routes = [
       component:()=> import ('@/views/details/details.vue')
     },
     {
+      path:"/gaozhong",
+      name:"高中学习航空",
+      component:()=> import ('@/views/gaozhong/gaozhong.vue')
+    },
+    {
+      path:"/chuzhong",
+      name:"初中学习航空",
+      component:()=> import ('@/views/chuzhong/chuzhong.vue')
+    },
+    {
       path:"/ynjd",
       component:()=> import ('@/views/ynjd/index.vue')
     },
