@@ -41,36 +41,40 @@
             ></a-input>
           </div>
         </a-form-model-item>
-        <a-form-model-item  ref="dates" label="" required prop="dates">
+        <a-form-model-item ref="dates" label="" required prop="dates">
           <div class="aviation_text_input">
             <span class="span"><em>*</em>出生年月</span>
             <a-date-picker
               v-model="form.dates"
-              show-time
               type="date"
               style="height: 0.35rem; color: #000 !important"
               :size="size"
               placeholder="请选择出生年月"
               @blur="
                 () => {
-                    $refs.dates.onFieldBlur();
+                  $refs.dates.onFieldBlur();
                 }
-                "
+              "
             />
           </div>
         </a-form-model-item>
 
-        <a-form-model-item ref="regions" label="" style="margin: 0" prop="regions">
+        <a-form-model-item
+          ref="regions"
+          label=""
+          style="margin: 0"
+          prop="regions"
+        >
           <div class="aviation_text_cascader">
             <span class="span"><em>*</em>所选课程</span>
             <div class="from_three">
               <a-select
                 v-model="form.regions"
                 placeholder="请选择课程"
-                 @blur="
-                    () => {
+                @blur="
+                  () => {
                     $refs.regions.onFieldBlur();
-                    }
+                  }
                 "
                 style="
                   width: 2rem;
@@ -96,17 +100,22 @@
           </div>
         </a-form-model-item>
 
-        <a-form-model-item ref="educations" label="" style="margin: 0" prop="educations">
+        <a-form-model-item
+          ref="educations"
+          label=""
+          style="margin: 0"
+          prop="educations"
+        >
           <div class="aviation_text_cascader">
             <span class="span"><em>*</em>当前学历</span>
             <div class="from_three">
               <a-select
                 v-model="form.educations"
                 placeholder="请选择学历"
-                 @blur="
-                    () => {
+                @blur="
+                  () => {
                     $refs.educations.onFieldBlur();
-                    }
+                  }
                 "
                 style="
                   width: 2rem;
@@ -138,7 +147,7 @@
             <a-input
               v-model="form.id_numbers"
               placeholder="请填写身份证号"
-               @blur="
+              @blur="
                 () => {
                   $refs.id_numbers.onFieldBlur();
                 }
@@ -210,7 +219,6 @@ export default {
         dates: undefined,
         educations: undefined,
         id_numbers: undefined,
-        type: [],
         descs: "",
       },
       rules: {
@@ -221,8 +229,8 @@ export default {
             trigger: "blur",
           },
           {
-            min: 3,
-            max: 5,
+            // pattern:/^[a-zA-Z]\w{3,15}$/ig,
+            pattern:/^[\u4E00-\u9FA5]{2,4}$/,
             message: "请填写正确的姓名",
             trigger: "blur",
           },
@@ -234,8 +242,7 @@ export default {
             trigger: "blur",
           },
           {
-            min: 11,
-            max: 11,
+            pattern:/^[1][3,4,5,7,8][0-9]{9}$/,
             message: "请填写正确的手机号",
             trigger: "blur",
           },
@@ -257,13 +264,7 @@ export default {
           {
             required: true,
             message: "请选择出生年月",
-            trigger: "blur",
-          },
-          {
-            min: 3,
-            max: 5,
-            message: "请选择出生年月",
-            trigger: "blur",
+            trigger: "change",
           },
         ],
         educations: [
@@ -286,23 +287,8 @@ export default {
             trigger: "blur",
           },
           {
-            min: 3,
-            max: 5,
+            pattern:/^[1-9][0-9]{5}(19|20)[0-9]{2}((01|03|05|07|08|10|12)(0[1-9]|[1-2][0-9]|30|31)|(04|06|09|11)(0[1-9]|[1-2][0-9]|30)|02(0[1-9]|[1-2][0-9]))[0-9]{3}([0-9]|x|X)$/,
             message: "请填写正确的身份证号",
-            trigger: "blur",
-          },
-        ],
-        type: [
-          {
-            type: "array",
-            required: true,
-            message: "请输入您的疑问",
-            trigger: "change",
-          },
-          {
-            min: 3,
-            max: 5,
-            message: "请输入您的疑问",
             trigger: "blur",
           },
         ],
@@ -310,9 +296,8 @@ export default {
           {
             required: true,
             message: "请输入您的疑问",
-            trigger: "blur",
+            trigger: "change",
           },
-
         ],
       },
     };
@@ -358,8 +343,8 @@ export default {
   border-radius: 0.04rem;
   // margin: 0 0.1rem;
   width: 3.55rem;
-  margin: 0 .1rem;
-  margin-top: .15rem;
+  margin: 0 0.1rem;
+  margin-top: 0.15rem;
   margin-bottom: 0.15rem;
   overflow: hidden;
   background-color: #fff;
@@ -367,13 +352,13 @@ export default {
     a {
       display: flex;
       border: 0;
-    height: 0.55rem;
+      height: 0.55rem;
       img {
         width: 100%;
       }
     }
   }
-  ::v-deep .ant-form-item-control{
+  ::v-deep .ant-form-item-control {
     display: flex;
     flex-direction: column;
     width: 3.55rem;
@@ -469,8 +454,8 @@ export default {
         }
       }
     }
-    .bottom_jick{
-        margin-top: .15rem;
+    .bottom_jick {
+      margin-top: 0.15rem;
       .aviation_text_button {
         background: #1d6da5;
         width: 2.73rem;
@@ -489,7 +474,7 @@ export default {
         padding-bottom: 0.15rem;
         display: block;
         // padding: 0 0 0.03rem 0;
-        padding-top: .05rem;
+        padding-top: 0.05rem;
         font-family: PingFang-SC-Medium;
         font-weight: normal;
         font-stretch: normal;
@@ -498,8 +483,6 @@ export default {
         color: #888888;
       }
     }
-    
-    
   }
 }
 ::v-deep .ant-select-selection {

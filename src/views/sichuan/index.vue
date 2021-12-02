@@ -46,7 +46,6 @@
             <span class="span"><em>*</em>出生年月</span>
             <a-date-picker
               v-model="form.date1"
-              show-time
               type="date"
               style="height: 0.35rem; color: #000 !important"
               :size="size"
@@ -60,12 +59,12 @@
           </div>
         </a-form-model-item>
 
-        <a-form-model-item ref="region" label="" style="margin: 0" prop="education">
+        <a-form-model-item ref="education" label="" style="margin: 0" prop="education">
           <div class="aviation_text_cascader">
             <span class="span"><em>*</em>所选课程</span>
             <div class="from_three">
               <a-select
-                v-model="form.region"
+                v-model="form.education"
                 placeholder="请选择课程"
                 style="
                   width: 2rem;
@@ -76,7 +75,7 @@
                 "
                  @blur="
                     () => {
-                      $refs.region.onFieldBlur();
+                      $refs.education.onFieldBlur();
                     }
                   "
               >
@@ -101,11 +100,11 @@
             <span class="span"><em>*</em>当前学历</span>
             <div class="from_three">
               <a-select
-                v-model="form.education"
+                v-model="form.id_number"
                 placeholder="请选择学历"
                  @blur="
                     () => {
-                      $refs.education.onFieldBlur();
+                      $refs.id_number.onFieldBlur();
                     }
                   "
                 style="
@@ -132,15 +131,15 @@
           </div>
         </a-form-model-item>
 
-        <a-form-model-item label="" prop="type" ref="type">
+        <a-form-model-item label="" prop="id_numbers" ref="id_numbers">
           <div class="aviation_text_input">
             <span class="span"><em>*</em>身份证号</span>
             <a-input
-              v-model="form.id_number"
+              v-model="form.id_numbers"
               placeholder="请填写身份证号"
               @blur="
                     () => {
-                      $refs.id_number.onFieldBlur();
+                      $refs.id_numbers.onFieldBlur();
                     }
                   "
             ></a-input>
@@ -215,7 +214,6 @@ export default {
         date1: undefined,
         education: undefined,
         id_number: undefined,
-        type: [],
         desc: "",
       },
       rules: {
@@ -226,8 +224,7 @@ export default {
             trigger: "blur",
           },
           {
-            min: 3,
-            max: 5,
+            pattern:/^[\u4E00-\u9FA5]{2,4}$/,
             message: "请填写正确的姓名",
             trigger: "blur",
           },
@@ -239,8 +236,7 @@ export default {
             trigger: "blur",
           },
           {
-            min: 11,
-            max: 11,
+            pattern:/^[1][3,4,5,7,8][0-9]{9}$/,
             message: "请填写正确的手机号",
             trigger: "blur",
           },
@@ -249,13 +245,7 @@ export default {
           {
             required: true,
             message: "请选择出生年月",
-            trigger: "blur",
-          },
-          {
-            min: 3,
-            max: 5,
-            message: "请选择出生年月",
-            trigger: "blur",
+            trigger: "change",
           },
         ],
         education: [
@@ -284,19 +274,23 @@ export default {
             trigger: "blur",
           },
         ],
-        type: [
+        id_numbers: [
           {
-            type: "array",
             required: true,
             message: "请填写身份证号",
-            trigger: "change",
+            trigger: "blur",
+          },
+          {
+            pattern:/^[1-9][0-9]{5}(19|20)[0-9]{2}((01|03|05|07|08|10|12)(0[1-9]|[1-2][0-9]|30|31)|(04|06|09|11)(0[1-9]|[1-2][0-9]|30)|02(0[1-9]|[1-2][0-9]))[0-9]{3}([0-9]|x|X)$/,
+            message: "请填写正确的身份证号",
+            trigger: "blur",
           },
         ],
         desc: [
           {
             required: true,
             message: "请填写您的疑问",
-            trigger: "blur",
+            trigger: "change",
           },
         ],
       },
