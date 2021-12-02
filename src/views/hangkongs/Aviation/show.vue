@@ -6,7 +6,7 @@
     <div class="show-text">
       <ul>
         <li v-for="item in school" :key="item.product_id">
-          <router-link :to="{path:'sichuan',params:'category_id'}">
+         <router-link  :to="{path:'/sichuan',query:{gid:item.product_id}}">
             <div class="school-img">
               <img :src="url + item.product_logo" alt="" />
             </div>
@@ -28,18 +28,21 @@
 </template>
 <script>
 import axios from "axios";
+
 export default {
   data() {
     return {
       school: [],
       url: "//39.105.137.169:9527/",
+     
     };
   },
   mounted() {
-    axios.get("/cw", { params: { mod: "list" } }).then((res) => {
+    console.log(this.$route);
+    axios.get("/cw", { params: { mod: "list",id:this.$route.query.id} }).then((res) => {
       console.log(res);
       this.school = res.data.list;
-      // console.log(this.school);
+      // console.log(this.router)
     });
   },
 };
