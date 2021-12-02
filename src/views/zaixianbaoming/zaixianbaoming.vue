@@ -588,6 +588,7 @@ export default {
       padding: 0  0 0 0.14rem;
       font-size: 0.12rem;
       height: 0.29rem;
+      top: 40%;
    
   }
   ::v-deep .ant-select-selection--single {
@@ -595,6 +596,7 @@ export default {
   }
   ::v-deep .ant-select-selection-selected-value{
      padding-left:0.2rem ;
+     line-height: .3rem;
   }
 }
 </style>

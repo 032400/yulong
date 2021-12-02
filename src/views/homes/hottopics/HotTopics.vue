@@ -9,10 +9,13 @@
                     <router-link tag="li" to="/detail">
                         <img src="@/assets/img/shouye/航空专业注意需求.jpg" alt="">
                     </router-link>
-                    <li>
+                    <router-link tag="li" to="/zhengwen">
                         <img src="@/assets/img/shouye/三步了解航空专业.png" alt="">
-                    </li>
+
+                    </router-link>
+                  
                     <router-link tag="li" to="/Enrollment">
+
                         <img src="@/assets/img/shouye/航空院校 招生面试问题.png" alt="">
 
                     </router-link>
