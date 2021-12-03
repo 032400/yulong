@@ -5,24 +5,33 @@
     </div>
     <div class="major-content">
       <ul>
+
+        <li v-for="(item, index) in image.slice(0,5)"  :key="index">
+          <router-link :to="{ path: item.category_url ,params:'category_id'}" >
+
         <li v-for="(item, index) in image" :key="index">
-          <!-- :to="{name:'detail',query:{menuId:item._id}}" -->
-          <!-- :to="{ name: item.category_url;query:{item.category_id}}" -->
+       
           <router-link  :to="{path:item.category_url,query:{id:item.category_id}}">
+
             <img :src="url + item.category_icon" alt="" />
 
           </router-link> 
         </li>
-       
 
         <!-- 添加点击显示图片效果 !-->
-        <div ref="lefts" class="left_img">
+        <div ref="lefts" class="left_img" v-show="image.length>5">
           <img
             src="@/assets/img/shouye/首页0_03_04.jpg"
             @click="click"
             alt=""
           />
         </div>
+        <li v-for="(item, index) in image.slice(6,10)"  :key="index">
+          <router-link :to="{ path: item.category_url ,params:'category_id'}" >
+            <img :src="url + item.category_icon" alt="" />
+          </router-link>
+        </li>
+        <div ref="right" class="right_img" v-show="image.length>5">
         
         <div ref="right" class="right_img">
           <img

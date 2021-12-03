@@ -7,14 +7,14 @@
       <div class="information_con_cen">
         <ul class="btm_list">
           <li>
-            <a href="#">
+            <router-link to="/message">
               <img
                 style="width: 0.16rem; padding-bottom: 0.02rem"
                 src="@/assets/img/shouye/首页_03.jpg"
                 alt=""
               />
-              39岁的小伙子,就发生了发颤,怎...</a
-            >
+              39岁的小伙子,就发生了发颤,怎...
+            </router-link>
             <p>2021.10.15</p>
           </li>
           <li>
@@ -24,8 +24,8 @@
                 src="@/assets/img/shouye/首页_03.jpg"
                 alt=""
               />
-              市北市民留言咨询这些问题,官...</a
-            >
+              市北市民留言咨询这些问题,官...
+            </a>
             <p>2021.10.15</p>
           </li>
           <li>
@@ -35,8 +35,8 @@
                 src="@/assets/img/shouye/首页_03.jpg"
                 alt=""
               />
-              美供应链受阻问题雪上加霜</a
-            >
+              美供应链受阻问题雪上加霜
+            </a>
             <p>2021.10.15</p>
           </li>
           <li>
@@ -46,8 +46,8 @@
                 src="@/assets/img/shouye/首页_03.jpg"
                 alt=""
               />
-              篮网有能力解决他们的问题度...</a
-            >
+              篮网有能力解决他们的问题度...
+            </a>
             <p>2021.10.15</p>
           </li>
           <li>
@@ -57,8 +57,8 @@
                 src="@/assets/img/shouye/首页_03.jpg"
                 alt=""
               />
-              记者实测快递企业智能客服:回...</a
-            >
+              记者实测快递企业智能客服:回...
+            </a>
             <p>2021.10.15</p>
           </li>
           <li>
@@ -68,8 +68,8 @@
                 src="@/assets/img/shouye/首页_03.jpg"
                 alt=""
               />
-              养老金有哪些渠道可以获得?有...</a
-            >
+              养老金有哪些渠道可以获得?有...
+            </a>
             <p>2021.10.15</p>
           </li>
           <li>
@@ -79,8 +79,8 @@
                 src="@/assets/img/shouye/首页_03.jpg"
                 alt=""
               />
-              怎么样买保险才是最合理的?咱...</a
-            >
+              怎么样买保险才是最合理的?咱...
+            </a>
             <p>2021.10.15</p>
           </li>
           <li>
@@ -90,8 +90,8 @@
                 src="@/assets/img/shouye/首页_03.jpg"
                 alt=""
               />
-              全面建成小康社会的重要举措...</a
-            >
+              全面建成小康社会的重要举措...
+            </a>
             <p>2021.10.15</p>
           </li>
           <li>
@@ -101,8 +101,8 @@
                 src="@/assets/img/shouye/首页_03.jpg"
                 alt=""
               />
-              摩根士丹利重磅报告:中国经济...</a
-            >
+              摩根士丹利重磅报告:中国经济...
+            </a>
             <p>2021.10.15</p>
           </li>
         </ul>

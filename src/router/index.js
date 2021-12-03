@@ -106,12 +106,37 @@ const routes = [
       path:"/ynjd",
       component:()=> import ('@/views/ynjd/index.vue')
     },
+    
     {
-      path:"/Netenergy",
-      name:"新能源汽车",
-      component:()=> import ('@/views/Netenergy/index.vue')
+
+      path:"/message",
+      name:"最新资讯",
+      component:()=> import ('@/views/message/message.vue')
 
     },
+    
+  {
+    path: "/ai",
+    name: "人工智能切图",
+    component: () => import('@/views/AI/index.vue')
+  },
+  {
+    path: "/financial",
+    name: "互联网金融与管理",
+    component: () => import('@/views/financial/index.vue')
+  },
+  {
+    path: "/Network",
+    name: "网络新媒体运营",
+    component: () => import('@/views/Network/index.vue')
+  },
+  {
+    path: "/Netenergy",
+    name: "新能源汽车",
+    component: () => import('@/views/Netenergy/index.vue')
+  },
+
+
   {
     path: "/Enrollment",
     name: "航空院校招生面试问题",
