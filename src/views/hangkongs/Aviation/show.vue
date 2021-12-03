@@ -6,7 +6,7 @@
     <div class="show-text">
       <ul>
         <li v-for="item in school" :key="item.product_id">
-          <router-link :to="{path:'sichuan',params:'category_id'}">
+         <router-link  :to="{path:'/sichuan',query:{gid:item.product_id}}">
             <div class="school-img">
               <img :src="url + item.product_logo" alt="" />
             </div>
@@ -14,9 +14,9 @@
               <div class="school-name">{{ item.product_name }}</div>
               <p><span>学校所在地：</span>{{ item.product_desc }}</p>
               <p>
-                <span>专业设置：</span>飞行器专业 电子工程专业 计算机专业 理学院
+                <span>专业设置：</span>{{item.product_mark}}
               </p>
-              <p><span>学校优势：</span>专业任选 推荐就业 一对一教学</p>
+              <p><span>学校优势：</span>{{item.product_weight}}</p>
             </div>
           </router-link>
         </li>
@@ -28,18 +28,18 @@
 </template>
 <script>
 import axios from "axios";
+
 export default {
   data() {
     return {
       school: [],
       url: "//39.105.137.169:9527/",
+     
     };
   },
   mounted() {
-    axios.get("/cw", { params: { mod: "list" } }).then((res) => {
-      console.log(res);
+    axios.get("/cw", { params: { mod: "list",id:this.$route.query.id} }).then((res) => {
       this.school = res.data.list;
-      // console.log(this.school);
     });
   },
 };

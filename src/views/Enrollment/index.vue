@@ -64,7 +64,7 @@
 
     <div class="inline">
       <div class="read-top">
-        <img src="@/assets/img/航空专业/推荐阅读_03.jpg" alt="" />
+       <img src="@/assets/img/shouye/航空专业内部席位_07.jpg" alt="" />
       </div>
       <div class="aviation_text">
         <div class="aviation_text_content">

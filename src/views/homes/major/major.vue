@@ -6,12 +6,14 @@
     <div class="major-content">
       <ul>
         <li v-for="(item, index) in image" :key="index">
-          <router-link :to="{ path: item.category_url ,params:'category_id'}" >
+          <!-- :to="{name:'detail',query:{menuId:item._id}}" -->
+          <!-- :to="{ name: item.category_url;query:{item.category_id}}" -->
+          <router-link  :to="{path:item.category_url,query:{id:item.category_id}}">
             <img :src="url + item.category_icon" alt="" />
-          </router-link>
+
+          </router-link> 
         </li>
        
-        
 
         <!-- 添加点击显示图片效果 !-->
         <div ref="lefts" class="left_img">
@@ -46,7 +48,6 @@ export default {
   },
   mounted(){
     axios.get("/cw", { params: { mod: "mayjor" } }).then((res)=>{
-      console.log(res);
       this.image = res.data;
     })
   },

@@ -4,40 +4,8 @@
       <div class="introduction-header">
         <img src="@/assets/img/四川外国语大学/四川外国语大学简介_03.jpg" alt="" />
       </div>
-      <div class="introduction-text">
-        <div class="school-img">
-          <img src="@/assets/img/四川外国语大学/学校简介(1)_03.jpg" alt="" />
-        </div>
-        <div class="school-text">
-          <div class="school-more">
-            <p><span>所在地区：</span>{{list.product_desc}}</p>
-            <p><span>办学特性：</span>{{list.product_adj}}</p>
-            <p><span>留学国家：</span>{{list.product_country}}</p>
-          </div>
-          <div class="details">
-            <p>
-              <span><i><img src="@/assets/img/四川外国语大学/学校简介_03.jpg" alt="" /></i>学校详情：</span >
-             <span v-html="list.product_text"></span> 
-            </p>
-            <p class="two">
-              
-              <!-- <router-link to=""> -->
-              <span class="look-details">查看详情>></span>
-              <!-- <router-link/> -->
-            </p>
-          </div>
-          <div class="advantage">
-            <div>
-              <span
-                ><i><img src="@/assets/img/四川外国语大学/学校简介_06.jpg" alt="" /></i
-                >学校优势：</span
-              >
-              <p>可靠的项目资源</p>
-              <p>优质稳定的合作公司</p>
-              <p>学分豁免，节省资金</p>
-            </div>
-          </div>
-        </div>
+      <div v-html="list.product_text">
+
       </div>
     </div>
     <div class="all-news">
@@ -177,7 +145,7 @@ export default {
     },
   },
   mounted(){
-   axios.get("/cw", { params: { mod: "center" } }).then((res) => {
+   axios.get("/cw", { params: { mod: "center",gid:this.$route.query.gid} }).then((res) => {
       console.log(res);
       this.list = res.data[0]
       this.img = res.data[0].product_album.split(',')
