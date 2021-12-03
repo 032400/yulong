@@ -1,4 +1,4 @@
-/* eslint-disable vue/no-side-effects-in-computed-properties */
+
 <template>
   <div class="actt">
     <div class="logo_body">
@@ -20,7 +20,7 @@
             "
             >首页</router-link
           >
-          <router-link to="/hangkong" tag="p">航空院校</router-link>
+          <router-link :to="{ path: '/hangkong',query:{id:44} }" tag="p">航空院校</router-link>
           <div class="title">
             <div class="header" @click="click">
               <router-link to="" tag="span" class="s" style="padding-left:.04rem">热门专业</router-link>

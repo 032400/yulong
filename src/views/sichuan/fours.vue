@@ -1,12 +1,12 @@
 <template>
   <div>
     <div class="int_con">
-      <img :src="url+img[0]" />
+      <img :src="url+img[1]" />
     </div>
     <Pages />
 
     <All />
-    <!-- {{list.product_text}} -->
+    
 
     
   </div>
@@ -22,7 +22,7 @@ export default {
   },
   data(){
     return {
-      // list:[],
+      
       url:"http://39.105.137.169:9527/",
       img:''
     }
@@ -31,9 +31,7 @@ export default {
     
   },
   mounted(){
-   axios.get("/cw", { params: { mod: "center" } }).then((res) => {
-      console.log(res);
-      // this.list = res.data[0]
+   axios.get("/cw", { params: { mod: "center",gid:this.$route.query.gid } }).then((res) => {
       this.img = res.data[0].product_album.split(',')
     });
   }
