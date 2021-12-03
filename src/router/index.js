@@ -39,6 +39,12 @@ const routes = [
             name:"艺考生",
             component:()=> import ('@/views/hangkongs/student/yikaosheng.vue')
           },
+          {
+            path:"/zhengwen",
+            name:"正文",
+            component:()=> import ('@/views/zhengwen/index.vue')
+      
+          },
         ]
      },
     {
@@ -106,13 +112,6 @@ const routes = [
       component:()=> import ('@/views/Netenergy/index.vue')
 
     },
-    {
-      path:"/zhengwen",
-      name:"正文",
-      component:()=> import ('@/views/zhengwen/index.vue')
-
-    },
-   
   {
     path: "/Enrollment",
     name: "航空院校招生面试问题",

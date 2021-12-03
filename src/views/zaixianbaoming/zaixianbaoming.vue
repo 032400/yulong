@@ -55,7 +55,6 @@
             <span class="span"><em>*</em>出生年月</span>
             <a-date-picker
               v-model="form.dates"
-              show-time
               type="date"
               style="height: 0.35rem; color: #000 !important"
               :size="size"
@@ -221,7 +220,6 @@ export default {
         dates: undefined,
         educations: undefined,
         id_numbers: undefined,
-        type: [],
         descs: "",
       },
      rules: {
@@ -232,8 +230,7 @@ export default {
             trigger: "blur",
           },
           {
-            min: 3,
-            max: 5,
+            pattern:/^[\u4E00-\u9FA5]{2,4}$/,
             message: "请填写正确的姓名",
             trigger: "blur",
           },
@@ -245,8 +242,7 @@ export default {
             trigger: "blur",
           },
           {
-            min: 11,
-            max: 11,
+            pattern:/^[1][3,4,5,7,8][0-9]{9}$/,
             message: "请填写正确的手机号",
             trigger: "blur",
           },
@@ -268,13 +264,7 @@ export default {
           {
             required: true,
             message: "请选择出生年月",
-            trigger: "blur",
-          },
-          {
-            min: 3,
-            max: 5,
-            message: "请选择出生年月",
-            trigger: "blur",
+            trigger: "change",
           },
         ],
         educations: [
@@ -297,23 +287,8 @@ export default {
             trigger: "blur",
           },
           {
-            min: 3,
-            max: 5,
+            pattern:/^[1-9][0-9]{5}(19|20)[0-9]{2}((01|03|05|07|08|10|12)(0[1-9]|[1-2][0-9]|30|31)|(04|06|09|11)(0[1-9]|[1-2][0-9]|30)|02(0[1-9]|[1-2][0-9]))[0-9]{3}([0-9]|x|X)$/,
             message: "请填写正确的身份证号",
-            trigger: "blur",
-          },
-        ],
-        type: [
-          {
-            type: "array",
-            required: true,
-            message: "请输入您的疑问",
-            trigger: "change",
-          },
-          {
-            min: 3,
-            max: 5,
-            message: "请输入您的疑问",
             trigger: "blur",
           },
         ],
@@ -321,7 +296,7 @@ export default {
           {
             required: true,
             message: "请输入您的疑问",
-            trigger: "blur",
+            trigger: "change",
           },
 
         ],
@@ -581,7 +556,7 @@ export default {
 }
   ::v-deep .ant-input{
       padding: 0  0 0 0.3rem;
-      height: 0.3rem;
+      height: 0.35rem;
       font-size: 0.12rem;
   }
   ::v-deep .ant-select-selection__placeholder{
@@ -592,7 +567,7 @@ export default {
    
   }
   ::v-deep .ant-select-selection--single {
-    height: 0.3rem;
+    height: 0.35rem;
   }
   ::v-deep .ant-select-selection-selected-value{
      padding-left:0.2rem ;
