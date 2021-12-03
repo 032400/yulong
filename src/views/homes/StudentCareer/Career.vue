@@ -2,79 +2,53 @@
   <div class="wrap">
     <div class="main">
       <div class="header">
-        <img src="@/assets/img/shouye/首页改1_85.gif" alt="" />
+        <img src="@/assets/img/shouye/首页改1_85.gif" alt />
       </div>
       <div class="tabs">
         <span
-          v-for="item in student"
-          :key="item.type"
+          v-for="item in text"
+          :key="item.class_id"
           @click="handleClick(item)"
-          :class="{ active: item.type == current }"
-        >
-          {{ item.name }}
-        </span>
+          :class="{ active: current == item.class_id }"
+        >{{ item.class_name }}</span>
       </div>
       <div class="list">
-        <ul v-if="current == '0'">
-          <li v-for="(item, index) in list" :key="index">
+        <ul v-for="item in text" :key="item.class_id" v-if="current == item.class_id">
+          <li v-for="(title , index) in ll" :key="index">
             <span class="text">
               <img
                 style="width: 0.16rem; padding-bottom: 0.02rem"
                 src="@/assets/img/shouye/首页_03.jpg"
-                alt=""
+                alt
               />
-              {{ item }}
+              {{ title.article_name }}
             </span>
             <span class="time">2021.10.15</span>
           </li>
         </ul>
-        <ul v-if="current == '1'">
-          <li v-for="(item, index) in list" :key="index">
+        <!-- v-if="current == list.jiuye.class_id" -->
+        <ul v-if="!ll.length">
+          <li v-for="(item, index) in list.first_show" :key="index">
             <span class="text">
               <img
                 style="width: 0.16rem; padding-bottom: 0.02rem"
                 src="@/assets/img/shouye/首页_03.jpg"
                 alt=""
               />
-              {{ item }}
-            </span>
-            <span class="time">2021.10.15</span>
-          </li>
-        </ul>
-        <ul v-if="current == '2'">
-          <li v-for="(item, index) in list" :key="index">
-            <span class="text">
-              <img
-                style="width: 0.16rem; padding-bottom: 0.02rem"
-                src="@/assets/img/shouye/首页_03.jpg"
-                alt=""
-              />
-              {{ item }}
-            </span>
-            <span class="time">2021.10.15</span>
-          </li>
-        </ul>
-        <ul v-if="current == '3'">
-          <li v-for="(item, index) in list" :key="index">
-            <span class="text">
-              <img
-                style="width: 0.16rem; padding-bottom: 0.02rem"
-                src="@/assets/img/shouye/首页_03.jpg"
-                alt=""
-              />
-              {{ item }}
+              {{ item.article_name }}
             </span>
             <span class="time">2021.10.15</span>
           </li>
         </ul>
       </div>
-       <div class="information_con_btm" @touchstart="seet()" @touchend="sett()">
-        <img :src="setimg" alt="" />
+      <div class="information_con_btm" @touchstart="seet()" @touchend="sett()">
+        <img :src="setimg" alt />
       </div>
     </div>
   </div>
 </template>
 <script>
+import axios from "axios"
 const student = [
   {
     name: "初中生",
@@ -98,25 +72,22 @@ export default {
   data() {
     return {
       student,
-      current: "0", //默认选中第一个tab
+      current: "", //默认选中第一个tab
       list: [
-        "39岁的小伙子,就发生了发颤,怎么",
-        "市北市民留言咨询这些问题,官方",
-        "美供应链受阻问题雪上加霜",
-        "篮网有能力解决他们的问题度,你",
-        "记者实测快速企业智能客服:回复",
-        "养老金有哪些渠道可以获得?有说明",
-        "怎么样买保险才是最合理的?咱们",
-        "全面建成小康社会的重要举措你们慢慢",
-        "摩根士丹利重磅报告:中国经济措施",
+       
       ],
       setimg: require("@/assets/img/公共/首页_06.jpg"),
+      text:[],
+      url: "http://39.105.137.169:9527/",
+      ll:[]
     };
   },
-  methods: {
+   methods: {
     //点击的时候改变current
     handleClick(item) {
-      this.current = item.type;
+      this.current = item.class_id;
+      this.hander()
+
     },
     seet() {
       this.setimg = require("@/assets/img/公共/首页_03.jpg");
@@ -124,7 +95,24 @@ export default {
     sett() {
       this.setimg = require("@/assets/img/公共/首页_06.jpg");
     },
+    hander(){
+       axios.get("/cw", { params: { mod: "gonews",cid:this.current} }).then((res)=>{
+      console.log(res);
+      this.ll=res.data
+
+      })
+    }
   },
+ mounted(){
+    axios.get("/cw", { params: { mod: "news" } }).then((res)=>{
+      console.log(res.data);
+      this.list = res.data
+      this.text = res.data.jiuye;
+    })
+    
+
+  },
+ 
   created() {},
 };
 </script>
@@ -204,7 +192,7 @@ body {
         flex-direction: column;
         margin-top: 0.42rem;
         li {
-            // width: 3.36rem;
+          // width: 3.36rem;
           height: 0.15rem;
           border-bottom: 0.01rem solid #ccc;
           margin-left: 0.04rem;
