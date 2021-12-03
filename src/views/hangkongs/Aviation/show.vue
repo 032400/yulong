@@ -14,9 +14,9 @@
               <div class="school-name">{{ item.product_name }}</div>
               <p><span>学校所在地：</span>{{ item.product_desc }}</p>
               <p>
-                <span>专业设置：</span>飞行器专业 电子工程专业 计算机专业 理学院
+                <span>专业设置：</span>{{item.product_mark}}
               </p>
-              <p><span>学校优势：</span>专业任选 推荐就业 一对一教学</p>
+              <p><span>学校优势：</span>{{item.product_weight}}</p>
             </div>
           </router-link>
         </li>
@@ -38,11 +38,8 @@ export default {
     };
   },
   mounted() {
-    console.log(this.$route);
     axios.get("/cw", { params: { mod: "list",id:this.$route.query.id} }).then((res) => {
-      console.log(res);
       this.school = res.data.list;
-      // console.log(this.router)
     });
   },
 };

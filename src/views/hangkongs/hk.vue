@@ -73,9 +73,8 @@ export default {
     page,
   },
   mounted(){
-    axios.get("/cw", { params: { mod: "list" } }).then((res) => {
+    axios.get("/cw", { params: { mod: "list" ,id:this.$route.query.id }}).then((res) => {
       this.urlimg = "//39.105.137.169:9527/"+res.data.nav
-      // console.log(this.urlimg)
     });
   }
 };

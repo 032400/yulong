@@ -11,7 +11,7 @@
 
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="(item, index) in imgs" :key="index">
-          <router-link :to="{ path: item.ad_url }">
+          <router-link :to="{ path: item.ad_url,query:{id:item.category_id} }">
             <img :src="url + item.ad_logo" />
           </router-link>
         </div>
@@ -74,9 +74,7 @@ export default {
       },
     });
     axios.get("/cw", { params: { mod: "bran" } }).then((res) => {
-      // console.log(res);
       this.imgs = res.data;
-      console.log(this.imgs);
     });
   },
   methods: {

@@ -48,7 +48,6 @@ export default {
   },
   mounted(){
     axios.get("/cw", { params: { mod: "mayjor" } }).then((res)=>{
-      console.log(res);
       this.image = res.data;
     })
   },

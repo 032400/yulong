@@ -1,9 +1,9 @@
 <template>
   <div>
-    <!-- <div class="int_con">
+    <div class="int_con">
       <img :src="url+img[1]" />
     </div>
-    <Pages /> -->
+    <Pages />
 
     <All />
     
@@ -32,7 +32,6 @@ export default {
   },
   mounted(){
    axios.get("/cw", { params: { mod: "center",gid:this.$route.query.gid } }).then((res) => {
-      console.log(res);
       this.img = res.data[0].product_album.split(',')
     });
   }
