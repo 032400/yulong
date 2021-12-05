@@ -7,15 +7,16 @@
       <div class="information_con_cen">
         <ul class="btm_list">
           <li v-for="(item,index) in listText" :key="index.article_clicknum">
-            <a href="#">
+            <router-link to="/message">
               <img
                 style="width: 0.16rem; padding-bottom: 0.02rem"
                 src="@/assets/img/shouye/首页_03.jpg"
                 alt=""
               />
-              {{item.article_name}}</a
-            >
-            <p>{{item.article_atime}}</p>
+              {{item.article_name}}
+            </router-link>
+            
+            <p>{{formatTime(item.article_atime)}}</p>
           </li>
           
         </ul>
@@ -28,6 +29,7 @@
 </template>
 <script>
 import axios from "axios"
+import moment from 'moment'
 export default {
   data() {
     return {
@@ -47,6 +49,10 @@ export default {
     },
     sett() {
       this.setimg = require("@/assets/img/公共/首页_06.jpg");
+    },
+    formatTime(value) {
+      const time = "YYYY.MM.DD";
+      return moment(value * 1000).format(time);
     },
   },
 };

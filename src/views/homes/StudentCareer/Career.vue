@@ -23,7 +23,7 @@
               />
               {{ title.article_name }}
             </span>
-            <span class="time">2021.10.15</span>
+            <span class="time">{{formatTime(title.article_atime)}}</span>
           </li>
         </ul>
         <!-- v-if="current == list.jiuye.class_id" -->
@@ -37,7 +37,7 @@
               />
               {{ item.article_name }}
             </span>
-            <span class="time">2021.10.15</span>
+            <span class="time">{{formatTime(item.article_atime)}}</span>
           </li>
         </ul>
       </div>
@@ -49,29 +49,12 @@
 </template>
 <script>
 import axios from "axios"
-const student = [
-  {
-    name: "初中生",
-    type: "0",
-  },
-  {
-    name: "高中生",
-    type: "1",
-  },
-  {
-    name: "三校生",
-    type: "2",
-  },
-  {
-    name: "艺考生",
-    type: "3",
-  },
-];
+import moment from 'moment'
+
 export default {
   name: "career",
   data() {
     return {
-      student,
       current: "", //默认选中第一个tab
       list: [
        
@@ -101,7 +84,11 @@ export default {
       this.ll=res.data
 
       })
-    }
+    },
+    formatTime(value) {
+      const time = "YYYY.MM.DD";
+      return moment(value * 1000).format(time);
+    },
   },
  mounted(){
     axios.get("/cw", { params: { mod: "news" } }).then((res)=>{
