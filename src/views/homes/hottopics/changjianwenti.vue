@@ -16,7 +16,7 @@
               {{item.article_name}}</a
             >
             
-            <p>{{item.article_atime}}</p>
+            <p>{{formatTime(item.article_atime)}}</p>
           </li>
          
         </ul>
@@ -28,6 +28,7 @@
   </div>
 </template>
 <script>
+import moment from 'moment'
 import axios from "axios"
 export default {
   data() {
@@ -49,6 +50,10 @@ export default {
     },
     sett() {
       this.setimg = require("@/assets/img/公共/首页_06.jpg");
+    },
+    formatTime(value) {
+      const time = "YYYY.MM.DD";
+      return moment(value * 1000).format(time);
     },
   },
 };
