@@ -7,9 +7,9 @@ module.exports = {
      open:true,
      proxy:{
       '/cw':{
-       target:'http://39.105.137.169:1535/',
+       target:'http://www.shxw114.com:1535/',
        pathRewrite:{
-         '^/cw':'http://39.105.137.169:1535/'
+         '^/cw':'http://www.shxw114.com:1535/'
        }
       },
       '/caipu':{
