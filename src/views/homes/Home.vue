@@ -12,6 +12,13 @@
     <changjianwenti />
     <Five />
     <foot />
+    <div class="bei">
+      <p>
+        <img src="@/assets/img/公共/未标题-1_03.png" alt="">
+        京公网安备 154545178722号</p>
+      <a href="https://beian.miit.gov.cn" >京ICP备2021039448号-1</a>
+     
+    </div>
   </div>
 </template>
 <script>
@@ -46,4 +53,16 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+a{
+  text-decoration: none;
+  color:#333;
+}
+.bei{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:#333;
+  font-size: .12rem;
+  background: #fff;
+}
 </style>
