@@ -74,6 +74,7 @@ export default {
       },
     });
     axios.get("/cw", { params: { mod: "bran" } }).then((res) => {
+      // console.log(1111,res)
       this.imgs = res.data;
     });
   },
