@@ -80,9 +80,21 @@
 </template>
 <script>
 import page from "@/components/page/index.vue";
+import axios from "axios";
 export default {
   components: {
     page,
+  },
+  data(){
+    return{
+      listText: [],
+    }
+  },
+   mounted(){
+    axios.get("/cw", { params: { mod: "gonews",cid:this.$route.query.id } }).then((res)=>{
+      console.log(res)
+      this.listText = res.data.hot;
+    })
   },
 };
 </script>

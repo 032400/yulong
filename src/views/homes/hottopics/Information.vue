@@ -7,7 +7,7 @@
       <div class="information_con_cen">
         <ul class="btm_list">
           <li v-for="(item,index) in listText" :key="index.article_clicknum">
-            <router-link to="/message">
+            <router-link  :to="{path:'/message',query:{cid:item.class_id}}">
               <img
                 style="width: 0.16rem; padding-bottom: 0.02rem"
                 src="@/assets/img/shouye/首页_03.jpg"
@@ -40,6 +40,7 @@ export default {
   },
   mounted(){
     axios.get("/cw", { params: { mod: "news" } }).then((res)=>{
+      console.log(res.data.hot)
       this.listText = res.data.hot;
     })
   },
