@@ -13,19 +13,22 @@
           <img src="@/assets/img/公共/疑难解答_03.jpg" alt="" />
         </div>
         <div class="information_con_cen">
-          <ul class="btm_list">
+        <ul class="btm_list">
+          <li v-for="(item,index) in listWen" :key="index.article_clicknum">
+            <a href="#">
+              <img
+                style="width: 0.16rem; padding-bottom: 0.02rem"
+                src="@/assets/img/shouye/首页_03.jpg"
+                alt=""
+              />
+              {{item.article_name}}</a
+            >
             
-            <li class="content_li" v-for="(item, index) in list" :key="index">
-              <span class="span_One"
-                ><em> <img src="@/assets/img/shouye/首页_03.jpg" alt="" /></em
-                >{{ item }}</span
-              >
-              <p>2021.10.15</p>
-            </li>
-          
-           
-          </ul>
-        </div>
+            <p>{{formatTime(item.article_atime)}}</p>
+          </li>
+         
+        </ul>
+      </div>
         <div class="information_con_btm" @touchstart="seet()" @touchend="sett()">
         <img :src="setimg" alt="" />
       </div>
@@ -35,24 +38,16 @@
 </template>
 <script>
 import Information from "@/views/homes/hottopics/Information.vue";
-
+import moment from 'moment'
+import axios from "axios"
 export default {
   components: {
     Information,
   },
    data() {
     return {
-     list: [
-        "39岁的小伙子,就发生了发颤,怎么",
-        "市北市民留言咨询这些问题,官方",
-        "美供应链受阻问题雪上加霜",
-        "篮网有能力解决他们的问题度,你",
-        "记者实测快速企业智能客服:回复",
-        "养老金有哪些渠道可以获得?有说明",
-        "怎么样买保险才是最合理的?咱们",
-        "全面建成小康社会的重要举措你们慢慢",
-        "摩根士丹利重磅报告:中国经济措施",
-      ],
+     listWen:[],
+      url: "http://39.105.137.169:9527/",
       setimg: require("@/assets/img/公共/首页_06.jpg"),
     };
   },
@@ -63,6 +58,16 @@ export default {
     sett() {
       this.setimg = require("@/assets/img/公共/首页_06.jpg");
     },
+     formatTime(value) {
+      const time = "YYYY.MM.DD";
+      return moment(value * 1000).format(time);
+    },
+  },
+   mounted(){
+    axios.get("/cw", { params: { mod: "news" } }).then((res)=>{
+      // console.log(res);
+      this.listWen = res.data.wen;
+    })
   },
 
 };
@@ -116,51 +121,23 @@ export default {
       .btm_list {
         width: 3.56rem;
         height: 100%;
-        
-        .content_li {
-          width: 100%;
-          border-bottom: 1px solid #cccccc;
-          display: flex;
-          justify-content: space-between;
-          margin-top: 0.2rem;
-          align-items: center;
-          text-align: -webkit-left;
-          .span_One {
-            width: 2.35rem;
-            padding-bottom: 0.02rem;
-            height: 0.15rem;
+        li {
+          padding: 0.2rem 0.05rem 0 0.07rem;
+          border-bottom: 1px solid #ccc;
+          overflow: hidden;
+          a {
+            float: left;
             font-family: PingFang-SC-Medium;
             font-size: 0.15rem;
             font-weight: normal;
             font-stretch: normal;
-            line-height: 0.15rem;
             letter-spacing: 0px;
             color: #333333;
+            width: 2.41rem;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
             overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            margin-left: 0.07rem;
-            em {
-              display: inline-block;
-              width: 0.16rem;
-              margin: 0 0.05rem;
-              img {
-                width: 100%;
-                margin-bottom: 0.04rem;
-              }
-            }
-          }
-          .span_Two {
-            // width: .74rem;
-            height: 0.11rem;
-            font-family: PingFang-SC-Medium;
-            font-size: 0.14rem;
-            font-weight: normal;
-            font-stretch: normal;
-            line-height: 0.12rem;
-            margin-right: 0.05rem;
-            letter-spacing: 0rem;
-            color: #999999;
           }
           p {
             float: right;
@@ -171,7 +148,6 @@ export default {
             letter-spacing: 0px;
             color: #999999;
             margin-bottom: 0;
-            padding-right: .1rem;
           }
         }
       }
