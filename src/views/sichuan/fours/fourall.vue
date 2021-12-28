@@ -1,8 +1,10 @@
 <template>
   <div class="all">
     <div class="all-introduction">
-      <div class="introduction-header">
-        <img src="@/assets/img/四川外国语大学/四川外国语大学简介_03.jpg" alt="" />
+      
+     
+      <div class="beijing">
+        <span class="daohanname">{{list.product_name}}</span>
       </div>
       <div v-html="list.product_text">
 
@@ -147,6 +149,7 @@ export default {
   mounted(){
    axios.get("/cw", { params: { mod: "center",gid:this.$route.query.gid} }).then((res) => {
       console.log(res);
+
       this.list = res.data[0]
       this.img = res.data[0].product_album.split(',')
     });
@@ -154,6 +157,26 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.beijing{
+  width: 3.55rem;
+  height: .54rem;
+  background-image: url("../../../assets/img/公共/公共导航.jpg");
+  background-size: 3.55rem 0.54rem;
+  background-repeat: no-repeat;
+  .daohanname{
+    width: 1.69rem;
+    height: .54rem;
+    font-family: PingFang-SC-Bold;
+    font-size: .17rem;
+    font-weight: normal;
+    font-stretch: normal;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    margin-left: 0.1rem;
+
+  }
+}
 .all {
   width: 3.55rem;
   margin: auto;
