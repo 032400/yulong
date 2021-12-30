@@ -8,7 +8,7 @@
     </div>
     <HotTopics />
     <Information />
-    <Career />
+    <!-- <Career /> -->
     <changjianwenti />
     <Five />
     <foot />
@@ -31,7 +31,7 @@ import aviation from "@/views/homes/major/aviation.vue";
 import HotTopics from "@/views/homes/hottopics/HotTopics.vue";
 import Information from "@/views/homes/hottopics/Information.vue";
 import changjianwenti from "@/views/homes/hottopics/changjianwenti.vue";
-import Career from "@/views/homes/StudentCareer/Career.vue";
+// import Career from "@/views/homes/StudentCareer/Career.vue";
 import Five from "@/views/homes/Five/index.vue";
 
 import foot from "@/views/homes/foot/index.vue";
@@ -45,7 +45,7 @@ export default {
     aviation,
     HotTopics,
     Information,
-    Career,
+    // Career,
     Five,
     foot,
   },

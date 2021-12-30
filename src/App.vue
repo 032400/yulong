@@ -63,10 +63,13 @@ export default {
         { passive: false }
       );
     },
+    
+
 }
 </script>
 
 <style lang="scss" scoped>
+
 .app{
     background: #eaeaea;
     width: 3.75rem;
@@ -76,4 +79,5 @@ export default {
 .act{
     padding: .53rem 0 .42rem 0;
 }
+
 </style>
