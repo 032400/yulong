@@ -1,7 +1,7 @@
 <template>
   <div class="show">
     <div class="beijing">
-        <span class="daohanname">{{school.product_name}}</span>
+        <span class="daohanname">航空专业院校展示</span>
       </div>
     <div class="show-text">
       <ul>

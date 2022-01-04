@@ -189,6 +189,7 @@
                 ok-text="确认"
                 cancel-text="取消"
                 @ok="hideModal"
+                
               >
 
                 <h3 class="title_cent">煜龙教育APP使用条款和隐私政策</h3>
@@ -437,7 +438,11 @@ export default {
   },
 };
 </script>
-
+<style >
+.ant-modal-wrap {
+  height: 614px;
+}
+</style>
 <style lang='scss' scoped>
 
 
