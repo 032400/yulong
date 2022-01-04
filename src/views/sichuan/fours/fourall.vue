@@ -148,7 +148,7 @@ export default {
   },
   mounted(){
    axios.get("/cw", { params: { mod: "center",gid:this.$route.query.gid} }).then((res) => {
-      console.log(res);
+      // console.log(res);
 
       this.list = res.data[0]
       this.img = res.data[0].product_album.split(',')
@@ -161,7 +161,7 @@ export default {
   width: 3.55rem;
   height: .54rem;
   background-image: url("../../../assets/img/公共/公共导航.jpg");
-  background-size: 3.55rem 0.54rem;
+  background-size: 3.68rem 0.54rem;
   background-repeat: no-repeat;
   .daohanname{
     width: 1.69rem;

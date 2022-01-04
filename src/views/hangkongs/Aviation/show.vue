@@ -1,8 +1,8 @@
 <template>
   <div class="show">
-    <div class="show-header">
-      <img src="@/assets/img/航空学院/国际航空服务与管理_22.jpg" alt="" />
-    </div>
+    <div class="beijing">
+        <span class="daohanname">{{school.product_name}}</span>
+      </div>
     <div class="show-text">
       <ul>
         <li v-for="item in school" :key="item.product_id">
@@ -34,7 +34,6 @@ export default {
     return {
       school: [],
       url: "//39.105.137.169:9527/",
-     
     };
   },
   mounted() {
@@ -45,19 +44,33 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+
 .show {
   width: 3.55rem;
   background: #fff;
   border-radius: 0.05rem;
   overflow: hidden;
   margin: 0.15rem auto;
-  .show-header {
-    width: 100%;
-    height: 0.44rem;
-    img {
-      width: 100%;
-    }
+ .beijing{
+  width: 3.55rem;
+  height: .54rem;
+  background-image: url("../../../assets/img/公共/公共导航.jpg");
+  background-size: 3.68rem 0.54rem;
+  background-repeat: no-repeat;
+  .daohanname{
+    width: 1.69rem;
+    height: .54rem;
+    font-family: PingFang-SC-Bold;
+    font-size: .17rem;
+    font-weight: normal;
+    font-stretch: normal;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    margin-left: 0.1rem;
+
   }
+}
   .show-text {
     padding: 0rem 0.05rem 0rem;
     ul {
