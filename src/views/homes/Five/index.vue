@@ -440,7 +440,7 @@ export default {
 </script>
 <style >
 .ant-modal-wrap {
-  height: 690px;
+  height: 6.53rem;
 }
 </style>
 <style lang='scss' scoped>
