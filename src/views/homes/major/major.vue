@@ -8,7 +8,7 @@
 
         <li v-for="(item, index) in image.slice(0,5)"  :key="index">
          
-          <router-link  :to="{path:'/hangkong',query:{id:item.category_id}}">
+          <router-link  :to="{path:'/hangkong',query:{id:44}}">
 
             <img :src="url + item.category_icon" alt="" />
 
@@ -24,7 +24,7 @@
           />
         </div>
         <li v-for="(item, index) in image.slice(6,10)"  :key="index">
-          <router-link  :to="{path:item.category_url,query:{id:item.category_id}}">
+          <router-link  :to="{path:'/hangkong',query:{id:44}}">
 
             <img :src="url + item.category_icon" alt="" />
 
