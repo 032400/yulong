@@ -68,6 +68,7 @@ export default {
   .information_con {
     width: 3.55rem;
     height: 100%;
+    margin-top: .15rem;
     margin: 0 auto;
     background: #ffffff;
     border-radius: 0.05rem;

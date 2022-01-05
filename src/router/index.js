@@ -152,7 +152,17 @@ const routes = [
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
+  // 加入代码
+  scrollBehavior (to, from, savedPosition) {
+    // 解决路由跳转后 会滚动到底部
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
+    }
+  },
+
 })
 
 export default router
