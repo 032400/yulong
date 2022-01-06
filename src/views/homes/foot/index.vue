@@ -5,29 +5,9 @@
         <img src="@/assets/img/shouye/国际航空服务与管理_99.jpg" alt="" />
       </div>
       <div class="sch-content">
-        <div class="sch-colleage">
-          <img src="@/assets/img/公共/首页改1_40.gif" alt="" />
-          <span>北京市航空中学</span>
-        </div>
-        <div class="sch-colleage">
-          <img src="@/assets/img/公共/首页改1_37.gif" alt="" />
-          <span>吉林大学</span>
-        </div>
-        <div class="sch-colleage" style="margin: 0.08rem 0">
-          <img src="@/assets/img/公共/首页改1_44.gif" alt="" />
-          <span>大连海事大学</span>
-        </div>
-        <div class="sch-colleage" style="margin: 0.08rem 0">
-          <img src="@/assets/img/公共/首页改1_46.gif" alt="" />
-          <span>渤海大学</span>
-        </div>
-        <div class="sch-colleage">
-          <img src="@/assets/img/公共/首页改1_50.gif" alt="" />
-          <span>山东杏林航空大学</span>
-        </div>
-        <div class="sch-colleage">
-          <img src="@/assets/img/公共/首页改1_52.gif" alt="" />
-          <span>南京市航空大学</span>
+        <div class="sch-colleage" v-for="item in hezuo" :key="item.je_id">
+          <img :src="url+item.je_imgs" alt="" />
+          <span>{{ item.je_names }}</span>
         </div>
       </div>
 
@@ -35,10 +15,22 @@
   </div>
 </template>
 <script>
+import axios from "axios"
 export default {
-  methods: {
-   
+  data() {
+    return {
+      hezuo:[],
+      url: "http://39.105.137.169:9527/",
+    };
   },
+   mounted(){
+    axios.get("/cw", { params: { mod: "hezuo" } }).then((res)=>{
+      console.log(res);
+      this.hezuo = res.data;
+
+    })
+  },
+ 
 };
 </script>
 <style lang='scss' scoped>

@@ -66,11 +66,11 @@
           prop="regions"
         >
           <div class="aviation_text_cascader">
-            <span class="span"><em>*</em>所选课程</span>
+            <span class="span"><em>*</em>所选专业</span>
             <div class="from_three">
               <a-select
                 v-model="form.regions"
-                placeholder="请选择课程"
+                placeholder="请选择专业"
                 @blur="
                   () => {
                     $refs.regions.onFieldBlur();
@@ -89,11 +89,17 @@
                   type="caret-down"
                   style="width: 0.11rem; height: 0.08rem; color: #000"
                 />
-                <a-select-option value="清华大学">
-                  <span style="color: #000">javaScript精选课程</span>
+                <a-select-option value="VIP地勤">
+                  <span style="color: #000">VIP地勤</span>
                 </a-select-option>
-                <a-select-option value="北大大学">
-                  <span style="color: #000">jquery精选课程</span>
+                <a-select-option value="游轮海乘">
+                  <span style="color: #000">游轮海乘</span>
+                </a-select-option>
+                <a-select-option value="高铁">
+                  <span style="color: #000">高铁</span>
+                </a-select-option>
+                <a-select-option value="空乘">
+                  <span style="color: #000">空乘</span>
                 </a-select-option>
               </a-select>
             </div>
