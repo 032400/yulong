@@ -51,12 +51,24 @@
 </template>
 
 <script>
-// import pages from "../page/index.vue";
+import axios from "axios"
 export default {
-  components: {
-    // pages,
+  data() {
+    return {
+      url: "http://39.105.137.169:9527/",
+      
+    };
+  },
+ 
+  mounted() {
+    
+    axios.get("/cw", { params: { mod: "shipin",cid:this.$route.query.cid } }).then((res)=>{
+      console.log(res);
+      // this.listimg=res.data
+    });
   },
 };
+
 </script>
 
 <style lang="scss" scoped>

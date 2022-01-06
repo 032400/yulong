@@ -13,11 +13,11 @@
             v-for="item in listimg"
             :key="item.id"
           >
-            <router-link to="videos"
-              ><img :src="item.img" alt=""
+            <router-link  :to="{path:'/videos',query:{cid:item.sp_id}}"
+              ><img :src="url+item.sp_logo" alt=""
             /></router-link>
-            <router-link to="videos"
-              ><img :src="item.img2" alt=""
+            <router-link :to="{path:'/videos',query:{cid:item.sp_id}}"
+              ><img :src="url+item.sp_poster" alt=""
             /></router-link>
           </div>
         </div>
@@ -39,27 +39,15 @@
   </div>
 </template>
 <script>
+import axios from "axios"
 import Swiper from "swiper";
 import "swiper/css/swiper.css";
 export default {
   data() {
     return {
+      url: "http://39.105.137.169:9527/",
       listimg: [
-        {
-          id: 1,
-          img: require("@/assets/img/航空学院/video/1.jpg"),
-          img2: require("@/assets/img/航空学院/video/2.jpg"),
-        },
-        {
-          id: 2,
-          img: require("@/assets/img/航空学院/video/3.jpg"),
-          img2: require("@/assets/img/航空学院/video/4.jpg"),
-        },
-        {
-          id: 3,
-          img: require("@/assets/img/航空学院/video/5.jpg"),
-          img2: require("@/assets/img/航空学院/video/6.jpg"),
-        },
+        
       ],
       leftimg: require("@/assets/img/公共/首页改1_10.gif"),
       rightimg: require("@/assets/img/公共/未标题-1_03.gif"),
@@ -79,6 +67,13 @@ export default {
     new Swiper("#swiper_con", {
       loop: true, // 循环模式选项
       autoplay: true, //自动播放
+      lazyLoading: true,
+      observer: true, //修改swiper自己或子元素时，自动初始化swiper
+      observeParents: true, //修改swiper的父元素时，自动初始化swiper
+      spaceBetween: 0,
+      observer: true, // 启动动态检查器(OB/观众/观看者)
+      observeParents: true, // 修改swiper的父元素时，自动初始化swiper
+      loopAdditionalSlides: 5,
       // 如果需要分页器
       pagination: {
         el: ".swiper-pagination",
@@ -88,6 +83,10 @@ export default {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+    });
+    axios.get("/cw", { params: { mod: "shipin",id:this.$route.query.id } }).then((res)=>{
+      console.log(res);
+      this.listimg=res.data
     });
   },
 };

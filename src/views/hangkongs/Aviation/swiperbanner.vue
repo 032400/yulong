@@ -9,7 +9,7 @@
         <div class="swiper-container" id="swiperThree">
           <div class="swiper-wrapper swiper1-wrapper">
             <div class="swiper-slide" v-for="item in img" :key="item.type">
-              <img :src="item.picture" />
+              <img :src="url+item.by_logo" />
             </div>
           </div>
           <img :src="rightimg" @click="right" class="swiper-button-next" />
@@ -21,7 +21,7 @@
         <div class="swiper-container" id="swiperFour">
           <div class="swiper-wrapper swiper4-wrapper">
             <div class="swiper-slide act" v-for="item in img2" :key="item.type">
-              <img :src="item.pic" />
+              <img :src="url+item.by_logo" />
             </div>
           </div>
         </div>
@@ -31,6 +31,7 @@
 </template>
 <script>
 //引入swiper
+import axios from "axios"
 import Swiper from "swiper";
 import "swiper/css/swiper.css";
 export default {
@@ -38,34 +39,12 @@ export default {
     return {
       shang: "0",
       xia: "0",
+      url: "http://39.105.137.169:9527/",
       img: [
-        { picture: require("@/assets/img/航空学院/1.jpg"), type: "0" },
-        { picture: require("@/assets/img/航空学院/2.jpg"), type: "1" },
-        { picture: require("@/assets/img/航空学院/3.jpg"), type: "2" },
-        { picture: require("@/assets/img/航空学院/4.jpg"), type: "3" },
-        { picture: require("@/assets/img/航空学院/5.jpg"), type: "4" },
+        
       ],
       img2: [
-        {
-          pic: require("@/assets/img/航空学院/国际航空服务与管理_44.jpg"),
-          type: "0",
-        },
-        {
-          pic: require("@/assets/img/航空学院/国际航空服务与管理_46.jpg"),
-          type: "1",
-        },
-        {
-          pic: require("@/assets/img/航空学院/国际航空服务与管理_48.jpg"),
-          type: "2",
-        },
-        {
-          pic: require("@/assets/img/航空学院/国际航空服务与管理_50.jpg"),
-          type: "3",
-        },
-        {
-          pic: require("@/assets/img/航空学院/国际航空服务与管理_52.jpg"),
-          type: "4",
-        },
+        
       ],
       leftimg: require("@/assets/img/航空学院/未标题-1_06.png"),
       rightimg: require("@/assets/img/航空学院/题-1_06.png"),
@@ -77,10 +56,23 @@ export default {
       slidesPerView: 5,
       watchSlidesVisibility: true, //防止不可点击
     });
+    axios.get("/cw", { params: { mod: "biye" } }).then((res)=>{
+      console.log(res);
+      this.img = res.data;
+      this.img2 = res.data;
+
+    });
     var gallerySwiper = new Swiper("#swiperThree", {
       spaceBetween: 10,
       loop: true, // 循环模式选项
       autoplay: true, //自动播放
+      lazyLoading: true,
+      observer: true, //修改swiper自己或子元素时，自动初始化swiper
+      observeParents: true, //修改swiper的父元素时，自动初始化swiper
+      spaceBetween: 0,
+      observer: true, // 启动动态检查器(OB/观众/观看者)
+      observeParents: true, // 修改swiper的父元素时，自动初始化swiper
+      loopAdditionalSlides: 5,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
