@@ -33,7 +33,7 @@ import axios from "axios"
 export default {
   data() {
     return {
-      setimg: require("@/assets/img/公共/首页_06.jpg"),
+      setimg: require("@/assets/img/公共/航空专业详情页_04.jpg"),
       listWen:[],
       url: "http://39.105.137.169:9527/",
     };
@@ -65,12 +65,14 @@ export default {
   height: auto;
   min-width: 3.56rem;
   background: #eaeaea;
+  margin-top: .15rem;
   .information_con {
     width: 3.55rem;
     height: 100%;
     margin: 0 auto;
     background: #ffffff;
     border-radius: 0.05rem;
+    padding-bottom: .01rem;
     .information_con_top {
       width: 100%;
       height: 0.55rem;
@@ -117,10 +119,12 @@ export default {
       }
     }
     .information_con_btm {
-      padding: 0.15rem 0.12rem 0.25rem 0.12rem;
+      margin: .18rem;
+      text-align: center;
       img {
-        width: 3.31rem;
-        height: 0.44rem;
+        // width: 3.31rem;
+        width: 0.24rem;
+        // margin: auto;
       }
     }
   }
