@@ -4,18 +4,24 @@
       <div class="sch-header">
         <img src="@/assets/img/shouye/国际航空服务与管理_99.jpg" alt="" />
       </div>
-      <div class="sch-content">
-        <div class="sch-colleage" v-for="item in hezuo" :key="item.je_id">
+      <div class="swiper-container" id="swiper_con">
+      <div class="sch-content swiper-wrapper" 
+          id="swiper_warp">
+        <div class="sch-colleage swiper-slide" 
+            id="slide" v-for="item in hezuo" :key="item.je_id">
           <img :src="url+item.je_imgs" alt="" />
           <span>{{ item.je_names }}</span>
         </div>
+       
       </div>
-
+ </div>
     </div>
   </div>
 </template>
 <script>
 import axios from "axios"
+import Swiper from "swiper";
+import "swiper/css/swiper.css";
 export default {
   data() {
     return {
@@ -29,12 +35,43 @@ export default {
       this.hezuo = res.data;
 
     })
+    new Swiper("#swiper_con", {
+       slidesPerView: 1,
+        spaceBetween: 5,
+      loop: true, // 循环模式选项
+      autoplay: true, //自动播放
+      lazyLoading: true,
+      observer: true, //修改swiper自己或子元素时，自动初始化swiper
+      observeParents: true, //修改swiper的父元素时，自动初始化swiper
+      // spaceBetween: 0,
+      observer: true, // 启动动态检查器(OB/观众/观看者)
+      observeParents: true, // 修改swiper的父元素时，自动初始化swiper
+      loopAdditionalSlides: 5,
+      // 如果需要分页器
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
   },
+ methods:{
+  
  
+ }
 };
 </script>
-<style lang='scss' scoped>
 
+<style lang='scss' scoped>
+#slide{
+  width: 1.65rem !important;
+}
+.sch-colleage:nth-child(1){
+  margin-left: 3.6rem !important;
+}
 .school {
   width: 3.54rem;
   min-height: 1rem;
@@ -60,7 +97,6 @@ export default {
     margin-top: 0.1rem;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
     .sch-colleage {
       width: 1.65rem;
       height: 0.55rem;
