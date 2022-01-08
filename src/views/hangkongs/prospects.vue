@@ -185,8 +185,8 @@ export default {
         "全面建成小康社会的重要举措你们慢慢",
         "39岁的小伙子,就发生了发颤,怎么",
       ],
-      setimg: require("@/assets/img/公共/首页_06.jpg"),
-      setimg1: require("@/assets/img/公共/首页_06.jpg"),
+      setimg: require("@/assets/img/公共/航空专业详情页_04.jpg"),
+      setimg1: require("@/assets/img/公共/航空专业详情页_04.jpg"),
     };
   },
   methods: {
@@ -194,13 +194,13 @@ export default {
       this.setimg = require("@/assets/img/公共/首页_03.jpg");
     },
     sett() {
-      this.setimg = require("@/assets/img/公共/首页_06.jpg");
+      this.setimg = require("@/assets/img/公共/航空专业详情页_04.jpg");
     },
     seet1() {
       this.setimg1 = require("@/assets/img/公共/首页_03.jpg");
     },
     sett1() {
-      this.setimg1 = require("@/assets/img/公共/首页_06.jpg");
+      this.setimg1 = require("@/assets/img/公共/航空专业详情页_04.jpg");
     },
   },
 };
@@ -302,6 +302,7 @@ export default {
       border-bottom-right-radius: 0.04rem;
       border-bottom-left-radius: 0.04rem;
       ul {
+        padding-bottom: .01rem;
         .content_li {
           width: 100%;
           border-bottom: 1px solid #cccccc;
@@ -349,10 +350,11 @@ export default {
           }
         }
         .information_con_btm {
-          padding: 0.15rem 0.12rem 0.25rem 0.12rem;
+          margin: .18rem;
+          text-align: center;
           img {
-            width: 3.31rem;
-            height: 0.44rem;
+            width: .24rem;
+            
           }
         }
       }
@@ -428,11 +430,12 @@ export default {
       }
     }
     .information_con_btm {
-      padding: 0.15rem 0.12rem 0.25rem 0.12rem;
-      img {
-        width: 3.31rem;
-        height: 0.44rem;
-      }
+          margin: .18rem;
+          text-align: center;
+          img {
+            width: .24rem;
+            
+          }
     }
   }
 }

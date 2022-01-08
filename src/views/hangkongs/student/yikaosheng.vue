@@ -117,7 +117,7 @@
 export default {
   data() {
     return {
-      setimg: require("@/assets/img/公共/首页_06.jpg"),
+      setimg: require("@/assets/img/公共/航空专业详情页_04.jpg"),
     };
   },
   methods: {
@@ -201,13 +201,12 @@ export default {
   padding: 0.1rem 0.1rem 0.2rem;
   box-sizing: border-box;
   .information_con_btm {
-    height: 0.44rem;
-    width: 3.32rem;
-    margin: 0.15rem auto 0;
-    img {
-      width: 3.31rem;
-      height: 0.44rem;
-    }
+          margin: .18rem auto 0;
+          text-align: center;
+          img {
+            width: .24rem;
+            
+          }
   }
 }
 .what-school p {
