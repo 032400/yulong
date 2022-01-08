@@ -53,8 +53,12 @@ export default {
   mounted() {
     var thumbsSwiper = new Swiper("#swiperFour", {
       spaceBetween: 1,
-      slidesPerView: 5,
+      slidesPerView: 4,
       watchSlidesVisibility: true, //防止不可点击
+      lazyLoading: true,
+      observer: true, //修改swiper自己或子元素时，自动初始化swiper
+      observeParents: true, //修改swiper的父元素时，自动初始化swiper
+      loopAdditionalSlides: 4,
     });
     axios.get("/cw", { params: { mod: "biye" } }).then((res)=>{
       console.log(res);
@@ -69,9 +73,6 @@ export default {
       lazyLoading: true,
       observer: true, //修改swiper自己或子元素时，自动初始化swiper
       observeParents: true, //修改swiper的父元素时，自动初始化swiper
-      spaceBetween: 0,
-      observer: true, // 启动动态检查器(OB/观众/观看者)
-      observeParents: true, // 修改swiper的父元素时，自动初始化swiper
       loopAdditionalSlides: 5,
       navigation: {
         nextEl: ".swiper-button-next",
