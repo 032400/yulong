@@ -60,7 +60,7 @@ export default {
       observeParents: true, //修改swiper的父元素时，自动初始化swiper
       loopAdditionalSlides: 4,
     });
-    axios.get("/cw", { params: { mod: "biye" } }).then((res)=>{
+    axios.get("/cw", { params: { mod: "biye" , id:this.$route.query.id }}).then((res)=>{
       console.log(res);
       this.img = res.data;
       this.img2 = res.data;
