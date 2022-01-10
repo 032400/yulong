@@ -172,7 +172,7 @@
 export default {
   data() {
     return {
-      setimg: require("@/assets/img/公共/首页_06.jpg"),
+      setimg: require("@/assets/img/公共/航空专业详情页_04.jpg"),
     };
   },
   methods: {
@@ -180,7 +180,7 @@ export default {
       this.setimg = require("@/assets/img/公共/首页_03.jpg");
     },
     sett() {
-      this.setimg = require("@/assets/img/公共/首页_06.jpg");
+      this.setimg = require("@/assets/img/公共/航空专业详情页_04.jpg");
     },
   },
 };
@@ -280,6 +280,7 @@ export default {
   margin: 0.15rem auto;
   background: #fff;
   border-radius: 0.05rem;
+  padding-bottom: .01rem;
   .mar-top {
     width: 100%;
     height: 0.55rem;
@@ -322,11 +323,12 @@ export default {
     // letter-spacing: 0px;
   }
   .information_con_btm {
-    padding: 0.15rem 0.12rem 0.25rem 0.12rem;
-    img {
-      width: 3.31rem;
-      height: 0.44rem;
-    }
+          margin: .18rem;
+          text-align: center;
+          img {
+            width: .24rem;
+            
+          }
   }
 }
 .ches {

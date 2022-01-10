@@ -118,9 +118,9 @@ export default {
   },
    data() {
     return {
-      setimg: require("@/assets/img/公共/首页_06.jpg"),
-      setimg1: require("@/assets/img/公共/首页_06.jpg"),
-      setimg2: require("@/assets/img/公共/首页_06.jpg"),
+      setimg: require("@/assets/img/公共/航空专业详情页_04.jpg"),
+      setimg1: require("@/assets/img/公共/航空专业详情页_04.jpg"),
+      setimg2: require("@/assets/img/公共/航空专业详情页_04.jpg"),
        list:[],
       url:"http://39.105.137.169:9527/",
       img:''
@@ -131,19 +131,19 @@ export default {
       this.setimg = require("@/assets/img/公共/首页_03.jpg");
     },
     sett() {
-      this.setimg = require("@/assets/img/公共/首页_06.jpg");
+      this.setimg = require("@/assets/img/公共/航空专业详情页_04.jpg");
     },
     seet1() {
       this.setimg1 = require("@/assets/img/公共/首页_03.jpg");
     },
     sett1() {
-      this.setimg1 = require("@/assets/img/公共/首页_06.jpg");
+      this.setimg1 = require("@/assets/img/公共/航空专业详情页_04.jpg");
     },
     seet2() {
       this.setimg2 = require("@/assets/img/公共/首页_03.jpg");
     },
     sett2() {
-      this.setimg2 = require("@/assets/img/公共/首页_06.jpg");
+      this.setimg2 = require("@/assets/img/公共/航空专业详情页_04.jpg");
     },
   },
   mounted(){
@@ -307,11 +307,12 @@ export default {
       }
       
     .information_con_btm {
-      padding: 0.15rem 0.12rem 0.25rem 0.12rem;
-      img {
-      width: 3.31rem;
-      height: 0.44rem;
-    }
+          // margin: .18rem;
+          text-align: center;
+          img {
+            width: .24rem;
+            
+          }
     }
     }
   }
@@ -361,13 +362,12 @@ export default {
       }
     }
     .information_con_btm {
-      height: 0.44rem;
-      width: 3.32rem;
-      margin: 0.1rem auto 0;
-     img {
-      width: 3.31rem;
-      height: 0.44rem;
-    }
+          margin: .1rem;
+          text-align: center;
+          img {
+            width: .24rem;
+            
+          }
     }
   }
   .all-issue {
@@ -413,13 +413,12 @@ export default {
   }
 
   .information_con_btm {
-    height: 0.44rem;
-    width: 3.32rem;
-    margin: auto;
-    img {
-      width: 3.31rem;
-      height: 0.44rem;
-    }
+          // margin: .18rem;
+          text-align: center;
+          img {
+            width: .24rem;
+            
+          }
   }
   .foot {
     font-size: 0.1rem;
