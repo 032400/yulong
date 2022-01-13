@@ -80,7 +80,7 @@ export default {
     },
     hander(){
        axios.get("/cw", { params: { mod: "gonews",cid:this.current} }).then((res)=>{
-      console.log(res);
+      // console.log(res);
       this.ll=res.data
 
       })
@@ -92,7 +92,7 @@ export default {
   },
  mounted(){
     axios.get("/cw", { params: { mod: "news" } }).then((res)=>{
-      console.log(res.data);
+      // console.log(res.data);
       this.list = res.data
       this.text = res.data.jiuye;
     })

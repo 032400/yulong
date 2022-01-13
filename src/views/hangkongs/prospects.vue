@@ -61,26 +61,26 @@
           </li>
           <li>
             <div class="banner_li_left">
-              <router-link to="/gaotie">
+              <router-link to="/kongcheng">
                 <img
                   src="@/assets/img/航空学院/国际航空服务与管理_83.jpg"
                   alt=""
                 />
               </router-link>
               <div class="ul_text">
-                就业方向：国内外各主要机场及其他非民航相关单位。从事飞机机体结构维修、飞机
+                就业方向：从事于国内，国际航班的客机服务工作，空姐、地勤等工作就是空乘专业毕业以后可能从事的工作。
                
               </div>
             </div>
             <div class="banner_li_right">
-              <router-link to="/kongcheng">
+              <router-link to="/gaotie">
                 <img
                   src="@/assets/img/航空学院/国际航空服务与管理_84.jpg"
                   alt=""
                 />
               </router-link>
               <div class="ul_text_two">
-                就业方向：国内外各大航空公司、地方航空公司、民营航空公司、外航服务公司、各大
+                就业方向：动车、高铁车厢乘务员、动车、高铁餐吧乘务员、售票员、检票员、客运员、安检员等。
               </div>
             </div>
           </li>

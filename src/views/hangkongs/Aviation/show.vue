@@ -1,7 +1,7 @@
 <template>
   <div class="show">
-    <div class="beijing">
-        <span class="daohanname">航空专业院校展示</span>
+    <div class="beijing" v-for="(item, index) in image.slice(0,1)"  :key="index">
+        <span class="daohanname">{{item.category_name}}院校展示</span>
       </div>
     <div class="show-text">
       <ul>
@@ -34,12 +34,17 @@ export default {
     return {
       school: [],
       url: "//39.105.137.169:9527/",
+      image:[],
     };
   },
   mounted() {
     axios.get("/cw", { params: { mod: "list",id:this.$route.query.id} }).then((res) => {
       this.school = res.data.list;
     });
+    axios.get("/cw", { params: { mod: "mayjor" } }).then((res)=>{
+      // console.log(res)
+      this.image = res.data;
+    })
   },
 };
 </script>

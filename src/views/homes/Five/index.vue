@@ -90,16 +90,19 @@
                   style="width: 0.11rem; height: 0.08rem; color: #000"
                 />
                 <a-select-option value="VIP地勤">
-                  <span style="color: #000">VIP地勤</span>
+                  <span style="color: #000">空乘</span>
                 </a-select-option>
                 <a-select-option value="游轮海乘">
-                  <span style="color: #000">游轮海乘</span>
-                </a-select-option>
-                <a-select-option value="高铁">
                   <span style="color: #000">高铁</span>
                 </a-select-option>
+                <a-select-option value="高铁">
+                  <span style="color: #000"> 新媒体</span>
+                </a-select-option>
                 <a-select-option value="空乘">
-                  <span style="color: #000">空乘</span>
+                  <span style="color: #000">新能源</span>
+                </a-select-option>
+                 <a-select-option value="空乘">
+                  <span style="color: #000">人工智能</span>
                 </a-select-option>
               </a-select>
             </div>
@@ -134,13 +137,19 @@
                 <a-icon
                   slot="suffixIcon"
                   type="caret-down"
-                  style="width: 0.11rem; height: 0.08rem; color: #000"
+                  style="width: 0.11rem; height: 0.08rem; "
                 />
-                <a-select-option value="清华大学">
-                  <span style="color: #000">大专学历</span>
+                <a-select-option value="初中">
+                  <span style="color: #000">初中</span>
                 </a-select-option>
-                <a-select-option value="北大大学">
-                  <span style="color: #000">本科学历</span>
+                <a-select-option value="高中">
+                  <span style="color: #000">高中</span>
+                </a-select-option>
+                <a-select-option value="大专">
+                  <span style="color: #000">大专</span>
+                </a-select-option>
+                <a-select-option value="本科">
+                  <span style="color: #000">本科</span>
                 </a-select-option>
               </a-select>
             </div>

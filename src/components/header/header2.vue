@@ -32,13 +32,13 @@
                 :class="{ active: isShow, tive: !isShow }"
                 style="width: 0.11rem; height: 0.08rem; color: rgb(0, 0, 0)"
               />
-              <!--  -->
             </div>
             <div class="bottom" v-show="isShow" ref="bottom">
+              <router-link to="/kongcheng" tag="p">空乘专业</router-link>
               <router-link to="/Service" tag="p">VIP地勤专业</router-link>
               <router-link to="/gaotie" tag="p">高铁乘务专业</router-link>
-              <router-link to="/youlun" tag="p">游轮海城专业</router-link>
-              <router-link to="/kongcheng" tag="p">空乘专业</router-link>
+              <router-link to="/youlun" tag="p">游轮海乘专业</router-link>
+              
             </div>
           </div>
           <router-link to="/hangkong/chuzhongsheng" tag="p">初中生</router-link>

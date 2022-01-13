@@ -71,218 +71,11 @@
         </div>
       </div>
     </div>
-    <div class="inline">
-      <div class="read-top">
-        <img src="@/assets/img/shouye/航空专业内部席位_07.jpg" alt="" />
-      </div>
-      <div class="aviation_text">
-        <div class="aviation_text_content">
-          <a-form-model
-            ref="ruleForm"
-            :model="form"
-            :rules="rules"
-            :label-col="labelCol"
-            :wrapper-col="wrapperCol"
-          >
-            <a-form-model-item ref="names" label="" prop="names">
-              <div class="aviation_text_input">
-                <span class="span"><em>*</em>学生姓名</span>
-                <a-input
-                  v-model="form.names"
-                  placeholder="请填写姓名"
-                  @blur="
-                    () => {
-                      $refs.names.onFieldBlur();
-                    }
-                  "
-                ></a-input>
-              </div>
-            </a-form-model-item>
-            <a-form-model-item ref="numbers" label="" prop="numbers">
-              <div class="aviation_text_input">
-                <span class="span"><em>*</em>手机号码</span>
-                <a-input
-                  v-model="form.numbers"
-                  placeholder="请填写手机号码"
-                  @blur="
-                    () => {
-                      $refs.numbers.onFieldBlur();
-                    }
-                  "
-                ></a-input>
-              </div>
-            </a-form-model-item>
-            <a-form-model-item ref="dates" label="" required prop="dates">
-              <div class="aviation_text_input">
-                <span class="span"><em>*</em>出生年月</span>
-                <a-date-picker
-                  v-model="form.dates"
-                  type="date"
-                  style="height: 0.35rem; color: #000 !important"
-                  :size="size"
-                  placeholder="请选择出生年月"
-                  @blur="
-                    () => {
-                      $refs.dates.onFieldBlur();
-                    }
-                  "
-                />
-              </div>
-            </a-form-model-item>
-
-            <a-form-model-item
-              ref="regions"
-              label=""
-              style="margin: 0"
-              prop="regions"
-            >
-              <div class="aviation_text_cascader">
-                <span class="span"><em>*</em>所选课程</span>
-                <div class="from_three">
-                  <a-select
-                    v-model="form.regions"
-                    placeholder="请选择课程"
-                    @blur="
-                      () => {
-                        $refs.regions.onFieldBlur();
-                      }
-                    "
-                    style="
-                      width: 2rem;
-                      font-size: 0.15rem;
-                      height: 0.35rem;
-                      color: #ccc;
-                      overflow: hidden;
-                    "
-                  >
-                    <a-icon
-                      slot="suffixIcon"
-                      type="caret-down"
-                      style="width: 0.11rem; height: 0.08rem; color: #000"
-                    />
-                    <a-select-option value="清华大学">
-                      <span style="color: #000">javaScript精选课程</span>
-                    </a-select-option>
-                    <a-select-option value="北大大学">
-                      <span style="color: #000">jquery精选课程</span>
-                    </a-select-option>
-                  </a-select>
-                </div>
-              </div>
-            </a-form-model-item>
-
-            <a-form-model-item
-              ref="educations"
-              label=""
-              style="margin: 0"
-              prop="educations"
-            >
-              <div class="aviation_text_cascader">
-                <span class="span"><em>*</em>当前学历</span>
-                <div class="from_three">
-                  <a-select
-                    v-model="form.educations"
-                    placeholder="请选择学历"
-                    @blur="
-                      () => {
-                        $refs.educations.onFieldBlur();
-                      }
-                    "
-                    style="
-                      width: 2rem;
-                      font-size: 0.15rem;
-                      height: 0.35rem;
-                      color: #ccc;
-                      overflow: hidden;
-                    "
-                  >
-                    <a-icon
-                      slot="suffixIcon"
-                      type="caret-down"
-                      style="width: 0.11rem; height: 0.08rem; color: #000"
-                    />
-                    <a-select-option value="清华大学">
-                      <span style="color: #000">大专学历</span>
-                    </a-select-option>
-                    <a-select-option value="北大大学">
-                      <span style="color: #000">本科学历</span>
-                    </a-select-option>
-                  </a-select>
-                </div>
-              </div>
-            </a-form-model-item>
-
-            <a-form-model-item ref="id_numbers" label="" prop="id_numbers">
-              <div class="aviation_text_input">
-                <span class="span"><em>*</em>身份证号</span>
-                <a-input
-                  v-model="form.id_numbers"
-                  placeholder="请填写身份证号"
-                  @blur="
-                    () => {
-                      $refs.id_numbers.onFieldBlur();
-                    }
-                  "
-                ></a-input>
-              </div>
-            </a-form-model-item>
-
-            <a-form-model-item label="" prop="descs">
-              <div class="aviation_textarea">
-                <span>您的疑问</span>
-                <div class="aviation_textarea_text">
-                  <textarea
-                    v-model="form.descs"
-                    name=""
-                    id=""
-                    cols="30"
-                    rows="10"
-                    style="color: #000"
-                    placeholder="请填写您的疑问"
-                  >
-                  </textarea>
-                </div>
-              </div>
-            </a-form-model-item>
-            <a-form-model-item :wrapper-col="{ span: 14, offset: 4 }">
-              <!-- <a-button type="primary" @click="onSubmit"> -->
-              <div class="bottom_jick">
-                <div class="aviation_text_button" @click="onSubmit">
-                  <span>立即提交</span>
-                </div>
-                <div class="submit-size">
-                  <div>
-                    <span @click="showModal">《隐私保障》</span>
-                  </div>
-                  <a-modal
-                    v-model="visible"
-                    title="隐私保障"
-                    ok-text="确认"
-                    cancel-text="取消"
-                    @ok="hideModal"
-                  >
-                    <p>Bla bla ...</p>
-                    <p>Bla bla ...</p>
-                    <p>Bla bla ...</p>
-                  </a-modal>
-                  <br />
-                  <br />
-                </div>
-              </div>
-            </a-form-model-item>
-          </a-form-model>
-        </div>
-      </div>
-    </div>
+    
      <div class="cdsa">
       <aviation />
     </div> 
-    <div class="read">
-      <div class="read-top">
-        <img src="@/assets/img/航空专业/推荐阅读_03.jpg" alt="" />
-      </div>
-      <Data />
-    </div>
+    
   </div>
 </template>
 
@@ -395,9 +188,9 @@ export default {
       this.$refs.ruleForm.validate((valid) => {
         if (valid) {
           alert("submit!");
-          console.log(this.form);
+          // console.log(this.form);
         } else {
-          console.log("error submit!!");
+          // console.log("error submit!!");
           return false;
         }
       });
@@ -406,7 +199,7 @@ export default {
       this.$refs.ruleForm.resetFields();
     },
     submit() {
-      console.log(this.value);
+      // console.log(this.value);
     },
     showModal() {
       this.visible = true;

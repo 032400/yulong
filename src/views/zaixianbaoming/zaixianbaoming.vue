@@ -308,9 +308,9 @@ export default {
       this.$refs.ruleForm.validate((valid) => {
         if (valid) {
           alert("submit!");
-          console.log(this.form);
+          // console.log(this.form);
         } else {
-          console.log("error submit!!");
+          // console.log("error submit!!");
           return false;
         }
       });
@@ -319,7 +319,7 @@ export default {
       this.$refs.ruleForm.resetFields();
     },
     submit() {
-      console.log(this.value);
+      // console.log(this.value);
     },
     showModal() {
       this.visible = true;

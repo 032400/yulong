@@ -7,6 +7,7 @@
           id="swiper_warp"
           style="background-color: #fdfafa"
         >
+
           <div
             class="swiper-slide"
             id="slide"
@@ -20,6 +21,8 @@
               ><img :src="url+item.sp_poster" alt=""
             /></router-link>
           </div>
+
+          
         </div>
         <img
           class="swiper-button-prev"

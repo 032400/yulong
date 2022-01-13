@@ -236,7 +236,6 @@
                 <div class="ul_text">
                   就业方向：地勤专业值机 、 机场安检 、 VIP客服 、 易登机 、
                   航空票务 、 两舱等
-                  '00000000000000000000000000000000000000000000000000'
                 </div>
               </div>
               <div class="banner_li_right">
@@ -248,7 +247,6 @@
                 </router-link>
                 <div class="ul_text_two">
                   就业方向：当时国内外的豪华邮轮为主，主要在邮轮上从事服务性的工作。高收入
-                  '00000000000000000000000000000000000000000000000000'
                 </div>
               </div>
             </li>
@@ -262,7 +260,6 @@
                 </router-link>
                 <div class="ul_text">
                   就业方向：国内外各主要机场及其他非民航相关单位。从事飞机机体结构维修、飞机
-                  '00000000000000000000000000000000000000000000000000'
                 </div>
               </div>
               <div class="banner_li_right">
@@ -274,7 +271,6 @@
                 </router-link>
                 <div class="ul_text_two">
                   就业方向：掌握民航管理、民航乘务、民航票务、民航法规、机场商务管理，从事
-                  '00000000000000000000000000000000000000000000000000'
                 </div>
               </div>
             </li>
@@ -288,7 +284,6 @@
                 </router-link>
                 <div class="ul_text">
                   就业方向：国内外各主要机场及其他非民航相关单位。从事飞机机体结构维修、飞机
-                  '00000000000000000000000000000000000000000000000000'
                 </div>
               </div>
               <div class="banner_li_right">
@@ -300,59 +295,14 @@
                 </router-link>
                 <div class="ul_text_two">
                   就业方向：国内外各大航空公司、地方航空公司、民营航空公司、外航服务公司、各大
-                  '00000000000000000000000000000000000000000000000000'
                 </div>
               </div>
             </li>
           </ul>
         </div>
       </div>
-      <div class="prospects_content">
-        <div class="prospects_content_title">
-          <img src="@/assets/img/航空学院/国际航空服务与管理_87.jpg" alt="" />
-        </div>
-        <div class="prospects_content_Two">
-          <ul>
-            <li class="content_li" v-for="(item, index) in lists" :key="index">
-              <span class="span_One"
-                ><em> <img src="@/assets/img/shouye/首页_03.jpg" alt="" /></em
-                >{{ item }}</span
-              >
-              <!-- <span class="span_Two">{{tlep}}</span> -->
-            </li>
-            <div
-              class="information_con_btm"
-              @touchstart="seet()"
-              @touchend="sett()"
-            >
-              <img :src="setimg" alt="" />
-            </div>
-          </ul>
-        </div>
-      </div>
-      <div class="five_top_kite">
-        <div class="header">
-          <img src="@/assets/img/航空学院/国际航空服务与管理_93.jpg" alt="" />
-        </div>
-        <div class="content">
-          <ul class="content_ul">
-            <li class="content_li" v-for="(item, index) in list" :key="index">
-              <span class="span_One"
-                ><em> <img src="@/assets/img/shouye/首页_03.jpg" alt="" /></em
-                >{{ item }}</span
-              >
-              <!-- <span class="span_Two">{{tlep}}</span> -->
-            </li>
-          </ul>
-        </div>
-        <div
-          class="information_con_btm"
-          @touchstart="seet1()"
-          @touchend="sett1()"
-        >
-          <img :src="setimg1" alt="" />
-        </div>
-      </div>
+     
+      
     </div>
     <div class="foot">
       <div class="school">
@@ -475,28 +425,7 @@ export default {
           text: "就业方向：国内外各大航空公司、地方航空公司、民营航空公司、外航服务公司、各大",
         },
       ],
-      list: [
-        "39岁的小伙子,就发生了发颤,怎么",
-        "市北市民留言咨询这些问题,官方",
-        "美供应链受阻问题雪上加霜",
-        "篮网有能力解决他们的问题度,你",
-        "记者实测快速企业智能客服:回复",
-        "养老金有哪些渠道可以获得?有说明",
-        "怎么样买保险才是最合理的?咱们",
-        "全面建成小康社会的重要举措你们慢慢",
-        "摩根士丹利重磅报告:中国经济措施",
-      ],
-      lists: [
-        "摩根士丹利重磅报告:中国经济措施",
-        "市北市民留言咨询这些问题,官方",
-        "美供应链受阻问题雪上加霜",
-        "篮网有能力解决他们的问题度,你",
-        "记者实测快速企业智能客服:回复",
-        "养老金有哪些渠道可以获得?有说明",
-        "怎么样买保险才是最合理的?咱们",
-        "全面建成小康社会的重要举措你们慢慢",
-        "39岁的小伙子,就发生了发颤,怎么",
-      ],
+     
       setimg: require("@/assets/img/公共/首页_06.jpg"),
       setimg1: require("@/assets/img/公共/首页_06.jpg"),
     };

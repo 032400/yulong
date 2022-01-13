@@ -61,7 +61,7 @@ export default {
       loopAdditionalSlides: 4,
     });
     axios.get("/cw", { params: { mod: "biye" , id:this.$route.query.id }}).then((res)=>{
-      console.log(res);
+      // console.log(res);
       this.img = res.data;
       this.img2 = res.data;
 

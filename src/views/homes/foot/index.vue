@@ -9,10 +9,12 @@
           id="swiper_warp">
         <div class="sch-colleage swiper-slide" 
             id="slide" v-for="item in hezuo" :key="item.je_id">
+            <div></div>
           <img :src="url+item.je_imgs" alt="" />
           <span>{{ item.je_names }}</span>
-        </div>
-       
+          
+        </div><br/>
+        
       </div>
  </div>
     </div>
@@ -25,7 +27,9 @@ import "swiper/css/swiper.css";
 export default {
   data() {
     return {
-      hezuo:[],
+      hezuo:[
+        
+      ],
       url: "http://39.105.137.169:9527/",
     };
   },
@@ -36,7 +40,7 @@ export default {
 
     })
     new Swiper("#swiper_con", {
-       slidesPerView: 1,
+       slidesPerView: 2,
         spaceBetween: 5,
       loop: true, // 循环模式选项
       autoplay: true, //自动播放
@@ -103,6 +107,7 @@ export default {
       border-radius: 0.06rem;
       padding: 0.05rem 0 0.05rem 0.05rem;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       border: 0.01rem solid #ccc;
       border-radius: 0.06rem;

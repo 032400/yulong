@@ -29,9 +29,9 @@
                     <router-link tag="li" to="/chuzhong">
                         <img src="@/assets/img/shouye/初中生学习航空专业.png" alt="">
                     </router-link>
-                    <li>
+                    <!-- <li>
                         <img src="@/assets/img/shouye/首页改1_75.gif" alt="">
-                    </li>
+                    </li> -->
                     <li>
                         <a href="#">查看更多</a>
                         <p>>></p>
@@ -113,7 +113,7 @@ em,i{
                 :nth-of-type(7){
                     margin-bottom: .1rem;
                 }
-                :nth-of-type(8){
+                :nth-of-type(7){
                     background-color: #d4d4d4;
                     font-family: PingFang-SC-Bold;
                     font-size: .17rem;

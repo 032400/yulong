@@ -14,9 +14,7 @@
         <img src="@/assets/img/vip地勤/VIP地勤专业_03.png" />
         <div class="in_xuxian">
           <div class="xuxian_text">
-            &nbsp;&nbsp;&nbsp;&nbsp; 地勤是航空服务专业，该专业主要课程民航概论、
-            航空市场营销、机场服务概论、航空运输地理、航空服务礼仪概论、
-            民航安全与应急处理、民航服务心理学、民航专业英语、航空服务技能培训等。
+            &nbsp;&nbsp;&nbsp;&nbsp; 国内航线勤务工作内容是在机场柜台办理旅客报到、检查证件、行李过磅、座位分配及出票（即为旅客更换登机牌），在候机室内引导旅客通关候机，登机并作广播服务，提醒旅客登机及贵宾服务工作或广播寻找已到未登机的旅客，另外勤务人员还须与空中厨房联系餐点、失物寻查、旅客申诉。地勤人员是航空公司对旅客的第一线员工需有良好的服务态度和耐心。
           </div>
         </div>
         <div class="in_img">
@@ -28,10 +26,9 @@
           </div>
           <div class="right">
             <span class="orange">自我分析：</span>
-            <span>本人的个性比较随和乐观，和同事相处和睦，与他人能较</span>
+            <span>安排各项学习任务，使学习有秩序地进行，有了计划可以把自己的学习管理好。</span>
             <span>
-              本人的个性比较随和乐观，和同事相处和睦，与他人能较
-              好地进行沟通交流与合作。在工作中能认认真真积极参与。
+              到一定时候对照计划检查总结一下自己的学习，看看有什么优点和缺点，优点发扬，缺点克服，使学习不断进步。
             </span>
           </div>
         </div>
@@ -41,10 +38,20 @@
         </div>
         <div class="right">
           <span class="blue">发展方向：</span>
-          <span>努力做学生学_的合作者、参与者和引导者，做学生的知心
-努力做学生学_的合作者、参与者和引导者，做学生的知心</span>
-          
-          
+          <span>提高计划观念和计划能力，使自己成为能够有条理地安排学习，生活、工作的人。
+            这种计划观念和计划能力，学生都应该学习和具备，这对一生都有好处。
+          </span>
+        </div>
+      </div>
+      <div class="number">
+        <div class="left">
+          <img src="@/assets/img/公共/航空专业详情页_03_08.png" alt="" />
+        </div>
+        <div class="right">
+          <span class="green">专业优势：</span><br />
+          <span>1、工作年限长，不吃青春饭，这个行业永远需要人，特别是有一定经验的人才。</span><br />
+          <span>2.工作环境好，安检中心、呼叫中心、预定中心、门户网站集合发展，航空地勤人员是真正的现代白领，都市丽人。</span><br />
+          <span>3.待遇福利高，工作强度与奖金福利成正比增长，劳有所得，机票奖励，实现蓝天梦、出国旅行，感受航空业的独特魅力。</span><br />
         </div>
       </div>
       </div>
@@ -54,7 +61,40 @@
       <img src="@/assets/img/公共/专业优势_03.jpg" />
       <div class="advantage_con">
         <img src="@/assets/img/vip地勤/VIP地勤专业_06.png" />
-        <Explain />
+        <div class="dv">
+          <div class="number">
+            <div class="left">
+              <img src="@/assets/img/公共/航空专业详情页_03.png" alt="" />
+            </div>
+            <div class="right">
+              <span class="orange">工作年限长：</span>
+              
+              <span>
+                不吃青春饭，这个行业永远需要人，特别是有一定经验的人才。</span
+              >
+            </div>
+          </div>
+          <div class="number">
+            <div class="left">
+              <img src="@/assets/img/公共/航空专业详情页_06.png" alt="" />
+            </div>
+            <div class="right">
+              <span class="blue">工作环境好：</span>
+              <span>安检中心、呼叫中心、预定中心、门户网站集合发展，航空地勤人员是真正的现代白领，都市丽人</span>
+            </div>
+          </div>
+          <div class="number">
+            <div class="left">
+              <img src="@/assets/img/公共/航空专业详情页_03_08.png" alt="" />
+            </div>
+            <div class="right">
+              <span class="green">待遇福利高：</span>
+              <span>
+                工作强度与奖金福利成正比增长，劳有所得，机票奖励，实现蓝天梦、出国旅行，感受航空业的独特魅力</span
+              >
+            </div>
+          </div>
+      </div>
       </div>
     </div>
     <!-- 职业规划 -->
@@ -64,9 +104,10 @@
         <img src="@/assets/img/vip地勤/VIP地勤专业_08.png" />
         <div class="in_xuxian">
           <div class="xuxian_text">
-            &nbsp;&nbsp;&nbsp;&nbsp; 地勤是航空服务专业，该专业主要课程民航概论、
-            航空市场营销、机场服务概论、航空运输地理、航空服务礼仪概论、
-            民航安全与应急处理、民航服务心理学、民航专业英语、航空服务技能培训等。
+            &nbsp;&nbsp;&nbsp;&nbsp; 经过了大学四年航空机电设备维修专业的理论进修，
+            使我们航空机电设备维修专业的基础知识有了根本掌握。我们即将离开大学校园，
+            作为大学毕业生，心中想得更多的是如何去做好自己专业发展、
+            如何更好的去完成以后工作中每一个任务。
           </div>
         </div>
       </div>
@@ -154,13 +195,13 @@ export default {
       }
       .in_xuxian {
         width: 3.3rem;
-        height: 0.7rem;
+        // height: 0.7rem;
         border: 0.02rem dotted #999999;
         border-radius: 0.15rem;
         margin-bottom: 0.1rem;
         .xuxian_text {
           width: 3.04rem;
-          height: 0.53rem;
+          // height: 0.53rem;
           font-size: 0.11rem;
           color: #333333;
           line-height: 0.18rem;
@@ -194,6 +235,7 @@ export default {
   .right {
     width: 2.53rem;
     float: left;
+    padding-top: 10px;
     padding-left: .1rem;
     font-size: 0.12rem;
     .orange {
@@ -232,14 +274,51 @@ export default {
         height: 1.2rem;
         margin-bottom: 0.1rem;
       }
+      .dv{
+    padding-bottom: .15rem;
+}
+.number {
+  width: 3.14rem;
+  margin: 0.15rem 0.1rem;
+  padding-bottom: 0.15rem;
+  border-bottom: 1px dotted rgb(153, 153, 153);
+  overflow: hidden;
+  .left {
+    float: left;
+    width: 0.51rem;
+    img {
+      width: .68rem;
+      height: 0.68rem;
+    }
+  }
+  .right {
+    width: 2.53rem;
+    float: left;
+    padding-top: 10px;
+    padding-left: .1rem;
+    font-size: 0.12rem;
+    .orange {
+      color: rgb(255, 51, 0);
+    }
+    .blue {
+      color: rgb(0, 102, 153);
+    }
+    .green {
+      color: rgb(0, 136, 24);
+    }
+    .pink {
+      color: rgb(126, 0, 146);
+    }
+  }
+}
       .in_xuxian {
         width: 3.3rem;
-        height: 0.7rem;
+        // height: 0.7rem;
         border: 0.02rem dotted #999999;
         border-radius: 0.15rem;
         .xuxian_text {
           width: 3.04rem;
-          height: 0.53rem;
+          // height: 0.53rem;
           font-size: 0.11rem;
           color: #333333;
           line-height: 0.18rem;
