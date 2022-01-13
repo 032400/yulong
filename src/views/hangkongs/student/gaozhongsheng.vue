@@ -66,91 +66,19 @@
         </div>
       </div>
       <div class="kc-text">
-        空乘就是大学选择读空中乘务专业，也就是未来当上大家说的空姐、空少艺考就是通过艺术类专业考试，拿到学校专业合格证后再在高考报考中报名该学校。简单来说空乘高考空乘就是大学选择读空中乘务专业，也就是未来当上大家说的空姐、空少艺考就是通过艺术类专业考试，拿到学校专业合格证后再在高考报考中报名该学校。简单来说空乘高考...
+       可以在不同城市国家穿梭，除了可以练就空姐危机处理、耐心、温和、语言表达等能力及专业素质，还能接触各界人事，拓宽人脉。此外，空姐也是一个高薪职业，且受社会尊重和人们向往的一种群体，能够参与到空姐队伍中非常不错。
       </div>
       <div class="information_con_btm" @touchstart="seet()" @touchend="sett()">
         <img :src="setimg" alt="" />
       </div>
     </div>
-    <div class="ches">
-      <div class="ches-header">
-        <img src="@/assets/img/艺考生/艺考生的四大优势_03.jpg" alt="" />
-      </div>
-      <div class="ches-text">
-        <ul>
-          <li>
-            <div class="text-img">
-              <img src="@/assets/img/公共/艺考生2_03.jpg" alt="" />
-            </div>
-            <div class="text-text">
-              <div class="text-header">
-                <div class="text-header-img">
-                  <img src="@/assets/img/艺考生/艺考生2_03.png" alt="" />
-                </div>
-                <p>升职潜力大</p>
-              </div>
-              <div class="text-header-text">
-                空乘的晋升制度非常简单，每个公司不外乎都是,全勤,年小时飞够，不扣分不犯错，有英语资质,有国际线资质。那么你就可以...
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="text-text">
-              <div class="text-header">
-                <div class="text-header-img">
-                  <img src="@/assets/img/艺考生/艺考生2_07.png" alt="" />
-                </div>
-                <p>工资待遇好</p>
-              </div>
-              <div class="text-header-text">
-                空乘的晋升制度非常简单，每个公司不外乎都是,全勤,年小时飞够，不扣分不犯错，有英语资质,有国际线资质。那么你就可以...
-              </div>
-            </div>
-            <div class="text-img">
-              <img src="@/assets/img/公共/艺考生2_06.jpg" alt="" />
-            </div>
-          </li>
-          <li>
-            <div class="text-img">
-              <img src="@/assets/img/公共/艺考生2_09.jpg" alt="" />
-            </div>
-            <div class="text-text">
-              <div class="text-header">
-                <div class="text-header-img">
-                  <img src="@/assets/img/艺考生/艺考生2_10.png" alt="" />
-                </div>
-                <p>入职面试快</p>
-              </div>
-              <div class="text-header-text">
-                空乘的晋升制度非常简单，每个公司不外乎都是,全勤,年小时飞够，不扣分不犯错，有英语资质,有国际线资质。那么你就可以...
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="text-text">
-              <div class="text-header">
-                <div class="text-header-img">
-                  <img src="@/assets/img/艺考生/艺考生2_12.jpg" alt="" />
-                </div>
-                <p>休闲时间多</p>
-              </div>
-              <div class="text-header-text">
-                空乘的晋升制度非常简单，每个公司不外乎都是,全勤,年小时飞够，不扣分不犯错，有英语资质,有国际线资质。那么你就可以...
-              </div>
-            </div>
-            <div class="text-img">
-              <img src="@/assets/img/公共/艺考生2_12.jpg" alt="" />
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
+   
     <div class="kczhiwei">
       <div class="ches-header">
         <img src="@/assets/img/高中生/空乘职位晋升详情_03.jpg" alt="" />
       </div>
       <div class="kczhiwei-img">
-        <img src="@/assets/img/高中生/高中生(1)0_01_03.jpg" alt="" />
+        <img src="@/assets/img/高中生/高中生晋升.png" alt="" />
       </div>
       <div class="kczhiwei-text">
         <div>一般学员在完成相应的业务培训后，可担当普通舱乘务员。</div>
@@ -161,7 +89,7 @@
           头等舱乘务员考核期满后，可担当区域乘务长，成绩优秀的区域乘务长经过考评委员会严格的考评后，可担当主任乘务长，并可以独立带班执行国际航班以及首长专机任务。
         </div>
         <div>
-          头等舱乘务员考核期满后，可担当区域乘务长，成绩优秀的区域乘务长经过考评委员会严格的考评后，可担当主任乘务长，并可以独立带班执行国际航班以及首长专机任务。
+          负责做好本部门岗位分工，规范各岗位工作规定和规程，负责客舱服务部人事考核等人力资源工作，主持分析本部门的工作进度。
         </div>
       </div>
     </div>
@@ -310,7 +238,7 @@ export default {
   }
   .kc-text {
     width: 3.3rem;
-    height: 1.62rem;
+    height: 1rem;
     // box-sizing: border-box;
     border-radius: 0.15rem;
     border: solid 0.01rem #999999;
@@ -405,7 +333,7 @@ export default {
   }
   .kczhiwei-img {
     width: 3.35rem;
-    height: 1.2rem;
+    height: 1.4rem;
     padding: 0.1rem 0.1rem;
     img {
       width: 100%;
@@ -415,8 +343,8 @@ export default {
   .kczhiwei-text {
     width: 100%;
     background: url("~@/assets/img/高中生/高中生_03.jpg") no-repeat;
-    background-size: 100% 100%;
-    margin: 0.3rem 0 0 0;
+    background-size: 90% 100%;
+    margin: 0.1rem 0 0 0;
     font-size: 0.12rem;
     div {
       padding: 0.13rem 0.2rem 0 1.4rem;

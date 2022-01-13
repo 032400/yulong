@@ -21,7 +21,43 @@
       <div class="Ccen">
         <img src="@/assets/img/初中生/初中生2_03.jpg" alt="" />
       </div>
-     <Explain />
+     <div class="dv">
+      <div class="number">
+        <div class="left">
+          <img src="@/assets/img/公共/航空专业详情页_03.png" alt="" />
+        </div>
+        <div class="right">
+          <span class="orange">自我分析：</span>
+          <span>安排各项学习任务，使学习有秩序地进行，有了计划可以把自己的学习管理好。</span>
+          <span>
+            到一定时候对照计划检查总结一下自己的学习，看看有什么优点和缺点，优点发扬，缺点克服，使学习不断进步。</span
+          >
+        </div>
+      </div>
+       <div class="number">
+        <div class="left">
+          <img src="@/assets/img/公共/航空专业详情页_06.png" alt="" />
+        </div>
+        <div class="right">
+          <span class="blue">发展方向：</span>
+          <span>提高计划观念和计划能力，使自己成为能够有条理地安排学习，生活、工作的人。
+            这种计划观念和计划能力，学生都应该学习和具备，这对一生都有好处。</span>
+        </div>
+      </div>
+      <div class="number">
+        <div class="left">
+          <img src="@/assets/img/公共/航空专业详情页_03_08.png" alt="" />
+        </div>
+        <div class="right">
+          <span class="green">发展规划：</span>
+          <span>培养良好的学习习惯，良好习惯养成以后，就能自然而然地按照一定的秩序去学习。</span>
+          <span>
+            有了计划，也有利于锻炼克服困难、不怕失败的精神，无论碰到什么困难挫折也要坚持完成计划，达到规定的学习目标。</span
+          >
+        </div>
+      </div>
+       
+  </div>
     </div>
 
     <div class="bott">
@@ -173,6 +209,42 @@ box-sizing:border-box;
   box-shadow: 1px 2px 2px 0px rgba(228, 228, 228, 0.51);
   border-radius: 0.05rem;
   margin-bottom: 0.15rem;
+  .dv{
+    padding-bottom: .15rem;
+}
+.number {
+  width: 3.14rem;
+  margin: 0.15rem 0.1rem;
+  padding-bottom: 0.15rem;
+  border-bottom: 1px dotted rgb(153, 153, 153);
+  overflow: hidden;
+  .left {
+    float: left;
+    width: 0.51rem;
+    img {
+      width: .68rem;
+      height: 0.68rem;
+    }
+  }
+  .right {
+    width: 2.53rem;
+    float: left;
+    padding-left: .1rem;
+    font-size: 0.12rem;
+    .orange {
+      color: rgb(255, 51, 0);
+    }
+    .blue {
+      color: rgb(0, 102, 153);
+    }
+    .green {
+      color: rgb(0, 136, 24);
+    }
+    .pink {
+      color: rgb(126, 0, 146);
+    }
+  }
+}
 }
 .Ctit img {
   width: 3.56rem;
