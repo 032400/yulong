@@ -66,7 +66,7 @@
       </div>
     </div>
 
-   
+
 
     <div class="cdsa">
       <aviation />
@@ -94,10 +94,10 @@ export default {
       form: {
         names: "",
         numbers: "",
-        regions: undefined,
-        dates: undefined,
-        educations: undefined,
-        id_numbers: undefined,
+        regions: "",
+        dates: "",
+        educations: "",
+        id_numbers: "",
         descs: "",
       },
        rules: {
@@ -132,7 +132,7 @@ export default {
             trigger: "blur",
           },
           {
-            min: 3,
+            min: 2,
             max: 5,
             message: "请选择课程",
             trigger: "blur",

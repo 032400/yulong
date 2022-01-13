@@ -35,7 +35,7 @@ export default {
   },
    mounted(){
     axios.get("/cw", { params: { mod: "hezuo" } }).then((res)=>{
-      console.log(res);
+      // console.log(res);
       this.hezuo = res.data;
 
     })

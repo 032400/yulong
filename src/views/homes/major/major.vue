@@ -6,7 +6,7 @@
     <div class="major-content">
       <ul>
 
-        <li v-for="(item, index) in image.slice(0,5)"  :key="index">
+        <li v-for="(item, index) in image.slice(0,5)"  :key="index" @click="Name(index)">
          
           <router-link  :to="{path:'/hangkong',query:{id:item.category_id}}">
 
@@ -55,6 +55,10 @@ export default {
     })
   },
   methods: {
+    Name(index){
+      this.$store.commit('Name',this.image[index].category_name)
+
+    },
     click() {
       this.$refs.lefts.style.display = "none";
       this.$refs.lefts.style.margin = "0";

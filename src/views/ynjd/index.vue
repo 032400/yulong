@@ -53,10 +53,10 @@ export default {
   },
   methods: {
     seet() {
-      this.setimg = require("@/assets/img/公共/首页_03.jpg");
+      this.setimg = '';
     },
     sett() {
-      this.setimg = require("@/assets/img/公共/首页_06.jpg");
+      this.setimg = '';
     },
      formatTime(value) {
       const time = "YYYY.MM.DD";
