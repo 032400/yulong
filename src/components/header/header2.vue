@@ -37,7 +37,7 @@
             <div class="bottom" v-show="isShow" ref="bottom">
               <router-link to="/Service" tag="p">VIP地勤专业</router-link>
               <router-link to="/gaotie" tag="p">高铁乘务专业</router-link>
-              <router-link to="/youlun" tag="p">游轮海城专业</router-link>
+              <router-link to="/youlun" tag="p">游轮海乘专业</router-link>
               <router-link to="/kongcheng" tag="p">空乘专业</router-link>
             </div>
           </div>

@@ -89,11 +89,11 @@
                   type="caret-down"
                   style="width: 0.11rem; height: 0.08rem; color: #000"
                 />
-                <a-select-option value="VIP地勤">
-                  <span style="color: #000">VIP地勤</span>
+                <a-select-option value="新媒体">
+                  <span style="color: #000">新媒体</span>
                 </a-select-option>
-                <a-select-option value="游轮海乘">
-                  <span style="color: #000">游轮海乘</span>
+                <a-select-option value="新能源">
+                  <span style="color: #000">新能源</span>
                 </a-select-option>
                 <a-select-option value="高铁">
                   <span style="color: #000">高铁</span>
@@ -136,10 +136,16 @@
                   type="caret-down"
                   style="width: 0.11rem; height: 0.08rem; color: #000"
                 />
-                <a-select-option value="清华大学">
+                <a-select-option value="初中学历">
+                  <span style="color: #000">初中学历</span>
+                </a-select-option>
+                <a-select-option value="高中学历">
+                  <span style="color: #000">高中学历</span>
+                </a-select-option>
+                <a-select-option value="大专学历">
                   <span style="color: #000">大专学历</span>
                 </a-select-option>
-                <a-select-option value="北大大学">
+                <a-select-option value="本科学历">
                   <span style="color: #000">本科学历</span>
                 </a-select-option>
               </a-select>
@@ -309,6 +315,7 @@ Cookie的主要用途之一是提供一种节约时间的实用功能。例如�
   </div>
 </template>
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
@@ -320,10 +327,10 @@ export default {
       form: {
         names: "",
         numbers: "",
-        regions: undefined,
-        dates: undefined,
-        educations: undefined,
-        id_numbers: undefined,
+        regions: "",
+        dates: "",
+        educations: "",
+        id_numbers: "",
         descs: "",
       },
       rules: {
@@ -359,7 +366,7 @@ export default {
             trigger: "blur",
           },
           {
-            min: 3,
+            min: 2,
             max: 5,
             message: "请选择课程",
             trigger: "blur",
@@ -379,7 +386,7 @@ export default {
             trigger: "blur",
           },
           {
-            min: 3,
+            min: 2,
             max: 5,
             message: "请选择学历",
             trigger: "blur",
@@ -407,16 +414,29 @@ export default {
       },
     };
   },
+  
   methods: {
+    
     onSubmit() {
+      
       this.$refs.ruleForm.validate((valid) => {
         if (valid) {
           alert("submit!");
-          console.log(this.form);
+          // console.log(this.form);
         } else {
           console.log("error submit!!");
           return false;
         }
+      });
+      axios.get("/cw", { params: { mod: "baoming" ,id:this.$route.query.id }}).then((res) => {
+        // this.$router.push({
+        //  name: "space",
+         
+        // })
+        res.data=[...res.data,this.form]
+        console.log(res)
+          
+       
       });
     },
     resetForm() {

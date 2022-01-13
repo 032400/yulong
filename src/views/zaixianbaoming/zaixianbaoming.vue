@@ -93,11 +93,17 @@
                   type="caret-down"
                   style="width: 0.11rem; height: 0.08rem; color: #000"
                 />
-                <a-select-option value="清华大学">
-                  <span style="color: #000">javaScript精选课程</span>
+                <a-select-option value="新媒体">
+                  <span style="color: #000">新媒体</span>
                 </a-select-option>
-                <a-select-option value="北大大学">
-                  <span style="color: #000">jquery精选课程</span>
+                <a-select-option value="新能源">
+                  <span style="color: #000">新能源</span>
+                </a-select-option>
+                <a-select-option value="高铁">
+                  <span style="color: #000">高铁</span>
+                </a-select-option>
+                <a-select-option value="空乘">
+                  <span style="color: #000">空乘</span>
                 </a-select-option>
               </a-select>
             </div>
@@ -129,11 +135,17 @@
                   type="caret-down"
                   style="width: 0.11rem; height: 0.08rem; color: #000"
                 />
-                <a-select-option value="清华大学">
-                  <span style="color: #000">大专学历</span>
+                <a-select-option value="初中">
+                  <span style="color: #000">初中</span>
                 </a-select-option>
-                <a-select-option value="北大大学">
-                  <span style="color: #000">本科学历</span>
+                <a-select-option value="高中">
+                  <span style="color: #000">高中</span>
+                </a-select-option>
+                <a-select-option value="大专">
+                  <span style="color: #000">大专</span>
+                </a-select-option>
+                <a-select-option value="本科">
+                  <span style="color: #000">本科</span>
                 </a-select-option>
               </a-select>
             </div>
@@ -205,6 +217,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
@@ -216,10 +229,10 @@ export default {
       form: {
         names: "",
         numbers: "",
-        regions: undefined,
-        dates: undefined,
-        educations: undefined,
-        id_numbers: undefined,
+        regions: "",
+        dates: "",
+        educations: "",
+        id_numbers: "",
         descs: "",
       },
      rules: {
@@ -254,7 +267,7 @@ export default {
             trigger: "blur",
           },
           {
-            min: 3,
+            min: 2,
             max: 5,
             message: "请选择课程",
             trigger: "blur",
@@ -274,7 +287,7 @@ export default {
             trigger: "blur",
           },
           {
-            min: 3,
+            min: 2,
             max: 5,
             message: "请选择学历",
             trigger: "blur",
@@ -313,6 +326,13 @@ export default {
           console.log("error submit!!");
           return false;
         }
+      });
+      axios.get("/cw", { params: { mod: "baoming" ,id:this.$route.query.id }}).then((res) => {
+        
+        res.data=[...res.data,this.form]
+        console.log(res)
+          
+       
       });
     },
     resetForm() {

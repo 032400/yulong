@@ -41,9 +41,9 @@
           </li>
         </ul>
       </div>
-      <div class="information_con_btm" @touchstart="seet()" @touchend="sett()">
+      <!-- <div class="information_con_btm" @touchstart="seet()" @touchend="sett()">
         <img :src="setimg" alt />
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -73,14 +73,14 @@ export default {
 
     },
     seet() {
-      this.setimg = require("@/assets/img/公共/首页_03.jpg");
+      this.setimg = '';
     },
     sett() {
-      this.setimg = require("@/assets/img/公共/首页_06.jpg");
+      this.setimg = '';
     },
     hander(){
        axios.get("/cw", { params: { mod: "gonews",cid:this.current} }).then((res)=>{
-      console.log(res);
+      // console.log(res);
       this.ll=res.data
 
       })
@@ -92,7 +92,7 @@ export default {
   },
  mounted(){
     axios.get("/cw", { params: { mod: "news" } }).then((res)=>{
-      console.log(res.data);
+      // console.log(res.data);
       this.list = res.data
       this.text = res.data.jiuye;
     })

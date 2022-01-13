@@ -530,16 +530,16 @@ export default {
       this.rightimg = require("@/assets/img/航空学院/未标题-1_03.png");
     },
     seet() {
-      this.setimg = require("@/assets/img/公共/首页_03.jpg");
+      this.setimg = '';
     },
     sett() {
-      this.setimg = require("@/assets/img/公共/首页_06.jpg");
+      this.setimg = '';
     },
     seet1() {
-      this.setimg1 = require("@/assets/img/公共/首页_03.jpg");
+      this.setimg1 = '';
     },
     sett1() {
-      this.setimg1 = require("@/assets/img/公共/首页_06.jpg");
+      this.setimg1 = '';
     },
   },
 };
