@@ -30,46 +30,8 @@
         </p>
       </div>
       <div class="message-context">
-          <p>近日，《金融时报》Financial Times商学院排名公布了。金融时报的全球商学院排名，与泰晤士和QS专业领域院校排名有一些区别，Financial Times排名偏向于“毕业后薪酬”、“薪酬提升”等标准，对商科学生的学术研究和未来就业有较高的参考价值。</p>
-          <p>《金融时报》2021年全球商学院排名，项目领域包含MBA、EMBA、金融硕士、管理硕士课程和在线MBA课程，以及高管教育非学位课程和欧洲顶级商学院排名。MBA、EMBA、金融硕士、管理硕士课程和在线MBA课程，以及高管教育非学位课程和欧洲顶级商学院排名。</p>
-            <div class="message-imgone">
-                <img src="@/assets/img/最新资讯/图文页_19.jpg" alt="">
-            </div>
-            <ul>
-                <li>
-                    <h4>排名方法：</h4>
-                    <p>评价指标：职业发展和薪资水平(所占权重50%)</p>
-                    <p>排名因素：性别多样性、国籍多样性、国际交流机会、拥有博士学位的老师比例等</p>
-                </li>
-                <li>
-                    <h4>入围资格：</h4>
-                    <p>· 商学院应获得AACSB或Equis认证或相关从属关系</p>
-                    <p>· 相关专业至少已开设3年</p>
-                    <p>· 在排名发布日期前，相关专业的第一届毕业生已毕业至少三年</p>
-                    <p>
-                        由此可见，《金融时报》全球商学院排名审核是非常严格的，同时也表示"
-                        <span>该排名对商科学生留学择校具有很高的参考价值。</span>
-                    </p>
-                </li>
-                <li>
-                    <h4>排名分析：</h4>
-                    <p>2021《金融时报》全球金融硕士排名分为两类：无需工作经验(Pre-experience)和需要工作经验(Post-experience)。</p>
-                </li>
-            </ul>
-            <h3>无需工作经验(Pre-experience)TOP15榜单:</h3>
-            <div class="message-top">
-                <img src="@/assets/img/最新资讯/图文页_22.jpg" alt="">
-            </div>
-            <p>从以上表单可知，TOP5全都被法国的商学院占领，巴黎高等商学院稳居第一，毕业生不仅起薪高，薪资增幅也快，不过申请要求也是不低的!</p>
-            <p>英国的商学院也很强势，在TOP10中占据2个席位，成为“英国第一商学院”的是伦敦商学院(第8名)，是伦敦大学的两大研究生院之一。</p>
-            <p>紧随其后的是牛津大学的商学院(第10名)、帝国理工学院的商学院(第11名)。英国的商学院在申请要求上较灵活一些，但每年的竞争者很多，申请压力也是不小的，需要提前做好留学申请规划。</p>
-            <p>中国的清华大学经济管理学院(第12名)表现也很不错，上海交通大学-上海高级金融学院第17名，北京大学-光华第20名。</p>
-            <p>由《金融时报》全球商学院排名可以看出，商科专业<span>出国留学</span>不一定非要去英、美，法国、意大利、西班牙、荷兰等国家商科强校也是不错的选择！</p>
-            <div class="message-imgtwo">
-                <img src="@/assets/img/最新资讯/图文页_25.jpg" alt="">
-            </div>
-            <p class="updown">阅读上一篇：2022QS商科硕士及全球MBA排名榜单</p>
-            <p class="updown">阅读下一篇：高中毕业是出国留学还是国内读二本？</p>
+          <div v-html="$store.state.listText"></div>
+          <!-- <section><section><section><section><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; overflow-wrap: break-word !important;">实训基地召开全体教师会议</p></section></section><section><section><section><section><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; overflow-wrap: break-word !important;"><strong style="margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important;"></strong>2021年12月14日实训基地在航空楼会议室召开了全体授课教师会议，会议由基地教务主任马静老师主持。</p></section></section></section></section></section></section><p></p><section><section><section><section><section><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; overflow-wrap: break-word !important;">马静主任跟教师们确定了部分期末考试本周是否已经考试完成，其他剩余的科目集中20、21、22考试，应对每个班级考级内容进行确定，并表扬朱宁老师教学认真负责，1+X证书考试完成，提醒各位教师提前做好年终总结和做好明年的课程安排。</p></section></section><section><section><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; overflow-wrap: break-word !important;"><br/></p></section></section><section><section><img class="rich_pages wxw-img" src="https://mmbiz.qpic.cn/mmbiz_jpg/PHkpEK5NOaczwlLcTAno0vYxcyicPnMtMd3wEPKXCku2BKhicGBCTPqptxxC0xkICRVcEEfODiayK3Lcicgev68kLg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"/></section></section></section></section></section><p></p><p><br/></p> -->
       </div>
     </div>
     <div class="message-footer">
@@ -79,22 +41,27 @@
   </div>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 import page from "@/components/page/index.vue";
-import axios from "axios";
 export default {
   components: {
     page,
   },
   data(){
     return{
-      listText: [],
+      
     }
   },
-   mounted(){
-    axios.get("/cw", { params: { mod: "gonews",cid:this.$route.query.id } }).then((res)=>{
-      console.log(res)
-      this.listText = res.data.hot;
-    })
+    computed: {
+    ...mapGetters(["Xiangqing"]),
+    Xiangqing() {
+      return this.Xiangqing;
+    }
+  },
+  watch: {
+    Xiangqing(newData, oldData) {
+     
+    }
   },
 };
 </script>

@@ -6,16 +6,16 @@
       </div>
       <div class="information_con_cen">
         <ul class="btm_list">
-          <li v-for="(item,index) in listWen" :key="index.article_clicknum">
-            <a href="#">
+          <li v-for="(item,index) in listWen" :key="index.article_clicknum" @click="Xiangqing(index)">
+            <router-link  :to="{path:'/message',query:{cid:item.article_id}}">
+            
               <img
                 style="width: 0.16rem; padding-bottom: 0.02rem"
                 src="@/assets/img/shouye/首页_03.jpg"
                 alt=""
               />
-              {{item.article_name}}</a
-            >
-            
+              {{item.article_name}}
+            </router-link>
             <p>{{formatTime(item.article_atime)}}</p>
           </li>
          
@@ -40,16 +40,20 @@ export default {
   },
    mounted(){
     axios.get("/cw", { params: { mod: "news" } }).then((res)=>{
-      // console.log(res);
+      console.log(res);
       this.listWen = res.data.wen;
     })
   },
   methods: {
+    Xiangqing(index){
+      // console.log(this.listText[index].article_text)
+      this.$store.commit('Xiangqing',this.listWen[index].article_text)
+    },
     seet() {
-      this.setimg = require("@/assets/img/公共/首页_03.jpg");
+      this.setimg = "";
     },
     sett() {
-      this.setimg = require("@/assets/img/公共/首页_06.jpg");
+      this.setimg = "";
     },
     formatTime(value) {
       const time = "YYYY.MM.DD";
