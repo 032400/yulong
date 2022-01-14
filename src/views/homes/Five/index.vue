@@ -72,7 +72,6 @@
               <a-select
                 v-model="form.regions"
                 placeholder="请选择专业"
-                type="date"
                 @blur="
                   () => {
                     $refs.regions.onFieldBlur();
@@ -91,20 +90,17 @@
                   type="caret-down"
                   style="width: 0.11rem; height: 0.08rem; color: #000"
                 />
-                <a-select-option value="空乘">
-                  <span style="color: #000">空乘</span>
-                </a-select-option>
-                <a-select-option value="高铁">
-                  <span style="color: #000">高铁</span>
-                </a-select-option>
                 <a-select-option value="新媒体">
                   <span style="color: #000">新媒体</span>
                 </a-select-option>
                 <a-select-option value="新能源">
                   <span style="color: #000">新能源</span>
                 </a-select-option>
-                 <a-select-option value="人工智能">
-                  <span style="color: #000">人工智能</span>
+                <a-select-option value="高铁">
+                  <span style="color: #000">高铁</span>
+                </a-select-option>
+                <a-select-option value="空乘">
+                  <span style="color: #000">空乘</span>
                 </a-select-option>
               </a-select>
             </div>
@@ -319,6 +315,11 @@ Cookie的主要用途之一是提供一种节约时间的实用功能。例如�
     </div>
   </div>
 </template>
+<style>
+/* .ant-select-selection__placeholder{
+  display: block !important;
+} */
+</style>
 <script>
 import axios from "axios";
 export default {
@@ -332,10 +333,10 @@ export default {
       form: {
         names: "",
         numbers: "",
-        regions: "",
-        dates: "",
-        educations: "",
-        id_numbers: "",
+        regions: undefined,
+        dates: undefined,
+        educations: undefined,
+        id_numbers: undefined,
         descs: "",
       },
       rules: {
@@ -426,20 +427,13 @@ export default {
       
       this.$refs.ruleForm.validate((valid) => {
         if (valid) {
-          alert("submit!");
-          // console.log(this.form);
         } else {
-          console.log("error submit!!");
           return false;
         }
       });
       axios.get("/cw", { params: { mod: "baoming" ,id:this.$route.query.id }}).then((res) => {
-        // this.$router.push({
-        //  name: "space",
-         
-        // })
+        
         res.data=[...res.data,this.form]
-        console.log(res)
           
        
       });
@@ -448,7 +442,7 @@ export default {
       this.$refs.ruleForm.resetFields();
     },
     submit() {
-      console.log(this.value);
+      
     },
     showModal() {
 
@@ -473,16 +467,12 @@ export default {
 .ant-modal-wrap {
   height: 6.53rem;
 }
-.ant-select-selection__placeholder{
-  display: block !important;
-}
 </style>
 <style lang='scss' scoped>
 
 
 .aviation_text {
   border-radius: 0.04rem;
-  // margin: 0 0.1rem;
   width: 3.55rem;
   margin: 0 0.1rem;
   margin-top: 0.15rem;
