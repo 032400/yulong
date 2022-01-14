@@ -91,17 +91,20 @@
                   type="caret-down"
                   style="width: 0.11rem; height: 0.08rem; color: #000"
                 />
+                <a-select-option value="空乘">
+                  <span style="color: #000">空乘</span>
+                </a-select-option>
+                <a-select-option value="高铁">
+                  <span style="color: #000">高铁</span>
+                </a-select-option>
                 <a-select-option value="新媒体">
                   <span style="color: #000">新媒体</span>
                 </a-select-option>
                 <a-select-option value="新能源">
                   <span style="color: #000">新能源</span>
                 </a-select-option>
-                <a-select-option value="高铁">
-                  <span style="color: #000">高铁</span>
-                </a-select-option>
-                <a-select-option value="空乘">
-                  <span style="color: #000">空乘</span>
+                 <a-select-option value="人工智能">
+                  <span style="color: #000">人工智能</span>
                 </a-select-option>
               </a-select>
             </div>
