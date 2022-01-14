@@ -72,6 +72,7 @@
               <a-select
                 v-model="form.regions"
                 placeholder="请选择专业"
+                type="date"
                 @blur="
                   () => {
                     $refs.regions.onFieldBlur();
@@ -468,6 +469,9 @@ export default {
 <style >
 .ant-modal-wrap {
   height: 6.53rem;
+}
+.ant-select-selection__placeholder{
+  display: block !important;
 }
 </style>
 <style lang='scss' scoped>

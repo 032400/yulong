@@ -17,7 +17,7 @@
             <li class="list-img">
                 <img :src="item.imgs" alt="">
             </li>
-            <li class="list-size"><span v-bind:style="item.color">{{item.title}}</span>{{item.text}}</li>
+            <li class="list-size"><span v-bind:style="item.color"></span>{{item.text}}</li>
         </ul>
     </div>
   </div>
@@ -31,13 +31,13 @@ export default {
         {
           imgs:require("@/assets/img/公共/航空专业详情页_03.png"),
           color:"color: #ff3300",
-          title: "工作前景好:",
+          
           text: "高铁乘务专业全称是高速铁路客运乘务专业，是国家教育部面向铁路行业开设的高等职业教育专业。其专业学制为三年。就业主要集中在铁路旅客列车客运乘务及其相关方向。",
         },
         {
           imgs:require("@/assets/img/公共/航空专业详情页_06.png"),
           color:"color: #ff3300",
-          title: "工作前景好:",
+        
           text: "高铁乘务专业是目前的一大热门专业，再加之中国目前的铁路系统技术和运营里程都是全世界规模最大的国家之一，因此我国的高铁行业发展将会持续走高，高铁乘务专业的毕业生在就业前景和发展前景上是很光明的。目前我国的很多高铁院校都是与企业实行资源互补，校企合作的发展方向和趋势，高铁乘务专业的学生在毕业之前学校一般会提供实习机会，在高铁企业实习期间，表现突出的学生会有优先就业的机会。",
         },
       ],
