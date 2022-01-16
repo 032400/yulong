@@ -7,6 +7,7 @@
       <div class="information_con_cen">
         <ul class="btm_list">
           <li v-for="(item,index) in listText" :key="index.article_clicknum" @click="Xiangqing(index)">
+
             <router-link  :to="{path:'/message',query:{cid:item.article_id}}" >
               <img
                 style="width: 0.16rem; padding-bottom: 0.02rem"
@@ -48,7 +49,7 @@ export default {
   },
   methods: {
     Xiangqing(index){
-      console.log(this.listText[index].article_text)
+      // console.log(this.listText[index].article_text)
       this.$store.commit('Xiangqing',this.listText[index].article_text)
     },
     seet() {

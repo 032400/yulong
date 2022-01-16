@@ -1,12 +1,12 @@
 <template>
   <div class="show">
     <div class="beijing" v-for="(item, index) in image.slice(0,1)"  :key="index">
-        <span class="daohanname">{{item.category_name}}院校展示</span>
+        <span class="daohanname">{{$store.state.name}}院校展示</span>
       </div>
     <div class="show-text">
       <ul>
-        <li v-for="item in school" :key="item.product_id">
-         <router-link  :to="{path:'/sichuan',query:{gid:item.product_id}}">
+        <li v-for="(item,index) in school" :key="item.product_id" @click="Xiangqingzhuan(index)">
+         <router-link  :to="{path:'/sichuan',query:{gid:item.product_id}}" >
             <div class="school-img">
               <img :src="url + item.product_logo" alt="" />
             </div>
@@ -14,9 +14,9 @@
               <div class="school-name">{{ item.product_name }}</div>
               <p><span>学校所在地：</span>{{ item.product_desc }}</p>
               <p>
-                <span>专业设置：</span>{{item.product_mark}}
+                <span>专业设置：</span>{{item.product_weight}}
               </p>
-              <p><span>学校优势：</span>{{item.product_weight}}</p>
+              <p><span>学校优势：</span>{{item.product_money}}</p>
             </div>
           </router-link>
         </li>
@@ -28,7 +28,7 @@
 </template>
 <script>
 import axios from "axios";
-
+import { mapGetters } from 'vuex'
 export default {
   data() {
     return {
@@ -38,13 +38,31 @@ export default {
     };
   },
   mounted() {
-    axios.get("/cw", { params: { mod: "list",id:this.$route.query.id} }).then((res) => {
+    axios.get("/cw", { params: { mod: "list",cid:this.$route.query.id} }).then((res) => {
+      console.log(res)
       this.school = res.data.list;
     });
-    axios.get("/cw", { params: { mod: "mayjor" } }).then((res)=>{
+    axios.get("/cw", { params: { mod: "mayjor",cid:this.$route.query.id } }).then((res)=>{
       // console.log(res)
       this.image = res.data;
     })
+  },
+  methods:{
+    Xiangqingzhuan(index){
+      console.log(this.school[index].product_album)
+      this.$store.commit('Xiangqingzhuan',this.school[index].product_album)
+    },
+  },
+  computed: {
+    ...mapGetters(["Name"]),
+    Name() {
+      return this.Name;
+    }
+  },
+  watch: {
+    Name(newData, oldData) {
+     
+    }
   },
 };
 </script>

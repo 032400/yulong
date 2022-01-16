@@ -4,7 +4,7 @@
       
      
       <div class="beijing">
-        <span class="daohanname">{{list.product_name}}</span>
+        <!-- <span class="daohanname">{{list.product_name}}</span> -->
       </div>
       <div v-html="list.product_text">
 
@@ -34,12 +34,12 @@
         <img src="@/assets/img/四川外国语大学/校园环境_03.jpg" alt="" />
       </div>
       <ul>
-        <li v-for="(item,index) in $store.state.img3" :key="index">
+        <!-- <li v-for="(item,index) in $store.state.img3" :key="index">
           <div>
             <img :src="url+item" alt="" />
           </div>
           <p>四川外国语大学</p>
-        </li>
+        </li> -->
         
       </ul>
      <div class="information_con_btm" @touchstart="seet1()" @touchend="sett1()">
@@ -145,18 +145,13 @@ export default {
     },
   },
   mounted(){
-   axios.get("/cw", { params: { mod: "center",gid:this.$route.query.gid} }).then((res) => {
-      // console.log(res);
+   axios.get("/cw", { params: { mod: "jiuye",jid:this.$route.query.jid} }).then((res) => {
+      console.log(res);
 
-      this.list = res.data[0]
-      this.img = res.data[0].product_album.split(',')
+      // this.list = res.data[0]
+      // this.img = res.data[0].product_album.split(',')
     });
-    // this.img3=this.Xiangqingzhuan
-    // axios.get("/cw", { params: { mod: "list",gid:this.$route.query.gid} }).then((res) => {
-    //   console.log(res);
-
-    //   this.img2=res.data
-    // });
+   
   }
 };
 </script>
