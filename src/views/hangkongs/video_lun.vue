@@ -1,7 +1,7 @@
 <template>
   <div class="video_warp">
     <div class="video_con">
-      <div class="swiper-container" id="swiper_con">
+      <div class="swiper-container" id="swiper_con3">
         <div
           class="swiper-wrapper"
           id="swiper_warp"
@@ -11,15 +11,14 @@
           <div
             class="swiper-slide"
             id="slide"
-            v-for="item in listimg"
+            v-for="(item,index) in listimg"
             :key="item.id"
+            @click="Video(index)"
           >
             <router-link  :to="{path:'/videos',query:{cid:item.sp_id}}"
               ><img :src="url+item.sp_logo" alt=""
             /></router-link>
-            <router-link :to="{path:'/videos',query:{cid:item.sp_id}}"
-              ><img :src="url+item.sp_poster" alt=""
-            /></router-link>
+            
           </div>
 
           
@@ -36,7 +35,6 @@
           @click="rightSide"
           alt=""
         />
-        <div class="swiper-pagination" style="bottom: 0"></div>
       </div>
     </div>
   </div>
@@ -65,9 +63,15 @@ export default {
       this.rightimg = require("@/assets/img/航空学院/未标题-1_03.png");
       this.leftimg = require("@/assets/img/公共/首页改1_10.gif");
     },
+    Video(index){
+      this.$store.commit('Video',this.listimg[index].sp_shipin)
+
+    },
   },
   mounted() {
-    new Swiper("#swiper_con", {
+    new Swiper("#swiper_con3", {
+      slidesPerView: 2,
+        spaceBetween: 5,
       loop: true, // 循环模式选项
       autoplay: true, //自动播放
       lazyLoading: true,
@@ -78,10 +82,7 @@ export default {
       observeParents: true, // 修改swiper的父元素时，自动初始化swiper
       loopAdditionalSlides: 5,
       // 如果需要分页器
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
+      
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",

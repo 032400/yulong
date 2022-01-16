@@ -17,46 +17,14 @@
     <swiperBanner />
     <Age />
     <Prospects />
-    <div class="foot">
-      <div class="school">
-        <div class="sch-header">
-          <img src="@/assets/img/shouye/国际航空服务与管理_99.jpg" alt="" />
-        </div>
-        <div class="sch-content">
-          <div class="sch-colleage">
-            <img src="@/assets/img/公共/首页改1_40.gif" alt="" />
-            <span>北京市航空中学</span>
-          </div>
-          <div class="sch-colleage">
-            <img src="@/assets/img/公共/首页改1_37.gif" alt="" />
-            <span>吉林大学</span>
-          </div>
-          <div class="sch-colleage" style="margin: 0.08rem 0">
-            <img src="@/assets/img/公共/首页改1_44.gif" alt="" />
-            <span>大连海事大学</span>
-          </div>
-          <div class="sch-colleage" style="margin: 0.08rem 0">
-            <img src="@/assets/img/公共/首页改1_46.gif" alt="" />
-            <span>渤海大学</span>
-          </div>
-          <div class="sch-colleage">
-            <img src="@/assets/img/公共/首页改1_50.gif" alt="" />
-            <span>山东杏林航空大学</span>
-          </div>
-          <div class="sch-colleage">
-            <img src="@/assets/img/公共/首页改1_52.gif" alt="" />
-            <span>南京市航空大学</span>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Foot />
   </div>
 </template>
 <script>
 import { mapGetters } from 'vuex'
 import Show from "@/views/hangkongs/Aviation/show.vue";
 import Age from "@/views/hangkongs/Aviation/age.vue";
-
+import Foot from "@/views/homes/foot/index.vue"
 import Video from "@/views/hangkongs/video_lun.vue";
 
 import swiperBanner from "@/views/hangkongs/Aviation/swiperbanner.vue";
@@ -76,7 +44,8 @@ export default {
     Age,
     Video,
     swiperBanner,
-    Prospects
+    Prospects,
+    Foot
   },
   mounted(){
     axios.get("/cw", { params: { mod: "list" ,id:this.$route.query.id }}).then((res) => {
