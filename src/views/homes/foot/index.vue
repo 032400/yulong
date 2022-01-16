@@ -4,7 +4,7 @@
       <div class="sch-header">
         <img src="@/assets/img/shouye/国际航空服务与管理_99.jpg" alt="" />
       </div>
-      <div class="swiper-container" id="swiper_con">
+      <div class="swiper-container" id="swiper_con1">
       <div class="sch-content swiper-wrapper" 
           id="swiper_warp">
         <div class="sch-colleage swiper-slide" 
@@ -39,7 +39,7 @@ export default {
       this.hezuo = res.data;
 
     })
-    new Swiper("#swiper_con", {
+    new Swiper("#swiper_con1", {
        slidesPerView: 2,
         spaceBetween: 5,
       loop: true, // 循环模式选项

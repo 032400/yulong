@@ -1,6 +1,6 @@
 <template>
   <div class="swiper">
-    <div class="swiper-container" id="swiperOne">
+    <div class="swiper-container" id="swiperOne2">
       <!-- <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="(item, index) in img" :key="index">
           <router-link :to="item.name">
@@ -17,7 +17,7 @@
         </div>
       </div>
       <!-- 如果需要分页器 -->
-      <div class="swiper-pagination" style="color: #00f0ff"></div>
+      <!-- <div class="swiper-pagination" style="color: #00f0ff"></div> -->
       <img
         class="swiper-button-prev"
         id="one"
@@ -56,7 +56,7 @@ export default {
     };
   },
   mounted() {
-    var mySwiper = new Swiper("#swiperOne", {
+    var mySwiper = new Swiper("#swiperOne2", {
       loop: true, // 循环模式选项
       lazyLoading: true,
       observer: true, //修改swiper自己或子元素时，自动初始化swiper
@@ -64,10 +64,8 @@ export default {
       spaceBetween: 0,
       observer: true, // 启动动态检查器(OB/观众/观看者)
       observeParents: true, // 修改swiper的父元素时，自动初始化swiper
-      loopAdditionalSlides: 4,
-      pagination: {
-        el: ".swiper-pagination",
-      },
+      loopAdditionalSlides: 3,
+      
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",

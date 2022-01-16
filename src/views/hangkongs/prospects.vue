@@ -9,7 +9,8 @@
           <li v-for="(item,index) in listimg" :key="index">
             <div class="banner_li_left">
               <!-- <router-link :to="{path:'/jiuyexiangqing',query:{jid:item.j_id}}" > -->
-                <img
+                <img style="     width: 1.6rem;
+     height: 1.04rem;"
                   :src="url+item.j_logo"
                   alt=""
                 />

@@ -13,12 +13,16 @@ export default new Vuex.Store({
     },
     Xiangqingzhuan(state,data){
       state.img3=data
+    },
+    Video(state,data){
+      state.video=data
     }
   },
   state:{
     listText:"111",
     name:"",
-    img3:[]
+    img3:[],
+    video:''
   },
   
   
@@ -31,6 +35,9 @@ export default new Vuex.Store({
     },
     Xiangqingzhuan(state) {
       return state.img3
+    },
+    Video(state) {
+      return state.video
     }
   },
   actions: {

@@ -1,7 +1,7 @@
 <template>
   <div class="major" ref="major_header">
     <div class="major-header">
-      <img src="@/assets/img/shouye/首页改1_18.gif" alt="" />
+      <img src="@/assets/img/shouye/2.jpg" alt="" />
     </div>
     <div class="major-content">
       <ul>

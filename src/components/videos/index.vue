@@ -16,8 +16,8 @@
     </div>
     <div class="videos">
       <div class="vides">
-        <img src="@/assets/img/航空学院/国际航空服务与管理_43.jpg" alt="" />
-        <!-- <video src="@/assets/images2/ship/mda-jmi4aniy24gvebwr.mp4" controls></video> -->
+        <!-- <img src="@/assets/img/航空学院/国际航空服务与管理_43.jpg" alt="" /> -->
+        <video  :src="url+$store.state.video" controls></video>
       </div>
       <div class="video-text">
         <p class="text-title">空姐站姿视频训练</p>
@@ -51,7 +51,8 @@
 </template>
 
 <script>
-import axios from "axios"
+// import axios from "axios"
+import { mapGetters } from 'vuex'
 export default {
   data() {
     return {
@@ -62,10 +63,21 @@ export default {
  
   mounted() {
     
-    axios.get("/cw", { params: { mod: "shipin",cid:this.$route.query.cid } }).then((res)=>{
-      console.log(res);
-      // this.listimg=res.data
-    });
+    // axios.get("/cw", { params: { mod: "shipin",cid:this.$route.query.cid } }).then((res)=>{
+    //   console.log(res);
+    //   this.listimg=res.data
+    // });
+  },
+  computed: {
+    ...mapGetters(["Video"]),
+    Video() {
+      return this.Video;
+    }
+  },
+  watch: {
+    Video(newData, oldData) {
+     
+    }
   },
 };
 
@@ -85,7 +97,7 @@ export default {
   overflow: hidden;
   video {
     width: 100%;
-    height: auto;
+    height: 2.5rem;
   }
   .vides {
     width: 100%;
