@@ -10,12 +10,15 @@ export default new Vuex.Store({
     },
     Name(state,data){
       state.name=data
-
+    },
+    Xiangqingzhuan(state,data){
+      state.img3=data
     }
   },
   state:{
     listText:"111",
-    name:""
+    name:"",
+    img3:[]
   },
   
   
@@ -25,6 +28,9 @@ export default new Vuex.Store({
     },
     Name(state) {
       return state.name
+    },
+    Xiangqingzhuan(state) {
+      return state.img3
     }
   },
   actions: {

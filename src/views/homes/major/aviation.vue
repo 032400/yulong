@@ -5,62 +5,60 @@
     </div>
     <div class="aviation-content">
       <ul>
-        <li>
+        <li v-for="(item,index) in listText" :key="index">
+          <router-link :to="{path:'/sichuan',query:{gid:item.product_id}}">
           <div class="content-img">
-            <img src="@/assets/img/公共/首页改1_40.gif" alt="" />
+            <img :src="url+item.product_logo" alt="" />
           </div>
           <div class="content-text">
-            <p>北京市航空中学</p>
+            <p>{{ item.product_name }}</p>
           </div>
+          
+          </router-link>
+          
         </li>
-        <li>
-          <div class="content-img">
-            <img src="@/assets/img/公共/首页改1_37.gif" alt="" />
-          </div>
-          <div class="content-text">
-            <p>吉林大学</p>
-          </div>
-        </li>
+        
       </ul>
-      <ul>
-        <li>
-          <div class="content-img">
-            <img src="@/assets/img/公共/首页改1_44.gif" alt="" />
-          </div>
-          <div class="content-text">
-            <p>大连海事大学</p>
-          </div>
-        </li>
-        <li>
-          <div class="content-img">
-            <img src="@/assets/img/公共/首页改1_46.gif" alt="" />
-          </div>
-          <div class="content-text">
-            <p>渤海大学</p>
-          </div>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <div class="content-img">
-            <img src="@/assets/img/公共/首页改1_50.gif" alt="" />
-          </div>
-          <div class="content-text">
-            <p>山东杏林航空大学</p>
-          </div>
-        </li>
-        <li>
-          <div class="content-img">
-            <img src="@/assets/img/公共/首页改1_52.gif" alt="" />
-          </div>
-          <div class="content-text">
-            <p>南京市航空大学</p>
-          </div>
-        </li>
-      </ul>
+     
+      
+      
     </div>
   </div>
 </template>
+<script>
+import axios from "axios"
+export default {
+  data() {
+    return {
+      listText:[],
+      url: "http://39.105.137.169:9527/",
+    };
+  },
+  mounted(){
+    axios.get("/cw", { params: { mod: "list" } }).then((res)=>{
+      console.log(res)
+      this.listText = res.data.list;
+    })
+    
+  },
+  methods: {
+    Xiangqing(index){
+      console.log(this.listText[index].article_text)
+      this.$store.commit('Xiangqing',this.listText[index].article_text)
+    },
+    seet() {
+      this.setimg = "";
+    },
+    sett() {
+      this.setimg ="";
+    },
+    formatTime(value) {
+      const time = "YYYY.MM.DD";
+      return moment(value * 1000).format(time);
+    },
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 .aviation {
@@ -81,12 +79,11 @@
   }
   .aviation-content {
     padding: 0.1rem 0.03rem 0.08rem 0.03rem;
-    height: 2.34rem;
     box-sizing: border-box;
     ul {
-      height: 0.67rem;
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
       li {
         width: 1.71rem;
         height: 0.67rem;
@@ -102,7 +99,8 @@
           margin: 0.14rem 0.11rem 0.13rem 0.09rem;
           float: left;
           img {
-            width: 100%;
+            width: .5rem;
+            height: auto;
           }
         }
         .content-text {

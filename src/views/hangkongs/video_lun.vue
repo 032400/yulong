@@ -87,7 +87,7 @@ export default {
         prevEl: ".swiper-button-prev",
       },
     });
-    axios.get("/cw", { params: { mod: "shipin",id:this.$route.query.id } }).then((res)=>{
+    axios.get("/cw", { params: { mod: "shipin",cid:this.$route.query.id } }).then((res)=>{
       console.log(res);
       this.listimg=res.data
     });

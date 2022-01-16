@@ -88,6 +88,11 @@ const routes = [
       component:()=> import ('@/views/sichuan/fours.vue')
     },
     {
+      path:"/jiuyexiangqing",
+      name:"就业详情",
+      component:()=> import ('@/views/jiuyexiangqing/fours.vue')
+    },
+    {
       path:"/detail",
       name:"航空专业详情",
       component:()=> import ('@/views/details/details.vue')
