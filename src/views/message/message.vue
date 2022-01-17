@@ -2,7 +2,7 @@
   <div>
     <page />
     <div class="message">
-      <div class="mseeage-title">
+      <!-- <div class="mseeage-title">
         <h2>《金融时报》公布2021年全球商学院排名，商科最强院校是这些！</h2>
         <p>
           <span>来源：煜龙时空网</span>
@@ -28,7 +28,7 @@
             </li>
           </ul>
         </p>
-      </div>
+      </div> -->
       <div class="message-context">
           <div v-html="$store.state.listText"></div>
           <!-- <section><section><section><section><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; overflow-wrap: break-word !important;">实训基地召开全体教师会议</p></section></section><section><section><section><section><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; overflow-wrap: break-word !important;"><strong style="margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important;"></strong>2021年12月14日实训基地在航空楼会议室召开了全体授课教师会议，会议由基地教务主任马静老师主持。</p></section></section></section></section></section></section><p></p><section><section><section><section><section><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; overflow-wrap: break-word !important;">马静主任跟教师们确定了部分期末考试本周是否已经考试完成，其他剩余的科目集中20、21、22考试，应对每个班级考级内容进行确定，并表扬朱宁老师教学认真负责，1+X证书考试完成，提醒各位教师提前做好年终总结和做好明年的课程安排。</p></section></section><section><section><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; overflow-wrap: break-word !important;"><br/></p></section></section><section><section><img class="rich_pages wxw-img" src="https://mmbiz.qpic.cn/mmbiz_jpg/PHkpEK5NOaczwlLcTAno0vYxcyicPnMtMd3wEPKXCku2BKhicGBCTPqptxxC0xkICRVcEEfODiayK3Lcicgev68kLg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"/></section></section></section></section></section><p></p><p><br/></p> -->

@@ -6,19 +6,19 @@
       </a>
     </div>
     <div class="aviation_text_content">
-      <InputOf/>
-      <InputText/>
+      <!-- <InputOf/>
+      <InputText/> -->
     </div>
   </div>
 </template>
 
 <script>
-import InputOf from './index.vue'
-import InputText from './index1.vue'
+// import InputOf from './index.vue'
+// import InputText from './index1.vue'
 export default {
     components:{
-      InputOf,
-      InputText
+      // InputOf,
+      // InputText
     },
 }
 </script>

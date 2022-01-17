@@ -10,7 +10,7 @@
 
       </div>
     </div>
-    <div class="all-news">
+    <!-- <div class="all-news">
       <div class="introduction-header">
         <img src="@/assets/img/四川外国语大学/新闻动态_03.jpg" alt="" />
       </div>
@@ -27,7 +27,7 @@
       <div class="information_con_btm" @touchstart="seet()" @touchend="sett()">
         <img :src="setimg" alt="" />
       </div>
-    </div>
+    </div> -->
     <index/>
     <div class="all-environment">
       <div class="introduction-header">
@@ -47,7 +47,7 @@
       </div>
     </div>
      
-    <div class="all-issue">
+    <!-- <div class="all-issue">
       <div class="introduction-header">
         <img src="@/assets/img/四川外国语大学/常见问题_03.jpg" alt="" />
       </div>
@@ -80,7 +80,7 @@
      <div class="information_con_btm" @touchstart="seet2()" @touchend="sett2()">
         <img :src="setimg2" alt="" />
       </div>
-    </div>
+    </div> -->
     <indexT/>
     <div class="foot">
       <p>报名资讯电话：8948956415</p>
