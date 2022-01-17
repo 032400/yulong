@@ -1,6 +1,5 @@
 <template>
   <div>
-    <page />
     <div class="message">
       <!-- <div class="mseeage-title">
         <h2>《金融时报》公布2021年全球商学院排名，商科最强院校是这些！</h2>
