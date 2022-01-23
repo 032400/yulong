@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="int_con">
-      <!-- <img :src="url+img[1]" /> -->
+      <img :src="url+img" />
     </div>
     <div class="title_warp">
       <p>
@@ -20,7 +20,7 @@
 </template>
 <script>
 // import Pages from "@/components/page/index.vue";
-import All from "@/views/sichuan/fours/fourall.vue";
+import All from "@/views/jiuyexiangqing/fours/fourall.vue";
 import axios from 'axios'
 export default {
   components: {
@@ -39,10 +39,11 @@ export default {
     
   },
   mounted(){
-  //  axios.get("/cw", { params: { mod: "center",gid:this.$route.query.gid } }).then((res) => {
-  //     this.img = res.data[0].product_album.split(',')
-  //     this.name = res.data[0].product_name
-  //   });
+  axios.get("/cw", { params: { mod: "jiuyexq",jid:this.$route.query.jid} }).then((res) => {
+
+      this.img = res.data[0].j_nav;
+      this.name=res.data[0].j_name
+    });
   }
 };
 </script>
