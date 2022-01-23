@@ -8,13 +8,13 @@
         <ul class="prospects_banner_ul">
           <li v-for="(item,index) in listimg" :key="index">
             <div class="banner_li_left">
-              <!-- <router-link :to="{path:'/jiuyexiangqing',query:{jid:item.j_id}}" > -->
+              <router-link :to="{path:'/jiuyexiangqing',query:{jid:item.j_id}}" >
                 <img style="     width: 1.6rem;
      height: 1.04rem;"
                   :src="url+item.j_logo"
                   alt=""
                 />
-              <!-- </router-link> -->
+              </router-link>
               <p style="    margin-top: -0.2rem;
     background: #ccc;
     color: #fff;
